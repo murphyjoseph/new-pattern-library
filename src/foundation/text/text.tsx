@@ -2,7 +2,8 @@ import React, { FC } from "react";
 
 import { IText } from './text.interface';
 import { stylerAttributeAndClassSetup } from "../../shared/services/styler";
-import stylesText from './text.scss';
+import stylesText from './text.module.scss';
+import { convertToKabob } from "../../shared/utilities/convertToKabob";
 
 interface ITraits {
   traits: IText;
@@ -14,10 +15,10 @@ export const Text: FC<ITraits> = ({ traits }) => {
   const { tag: _tag, text, title, ...remainder } = traits
   const Tag: keyof JSX.IntrinsicElements = !!_tag ? _tag : "span"
 
-  if (!!traits.css) traits.css.internal = StylesText[`text-${traits.variant}`]
-  if (!traits.css)
-    traits.css = {}
-    traits.css.internal = StylesText[`text-${traits.variant}`]
+  if (!!remainder.css) remainder.css.internal = StylesText[`text-${convertToKabob(traits.variant)}`]
+  if (!remainder.css)
+    remainder.css = {}
+    remainder.css.internal = StylesText[`text-${convertToKabob(traits.variant)}`]
 
   return (
     <Tag {...stylerAttributeAndClassSetup(remainder)}>

@@ -4,7 +4,7 @@
 
 // # ========= ---  BTN STYLES --- ========== # \\
 
-.text-action {
+.text-btn-base {
   @include mi-theme(map-fetch($map-theme, 'btns' 'default'));
   @include mi-align(text, c);
   padding: get-size('size1') get-size('size3');
@@ -25,62 +25,78 @@
   }
 }
 
-.text-action-full {
+.is-small {
+  padding: get-size('size1', 'spacing') get-size('size3', 'spacing');
+}
+
+.is-medium {
+  padding: get-size('size2', 'spacing') get-size('size4', 'spacing');
+}
+
+.is-large {
+  padding: get-size('size3', 'spacing') get-size('size6', 'spacing');
+}
+
+.is-default {
+  padding: get-size('size2', 'spacing') get-size('size5', 'spacing');
+}
+
+.text-btn-full {
   width: 100%;
 }
 
-.text-action-standard {
+.text-btn-standard {
   width: get-size('size4', 'btn');
   padding-top: get-size('size2');
   padding-bottom: get-size('size2');
 }
 
-.text-action-skinny {
+.text-btn-skinny {
   padding-top: get-size('size1');
   padding-bottom: get-size('size1');
 }
 
-.text-action-disabled {
+.text-btn-disabled {
   cursor: default;
 }
 
-.text-action-centered {
+.text-btn-centered {
   @include mi-position('center-block');
 }
 
 // THEMING
-.text-action-global {
+.text-btn-global {
   @include mi-theme(map-fetch($map-theme, 'btns' 'skins' 'global'));
 }
 
-.text-action-global-outline {
+.text-btn-global-outline {
   @include mi-theme(map-fetch($map-theme, 'btns' 'skins' 'global-outline'));
 }
 
-.text-action-primary {
+.text-btn-primary {
   @include mi-theme(map-fetch($map-theme, 'btns' 'skins' 'primary'));
 }
 
-.text-action-primary-outline {
+.text-btn-primary-outline {
   @include mi-theme(map-fetch($map-theme, 'btns' 'skins' 'primary-outline'));
 }
 
-.text-action-disabled {
+.text-btn-disabled {
   @include mi-theme(map-fetch($map-theme, 'btns' 'skins' 'disabled'));
 }
 
-.text-action-warning {
+.text-btn-warning {
   @include mi-theme(map-fetch($map-theme, 'btns' 'skins' 'warning'));
 }
 
-.text-action-success {
+.text-btn-success {
   @include mi-theme(map-fetch($map-theme, 'btns' 'skins' 'success'));
 }
 
-.text-action-simple {
+.text-btn-simple {
   @include mi-theme(map-fetch($map-theme, 'btns' 'skins' 'simple'));
 }
 
-.text-action-neutral {
+.text-btn-neutral {
   @include mi-theme(map-fetch($map-theme, 'btns' 'skins' 'neutral'));
 }

@@ -30,3 +30,4 @@ export type TGridType = "wrapper" | "column";
 export type TGridDisplay = "flex" | "grid";
 export type TWhiteSpace = "pre" | "preLine";
 export type TPositionTypes = "absolute" | "relative" | "fixed" | "sticky" | "static" | "none" | "none";
+export type TBtnSizes = "small" | "medium" | "large" | "default"

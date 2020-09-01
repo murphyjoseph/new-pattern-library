@@ -1,7 +1,13 @@
+## NOTE
+- Still figuring out some things here but this is an effort to clean up things for you
+- Things still need to be automated to some degree
+- Experimenting with styled-components so things might get messy
+- Also messy because this was produced strictly for showcasing the direction we're going and lots of cleaning needs to happen
 
-
-## Problems
+## TODO - Problems
 - Why are there multiple style tags all showing the same css?
+- We need explicit standards in how to order our imports, when to line break attributes, strictness with semicolons and such (lint roolz), etc.
+- Names of components likely need to be refactored with a prefix to prevent issues with html spec
 - How should we handle fixed values for dynamic patterns at foundational level?
 + e.g. labels shouldnt have the ability to change kind(variant) value
 + Should we maintain naming structure for those? e.g. if labels have use variant label-one should

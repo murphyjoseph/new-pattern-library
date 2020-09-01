@@ -1,9 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
 import { TextLink } from './foundation/text/text-link';
 import { TextAction } from './foundation/text/text-action';
 import { createSizeMap } from './shared/styles-js/create-sizes';
+import { TextCTA } from './foundation/text/text-cta';
+import { HeadingOne } from './components/typography/heading-one';
+import { BodyOne } from './components/typography/body-one';
+import { BtnPrimary } from './components/btn/btn-primary';
+import { BtnUtility } from './components/btn/btn-utility';
+import { BodyTwo } from './components/typography/body-two';
+import { PageMarketing } from './components/pages/page-marketing';
 
 function App() {
 
@@ -11,35 +17,20 @@ function App() {
     console.log("you clicked.")
   }
 
-
-
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <TextLink traits={({
-          text: "Learn React",
-          target: "_blank",
-          href: "https://reactjs.org",
-          variant: "primary"
-        })} />
-        <TextAction traits={({
-          text: "Learn React",
-          onClick: myClickEvent,
-          variant: "primary"
-        })} />
+      <header>
+
       </header>
+      <main>
+        <PageMarketing title="Examples">
+          <HeadingOne tag="h1" text="Heading One" />
+          <BodyOne text="body one Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" />
+          <BodyTwo text="body two Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" />
+          <BtnPrimary text="Fire Event" onClick={myClickEvent} size="medium" />
+        </PageMarketing>
+
+      </main>
     </div>
   );
 }

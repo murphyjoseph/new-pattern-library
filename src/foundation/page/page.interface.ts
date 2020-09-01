@@ -5,7 +5,7 @@ import { IPattern } from '../../shared/interfaces/pattern.interface';
 
 export interface IPage extends IPattern {
   title: string
-  margin: IStylesSpacing
+  margin?: IStylesSpacing
   padding: IStylesSpacing
   colorBackground?: TColors
 }
