@@ -1,0 +1,8 @@
+<svg class="icon__svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <title>hamburger</title>
+  <g id="icon_hamburger">
+    <path class="cls-1" d="M6.39,12.39H53.61a6.23,6.23,0,0,0,6.39-6,6.23,6.23,0,0,0-6.39-6H6.39A6.23,6.23,0,0,0,0,6.39,6.23,6.23,0,0,0,6.39,12.39Z"/>
+    <path class="cls-1" d="M53.61,24H6.39A6.23,6.23,0,0,0,0,30a6.23,6.23,0,0,0,6.39,6H53.61A6.23,6.23,0,0,0,60,30,6.23,6.23,0,0,0,53.61,24Z"/>
+    <path class="cls-1" d="M53.61,47.61H6.39a6,6,0,1,0,0,12H53.61a6,6,0,1,0,0-12Z"/>
+  </g>
+</svg>

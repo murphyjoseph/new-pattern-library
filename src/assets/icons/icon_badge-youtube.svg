@@ -1,0 +1,7 @@
+<svg class="icon__svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <title>youtube</title>
+  <g id="icon_badge-youtube">
+    <circle class="cls-1" cx="30" cy="30" r="30"/>
+    <path class="cls-2" d="M46.29,21.75a4.25,4.25,0,0,0-3-3C40.63,18,30,18,30,18s-10.63,0-13.28.72a4.25,4.25,0,0,0-3,3A45,45,0,0,0,13,30a45,45,0,0,0,.71,8.25,4.25,4.25,0,0,0,3,3C19.37,42,30,42,30,42s10.63,0,13.28-.72a4.25,4.25,0,0,0,3-3A45,45,0,0,0,47,30,45,45,0,0,0,46.29,21.75ZM26.52,35.06V24.94L35.41,30Z"/>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg class="icon__svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <title>chevron</title>
+  <g id="icon_chevron">
+    <path class="cls-1" d="M1,20.48a3.21,3.21,0,0,1-1-2.34A3.13,3.13,0,0,1,1,15.8l3-3a3.44,3.44,0,0,1,2.33-1.06,3,3,0,0,1,2.34.93L30,34,51.33,12.65a3,3,0,0,1,2.35-.89A3.39,3.39,0,0,1,56,12.81l3,3a3.33,3.33,0,0,1,0,4.68L32.31,47.18a3,3,0,0,1-4.26.41,2.33,2.33,0,0,1-.42-.41Z"/>
+  </g>
+</svg>

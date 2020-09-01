@@ -1,0 +1,13 @@
+// # # # # # # # # # # # # # # # # # # # # # # # # # # #  \\
+// ***************** CONSTANTS for branding *************** \\
+// # # # # # # # # # # # # # # # # # # # # # # # # # # #  \\
+
+@import "../base/alpha-base";
+
+$updated-map-branding: append(get-branding(), none 'none');
+
+:export {
+  @each $name, $value in $updated-map-branding {
+    #{$name}: #{$name};
+  }
+}

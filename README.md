@@ -1,3 +1,30 @@
+
+
+## Problems
+- Why are there multiple style tags all showing the same css?
+- How should we handle fixed values for dynamic patterns at foundational level?
++ e.g. labels shouldnt have the ability to change kind(variant) value
++ Should we maintain naming structure for those? e.g. if labels have use variant label-one should
+  trait be called main or mTraitTextMain and mTraitTextSub (where m stands for modified) that way
+  when you see m prefix you know that it's based on IText but has fixed defaults.
+
+CSS in JS
+https://2019.stateofcss.com/technologies/css-in-js/
+
+https://typedoc.org/
+auto gen typescript docs
+
+https://deno.land/
+a secure runtime for JS and TS
+
+If you make SCSS changes you'll need to generate new typings. The command to do that is below.
+```
+yarn tsm src -n "dashes"
+```
+Further documentation can be found here: https://github.com/skovy/typed-scss-modules
+
+#############################################
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

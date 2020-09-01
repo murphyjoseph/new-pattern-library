@@ -1,0 +1,6 @@
+<svg class="icon__svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <title>plus</title>
+  <g id="icon_plus">
+    <path class="cls-1" d="M53.57,23.57H36.43V6.43A6.43,6.43,0,0,0,30,0h0a6.43,6.43,0,0,0-6.43,6.43V23.57H6.43A6.43,6.43,0,0,0,0,30H0a6.43,6.43,0,0,0,6.43,6.43H23.57V53.57A6.43,6.43,0,0,0,30,60h0a6.43,6.43,0,0,0,6.43-6.43V36.43H53.57A6.43,6.43,0,0,0,60,30h0A6.43,6.43,0,0,0,53.57,23.57Z"/>
+  </g>
+</svg>

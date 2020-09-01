@@ -1,0 +1,7 @@
+<svg class="icon__svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <title>facebook</title>
+  <g id="icon_badge-facebook">
+    <circle class="cls-1" cx="30" cy="30" r="30"/>
+    <path id="f" class="cls-2" d="M32.39,45.5V31.38h4.74l.71-5.53H32.39V22.33c0-1.59.45-2.68,2.72-2.68H38V14.72a37.66,37.66,0,0,0-4.23-.22c-4.19,0-7.05,2.57-7.05,7.28v4.07H22v5.53h4.72V45.5Z"/>
+  </g>
+</svg>
