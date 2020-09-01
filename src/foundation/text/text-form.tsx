@@ -3,7 +3,7 @@ import { ITextForm, IText } from './text.interface';
 import { Text } from "./text";
 import _isFunction from 'lodash/isFunction';
 import { stylerAttributeAndClassSetup } from "../../shared/services/styler";
-import stylesTextAction from './text-action.scss';
+import stylesTextAction from './text-action.module.scss';
 
 interface ITraits {
   traits: ITextForm

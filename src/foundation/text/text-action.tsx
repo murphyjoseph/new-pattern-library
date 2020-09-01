@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { ITextAction, IText } from './text.interface';
 import { Text } from "./text";
 import _isFunction from 'lodash/isFunction';
-import stylesTextAction from './text-action.scss';
+import stylesTextAction from './text-action.module.scss';
 import { stylerAttributeAndClassSetup } from "../../shared/services/styler";
 import { capitalizeFirst } from '../../shared/utilities/capitalizeFirst';
 
@@ -16,6 +16,8 @@ export const TextAction: FC<ITraits> = ({
 }) => {
 
   const StylesTextAction = stylesTextAction as { [key: string]: string }
+
+  console.log(StylesTextAction)
 
   const { onClick, text: _text, ...remainder} = traits;
 
