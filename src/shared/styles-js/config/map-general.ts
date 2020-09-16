@@ -1,3 +1,18 @@
+export const mapGeneral = {
+  size: {
+    floor   : .25,
+    ceiling : 3
+  },
+  breakpoints: {
+    ems    : { breakpoint3: '13px', breakpoint4: '13px', breakpoint6: "13px" },
+    mobile : "breakpoint6"
+  }
+}
+
+
+
+
+
 export const stylesConfig = {
   labels: {
     sizes: {

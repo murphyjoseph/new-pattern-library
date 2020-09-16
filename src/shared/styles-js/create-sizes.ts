@@ -32,21 +32,11 @@ export const createSizeMap = (multiplier: number, floor?: number, ceiling?: numb
   const sizeIncrement = (sizeCeiling - sizeFloor)/sizeLabelLength;
   let size = 0
 
-  console.log("icrement")
-  console.log(sizeIncrement)
-
   for (let key of Object.keys(LABEL_SIZES)) {
-    // console.log(index); // "O", "5", "6"
-    // const key = Object.keys(LABEL_SIZES);
-    // key = size + sizeIncrement
-
 
     size = size === 0 ? sizeFloor : size + sizeIncrement;
-    // round(size, 2).toFixed(2)
     //turns out rounding decimals in javascript is a little bit tricky...
-    Object.assign(newSizeValues, {[key]: Math.round(size).toFixed(2)})
-    // var obj = {key1: "value1", key2: "value2"s};
-    // Object.assign(obj, {key3: "value3"});
+    Object.assign(newSizeValues, {[key]: Math.round( 100 * size )/ 100})
   }
 
   console.log(newSizeValues)

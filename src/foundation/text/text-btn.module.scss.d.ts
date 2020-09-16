@@ -1,3 +1,4 @@
+export const isDefault: string;
 export const isLarge: string;
 export const isMedium: string;
 export const isSmall: string;
