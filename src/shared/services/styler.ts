@@ -1,8 +1,8 @@
 import _remove from 'lodash/remove';
-import styles from "../styles/styles.module.scss";
+import styles from "../styles/styles.scss";
 import { IStylesBorder, IStylesMaxWidth, IStylesRounded, IStylesColor, IStylesPosition, IStylesSpacing, IStylesOverflow, IStylesShadow } from '../interfaces/styles.interface';
 import { TWhiteSpace, TDisplaySettings, TAlignmentText, TColors } from '../types/util-types';
-import { isRoundedFull, isRounded } from '../styles/styles.module.scss';
+import { isRoundedFull, isRounded } from '../styles/styles.scss';
 
 const Styles = styles as { [key: string]: string };
 

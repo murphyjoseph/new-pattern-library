@@ -7,6 +7,7 @@ export const mapGeneral = {
     ems    : { breakpoint3: '13px', breakpoint4: '13px', breakpoint6: "13px" },
     mobile : "breakpoint6"
   }
+
 }
 
 

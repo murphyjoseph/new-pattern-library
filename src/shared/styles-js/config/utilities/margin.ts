@@ -5,16 +5,15 @@ import { mapSizes } from '../map-sizes';
 import { TSpacingDirections } from '../../../types/util-types';
 
 interface IStylesSpacingJS {
-  direction?: TSpacingDirections,
-  size?: TLabelsSpacing
+  direction: TSpacingDirections,
+  size: TLabelsSpacing
 }
 
-export const padding = (params: IStylesSpacingJS) => {
+export const margin = (params: IStylesSpacingJS) => {
   if (!params.size) params.size = "size1"
-  if (!params.direction) params.direction = "all"
   if (params.direction === mapLabels.directions.spacing.all) {
     return {
-      padding: {
+      margin: {
         top: `${mapSizes.spacing[params.size]}em`,
         bottom: `${mapSizes.spacing[params.size]}em`,
         left: `${mapSizes.spacing[params.size]}em`,
@@ -23,7 +22,7 @@ export const padding = (params: IStylesSpacingJS) => {
     }
   } else if (params.direction === mapLabels.directions.spacing.vertical) {
     return {
-      padding: {
+      margin: {
         top: `${mapSizes.spacing[params.size]}em`,
         bottom: `${mapSizes.spacing[params.size]}em`,
         left: 0,
@@ -32,5 +31,3 @@ export const padding = (params: IStylesSpacingJS) => {
     }
   }
 }
-
-

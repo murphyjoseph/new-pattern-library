@@ -64,3 +64,13 @@ declare module '*.module.sass' {
   const classes: { readonly [key: string]: string };
   export default classes;
 }
+
+declare module '*.st.css' {
+  const stylesheet: import('@stylable/runtime').RuntimeStylesheet;
+  export = stylesheet;
+}
+
+declare module "*.scss" {
+  const styles: { [className: string]: string };
+  export default styles;
+}

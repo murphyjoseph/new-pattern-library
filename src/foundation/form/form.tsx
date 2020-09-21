@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import { IForm } from "./form.interface";
 import { stylerAttributeAndClassSetup } from "../../shared/services/styler";
-import mainStyles from '../../styles/styles.module.scss';
+import mainStyles from '../../shared/styles/styles.scss';
 import { TextForm } from "../text/text-form";
 
 interface Props {

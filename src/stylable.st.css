@@ -1,0 +1,23 @@
+:vars {
+  size1: 1em;
+  size2: 2em;
+}
+
+.root {}
+
+.padding {
+  -st-states: direction( enum(all, top, bottom, right, left) ),
+              size( enum(size1, size2) );
+}
+
+.block {
+  display: block;
+}
+
+.red {
+  color: red;
+}
+
+.padding:direction(all):size(size1) {
+  padding: value(size1);
+}
