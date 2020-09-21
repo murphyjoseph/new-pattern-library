@@ -10,24 +10,18 @@ interface ITraits {
 
 export const FieldInput: FC<ITraits> = ({ traits }) => {
 
-  const { traitLabel, isRequired, id, ...remainder } = traits
-
-  // more performance to reference object literal
-  const forTraitsLabel = {
-    main: traitLabel?.main,
-    secondary: traitLabel?.secondary,
-    isRequired: isRequired,
-    for: id
-  }
+  const { kind, traitLabel, isRequired, for: _for, ...remainder } = traits;
 
   return (
     <div {...stylerAttributeAndClassSetup(remainder)}>
-      <Label traits={forTraitsLabel} />
-      <input
-        id={traits.id}
-        type={traits.kind}
-      />
-      {/* validation and input description go here */}
+      <Label traits={({
+        main: traitLabel?.main,
+        secondary: traitLabel?.secondary,
+        isRequired: isRequired,
+        for: _for
+      })} />
+
+      <input id={_for} type={kind} />
     </div>
   )
 }
