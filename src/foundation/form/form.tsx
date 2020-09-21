@@ -9,7 +9,6 @@ interface Props {
 }
 
 export const Form: FC<Props> = ({ traits, children }) => {
-
   const MainStyles = mainStyles as { [key: string]: string }
 
   const { traitTextForm, name, onSubmit } = traits;

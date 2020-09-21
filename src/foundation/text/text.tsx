@@ -10,7 +10,6 @@ interface ITraits {
 }
 
 export const Text: FC<ITraits> = ({ traits }) => {
-
   const StylesText = stylesText as { [key: string]: string }
   const { tag: _tag, text, title, ...remainder } = traits
   const Tag: keyof JSX.IntrinsicElements = !!_tag ? _tag : "span"

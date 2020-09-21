@@ -10,8 +10,8 @@ import ConstantsColAuto from '../styles/constants/constant-col-auto.module.scss'
 import ConstantsColPercent from '../styles/constants/constant-col-percent.module.scss'
 import ConstantsColFixed from '../styles/constants/constant-col-width.module.scss'
 
-export type TBreakpoints = (typeof ConstantsColors)[keyof typeof ConstantsColors]
-export type TColors = (typeof ConstantsBreakpoints)[keyof typeof ConstantsBreakpoints]
+export type TBreakpoints = (typeof ConstantsBreakpoints)[keyof typeof ConstantsBreakpoints]
+export type TColors = (typeof ConstantsColors)[keyof typeof ConstantsColors]
 export type TSizeLabels = (typeof ConstantsLabelsSize)[keyof typeof ConstantsLabelsSize]
 export type TPositionLabels = (typeof ConstantsLabelsPosition)[keyof typeof ConstantsLabelsPosition]
 export type TDirectionLabels = (typeof ConstantsLabelsDirection)[keyof typeof ConstantsLabelsDirection]

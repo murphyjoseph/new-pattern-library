@@ -10,6 +10,7 @@ export const TextTitle: FC<IPropsTextTitle> = ({
   text: _text,
 }: IPropsTextTitle) => {
   const settings: IText = {
+    colorText: 'white',
     variant: 'primary',
     text: _text,
     tag: 'h1',
