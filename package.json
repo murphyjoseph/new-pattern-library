@@ -51,6 +51,7 @@
     "jest-environment-jsdom-fourteen": "1.0.1",
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
+    "jss": "10.4.0",
     "jss-plugin-camel-case": "^10.4.0",
     "jss-plugin-default-unit": "^10.4.0",
     "jss-plugin-global": "^10.4.0",
