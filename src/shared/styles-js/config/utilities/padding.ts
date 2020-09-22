@@ -4,6 +4,8 @@ import jss from 'jss'
 import { mapSizes } from '../map-sizes';
 import { TSpacingDirections } from '../../../types/util-types';
 
+export const test = "";
+
 interface IStylesSpacingJS {
   direction: TSpacingDirections,
   size: TLabelsSpacing
@@ -23,19 +25,19 @@ export const padding = (params: IStylesSpacingJS) => {
   }
 }
 
-const paddingAllSize12 = padding({size: "size12", direction: "all"})
+// const paddingAllSize12 = padding({size: "size12", direction: "all"})
 
 
 
-const stylesheet: any = jss.createStyleSheet({
-  // for (let key of Object.keys(mapSizes.spacing)) {
+// const stylesheet: any = jss.createStyleSheet({
+//   // for (let key of Object.keys(mapSizes.spacing)) {
 
-  // }
+//   // }
 
-  // utPadding: { padding: flex },
-  ...paddingAllSize12
-});
+//   // utPadding: { padding: flex },
+//   ...paddingAllSize12
+// });
 
-stylesheet.attach();
+// stylesheet.attach();
 
-export default stylesheet.classes;
+// export default stylesheet.classes;

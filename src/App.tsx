@@ -12,8 +12,7 @@ import { PageMarketing } from './components/pages/page-marketing';
 import { mapVariants } from './shared/styles-js/config/map-variants';
 import { setSizes } from './shared/styles-js/config/set-sizes';
 import { mapSizes } from './shared/styles-js/config/map-sizes';
-import { padding } from './shared/styles-js/config/utilities/padding';
-import classes from './shared/styles-js/config/utilities/padding';
+
 // import classes
 
 function App() {
@@ -21,14 +20,6 @@ function App() {
   const myClickEvent = () => {
     console.log("you clicked.")
   }
-
-  console.log(mapSizes)
-
-  console.log(mapVariants)
-
-  console.log("classes")
-  console.log(classes)
-
 
   return (
     <div className="App">
