@@ -11,7 +11,7 @@ interface IStylesSpacingJS {
   size: TLabelsSpacing
 }
 
-export const padding = (params: IStylesSpacingJS) => {
+export const stylePadding = (params: IStylesSpacingJS) => {
   if (!params.size) params.size = "size1"
   if (params.direction === mapLabels.directions.spacing.all) {
     return {
