@@ -1,41 +1,34 @@
-import { TMapLabels, TLabelsSpacing, mapLabels } from '../map-labels';
-import { IStylesSpacing } from '../../../interfaces/styles.interface';
-// import jss from 'jss'
+import { TLabelsSpacing, mapLabels } from '../map-labels';
 import { mapSizes } from '../map-sizes';
 import { TSpacingDirections } from '../../../types/util-types';
 
 interface IStylesSpacingJS {
-  direction: TSpacingDirections,
-  size: TLabelsSpacing
+  direction?: TSpacingDirections,
+  size?: TLabelsSpacing
 }
 
-export const padding = (params: IStylesSpacingJS) => {
+export const stylePadding = (params: IStylesSpacingJS) => {
   if (!params.size) params.size = "size1"
+  if (!params.direction) params.direction = "all"
   if (params.direction === mapLabels.directions.spacing.all) {
     return {
-      padding: `${mapSizes.spacing[params.size]}em`
+      padding: {
+        top: `${mapSizes.spacing[params.size]}em`,
+        bottom: `${mapSizes.spacing[params.size]}em`,
+        left: `${mapSizes.spacing[params.size]}em`,
+        right: `${mapSizes.spacing[params.size]}em`
+      }
     }
   } else if (params.direction === mapLabels.directions.spacing.vertical) {
     return {
-      paddingTop: `${mapSizes.spacing[params.size]}em`,
-      paddingBottom: `${mapSizes.spacing[params.size]}em`
+      padding: {
+        top: `${mapSizes.spacing[params.size]}em`,
+        bottom: `${mapSizes.spacing[params.size]}em`,
+        left: 0,
+        right: 0
+      }
     }
   }
 }
 
-const paddingAllSize12 = padding({size: "size12", direction: "all"})
 
-
-
-// const stylesheet: any = jss.createStyleSheet({
-//   // for (let key of Object.keys(mapSizes.spacing)) {
-
-//   // }
-
-//   // utPadding: { padding: flex },
-//   ...paddingAllSize12
-// });
-
-// stylesheet.attach();
-
-export default paddingAllSize12 // stylesheet.classes;

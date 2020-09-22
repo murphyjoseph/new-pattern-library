@@ -1,8 +1,8 @@
-import { IPattern } from '../../shared/interfaces/pattern.interface';
-import { IState } from '../../shared/interfaces/state.interface';
-import { IStylesSpacing, IStylesColor } from '../../shared/interfaces/styles.interface';
-import { IText, ITextForm } from '../text/text.interface';
-import { ILabel } from '../label/label.interface';
+import { ILabel } from "../label/label.interface";
+import { IText } from "../text/text.interface";
+import { IPattern } from "../../shared/interfaces/pattern.interface";
+import { IState } from "../../shared/interfaces/state.interface";
+import { IStylesColor, IStylesSpacing } from "../../shared/interfaces/styles.interface";
 
 type TKinds = "text" | "tel" | "email" | "password" | "checkbox" | "radio" | "number" | "zipcode" | "hidden";
 
@@ -32,8 +32,6 @@ export interface IFieldInput extends IPattern, IState, IStylesColor {
   validation?: () => {[key: string]: any},
   padding?: IStylesSpacing,
   margin?: IStylesSpacing,
-  id: string,
+  for: string,
   traitLabel?: ILabel
-  traitDescription?: IText
 }
-

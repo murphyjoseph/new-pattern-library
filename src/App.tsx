@@ -12,7 +12,10 @@ import { PageMarketing } from './components/pages/page-marketing';
 import { mapVariants } from './shared/styles-js/config/map-variants';
 import { setSizes } from './shared/styles-js/config/set-sizes';
 import { mapSizes } from './shared/styles-js/config/map-sizes';
-import classes, { padding } from './shared/styles-js/config/utilities/padding';
+import {render} from 'react-dom'
+import {createUseStyles} from 'react-jss'
+import { stylePadding } from './shared/styles-js/config/utilities/padding';
+import { cx, css } from 'emotion'
 
 // import classes
 
@@ -21,23 +24,48 @@ function App() {
     console.log('you clicked.');
   };
 
-  console.log(mapSizes);
+  // REACT-JSS
 
-  console.log(mapVariants);
+  const useStyles = createUseStyles({
+    padding: {...stylePadding({direction: "all", size: "size4"})}
+  })
 
-  console.log('classes');
-  console.log(classes);
+  const classes = useStyles()
+
+  // EMOTION
+  // https://emotion.sh/docs/emotion
+
+  const cls1 = css`
+    font-size: 20px;
+    background: green;
+  `
+  const cls2 = css`
+    font-size: 20px;
+    background: blue;
+  `
+
+  const foo = true
+  const bar = false
 
   return (
     <div className="App">
-      <header />
-      <main>
+      <header>
+
+      </header>
+      <main className={classes.padding}>
         <PageMarketing title="Examples">
           <HeadingOne tag="h1" text="Heading One" />
           {/* <div className={padding({size: "size12", direction: "all"})} /> */}
           <BodyOne text="body one Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" />
           <BodyTwo text="body two Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" />
           <BtnPrimary text="Fire Event" onClick={myClickEvent} size="medium" />
+          <div
+            className={cx(
+              { [cls1]: foo },
+              { [cls2]: bar }
+            )}>
+              Emotion Example
+          </div>
         </PageMarketing>
 
       </main>

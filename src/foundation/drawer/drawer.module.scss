@@ -1,0 +1,120 @@
+@import '../../styles/base/_alpha-base';
+@import '../../styles/mi-mixins/alpha-mixins';
+
+// # ========= ---  drawer STYLES --- ========== # \\
+
+.drawer-no-portal, .drawer-portal {
+  &.drawer-direction-top,
+  &.drawer-direction-bottom {
+    width: 100%;
+    @each $key, $value in get-sizes('drawer') {
+      &.drawer-#{$key} {
+        height: $value;
+      }
+    }
+  }
+}
+
+.drawer-portal {
+  max-width: 100%;
+  &.drawer-direction-right,
+  &.drawer-direction-left {
+    height: 100vh;
+  }
+}
+
+.drawer-no-portal {
+  &.drawer-direction-right,
+  &.drawer-direction-left {
+    height: 100%;
+  }
+}
+
+.drawer-no-portal, .drawer-portal {
+  &.drawer-direction-right,
+  &.drawer-direction-left {
+    @each $key, $value in get-sizes('drawer') {
+      &.drawer-#{$key} {
+        width: $value;
+      }
+    }
+  }
+}
+
+@each $key, $value in get-sizes('drawer') {
+  .drawer-#{$key} {
+    width: $value;
+  }
+}
+
+.drawer-portal, .drawer-no-portal {
+  background: get-color('white');
+  &.drawer-direction-right {
+    @include mi-shadow($direction: "left");
+  }
+  &.drawer-direction-left {
+    @include mi-shadow($direction: "right");
+  }
+  &.drawer-direction-top {
+    @include mi-shadow($direction: "bottom");
+  }
+  &.drawer-direction-bottom {
+    @include mi-shadow($direction: "top");
+  }
+}
+
+.drawer-no-portal {
+  &.drawer-direction-right {
+    right: 100%;
+    top: 0;
+  }
+  &.drawer-direction-left {
+    left: 100%;
+    top: 0;
+  }
+  &.drawer-direction-top {
+    top: 100%;
+    left: 0;
+  }
+  &.drawer-direction-bottom {
+    bottom: 100%;
+    left: 0;
+  }
+}
+
+.drawer-portal {
+  &.drawer-direction-right {
+    right: 0;
+    top: 0;
+  }
+  &.drawer-direction-left {
+    left: 0;
+    top: 0;
+  }
+  &.drawer-direction-top {
+    left: 0;
+    top: 0;
+  }
+  &.drawer-direction-bottom {
+    left: 0;
+    bottom: 0;
+  }
+}
+
+
+  .drawer-portal.drawer-direction-right {
+    right: 0;
+    top: 0;
+  }
+  .drawer-portal.drawer-direction-left {
+    left: 0;
+    top: 0;
+  }
+  .drawer-portal.drawer-direction-top {
+    left: 0;
+    top: 0;
+  }
+  .drawer-portal.drawer-direction-bottom {
+    left: 0;
+    bottom: 0;
+  }
