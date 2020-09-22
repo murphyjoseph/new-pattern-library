@@ -12,6 +12,7 @@ import { PageMarketing } from './components/pages/page-marketing';
 import { mapVariants } from './shared/styles-js/config/map-variants';
 import { setSizes } from './shared/styles-js/config/set-sizes';
 import { mapSizes } from './shared/styles-js/config/map-sizes';
+import {createUseStyles} from 'react-jss'
 
 // import classes
 
