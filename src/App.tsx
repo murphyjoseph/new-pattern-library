@@ -13,6 +13,7 @@ import { mapVariants } from './shared/styles-js/config/map-variants';
 import { setSizes } from './shared/styles-js/config/set-sizes';
 import { mapSizes } from './shared/styles-js/config/map-sizes';
 import {createUseStyles} from 'react-jss'
+import { stylePadding } from './shared/styles-js/config/utilities/padding';
 
 // import classes
 
@@ -22,12 +23,18 @@ function App() {
     console.log("you clicked.")
   }
 
+  const useStyles = createUseStyles({
+    padding: {...stylePadding({direction: "all", size: "size4"})}
+  })
+
+  const classes = useStyles()
+
   return (
     <div className="App">
       <header>
 
       </header>
-      <main>
+      <main className={classes.padding}>
         <PageMarketing title="Examples">
           <HeadingOne tag="h1" text="Heading One" />
           {/* <div className={padding({size: "size12", direction: "all"})} /> */}
