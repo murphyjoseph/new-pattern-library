@@ -41,13 +41,42 @@ const setDirection = (direction: any, size: any) => {
       };
   }
 }
+
+const setDirectionStyled = (direction: any, size: any) => {
+  const s = getSize(size);
+  switch (direction) {
+    case DIRECTIONS.LEFT:
+      return `padding-left: ${s};`;
+    case DIRECTIONS.RIGHT:
+      return `padding-right: ${s};`;
+    case DIRECTIONS.HORIZONTAL:
+      return `padding: 0 ${s};`;
+    case DIRECTIONS.VERTICAL:
+      return `padding: ${s} 0;`;
+    case DIRECTIONS.ALL:
+      return `padding: ${s};`;
+  }
+}
 export const stylePadding = (padding: IStylesSpacing) => {
   const {
     direction,
     size,
-    breakpointName,
-    breakpointDirection } = padding;
+    // breakpointName,
+    // breakpointDirection 
+  } = padding;
   return {
     ...setDirection(direction, size),
   }
 }
+
+export const getPaddingStyled = (padding: any) => {
+  const {
+    direction,
+    size,
+    // breakpointName,
+    // breakpointDirection 
+  } = padding;
+  return setDirectionStyled(direction, size);
+}
+
+

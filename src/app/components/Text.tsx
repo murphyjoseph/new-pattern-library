@@ -8,11 +8,7 @@ interface ITraits {
 }
 
 export const Text = ({ traits }: any) => {
-  const styles = {
-    traits,
-    bodyPadding: '10px',
-  }
-  const classes: any = useStyles(styles);
+  const classes: any = useStyles(traits);
   const { tag: _tag, text, variant } = traits;
   const Tag: keyof JSX.IntrinsicElements = !!_tag ? _tag : "span";
   return (
