@@ -8,10 +8,18 @@ interface IStylesSpacingJS {
   size: TLabelsSpacing
 }
 
+export const paddingAllSize1 = css`padding: ${mapSizes.spacing["size1"]}em`
+export const paddingAllSize2 = css`padding: ${mapSizes.spacing["size2"]}em`
+export const paddingAllSize3 = css`padding: ${mapSizes.spacing["size3"]}em`
+export const paddingAllSize4 = css`padding: ${mapSizes.spacing["size4"]}em`
+export const paddingAllSize5 = css`padding: ${mapSizes.spacing["size5"]}em`
+export const paddingAllSize6 = css`padding: ${mapSizes.spacing["size6"]}em`
+
 export const linariaPadding = (_direction: TSpacingDirections, _size: any) => {
+  const size = "1em"
   return (
 
-    css`padding: 1em`
+    css`padding: ${mapSizes.spacing["size5"]}em`
   )
   // console.log("params")
   // console.log(_params)

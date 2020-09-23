@@ -17,8 +17,10 @@ import {createUseStyles} from 'react-jss'
 import { stylePadding } from './shared/styles-js/config/utilities/padding';
 // import { cx, css } from 'emotion'
 import { css, cx } from 'linaria';
-import { linariaPadding } from './shared/styles-js/config/utilities/linaria-padding';
+import { linariaPadding, paddingAllSize1, paddingAllSize5 } from './shared/styles-js/config/utilities/linaria-padding';
 // import classes
+
+export const test = css`background: red`
 
 function App() {
 
@@ -65,6 +67,7 @@ function App() {
   // const padding = linariaPadding({direction: "all", size: "size5"})
 
 
+
   return (
     <div className="App">
       <header>
@@ -84,7 +87,8 @@ function App() {
             )}>
               Emotion Example
           </div> */}
-          <h1 className={cx(header, padding)}> Linaria </h1>
+          <h1 className={test}> Linaria </h1>
+          <h2 className={paddingAllSize5}> Linaria2 </h2>
 
           <div>
 
