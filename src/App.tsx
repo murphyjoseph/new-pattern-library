@@ -15,8 +15,9 @@ import { mapSizes } from './shared/styles-js/config/map-sizes';
 import {render} from 'react-dom'
 import {createUseStyles} from 'react-jss'
 import { stylePadding } from './shared/styles-js/config/utilities/padding';
-import { cx, css } from 'emotion'
-
+// import { cx, css } from 'emotion'
+import { css, cx } from 'linaria';
+import { linariaPadding } from './shared/styles-js/config/utilities/linaria-padding';
 // import classes
 
 function App() {
@@ -36,17 +37,33 @@ function App() {
   // EMOTION
   // https://emotion.sh/docs/emotion
 
-  const cls1 = css`
-    font-size: 20px;
-    background: green;
-  `
-  const cls2 = css`
-    font-size: 20px;
-    background: blue;
-  `
+  // const cls1 = css`
+  //   font-size: 20px;
+  //   background: green;
+  // `
+  // const cls2 = css`
+  //   font-size: 20px;
+  //   background: blue;
+  // `
+  // const foo = true
+  // const bar = false
 
-  const foo = true
-  const bar = false
+  // LINARIA
+
+  // import { modularScale, hiDPI } from 'polished';
+  // import fonts from './fonts';
+
+  // Write your styles in `css` tag
+  const header = css`
+    text-transform: uppercase;
+    font-size: 14px;
+  `;
+
+  const padding = linariaPadding("all", "size5")
+
+
+  // const padding = linariaPadding({direction: "all", size: "size5"})
+
 
   return (
     <div className="App">
@@ -60,12 +77,17 @@ function App() {
           <BodyOne text="body one Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" />
           <BodyTwo text="body two Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" />
           <BtnPrimary text="Fire Event" onClick={myClickEvent} size="medium" />
-          <div
+          {/* <div
             className={cx(
               { [cls1]: foo },
               { [cls2]: bar }
             )}>
               Emotion Example
+          </div> */}
+          <h1 className={cx(header, padding)}> Linaria </h1>
+
+          <div>
+
           </div>
         </PageMarketing>
 

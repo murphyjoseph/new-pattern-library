@@ -78,6 +78,7 @@ module.exports = function(webpackEnv) {
         options: paths.publicUrlOrPath.startsWith('.')
           ? { publicPath: '../../' }
           : {},
+          hmr: process.env.NODE_ENV !== 'production'
       },
       {
         loader: require.resolve('css-loader'),
@@ -336,7 +337,7 @@ module.exports = function(webpackEnv) {
                 formatter: require.resolve('react-dev-utils/eslintFormatter'),
                 eslintPath: require.resolve('eslint'),
                 resolvePluginsRelativeTo: __dirname,
-                
+
               },
               loader: require.resolve('eslint-loader'),
             },
@@ -364,33 +365,70 @@ module.exports = function(webpackEnv) {
             {
               test: /\.(js|mjs|jsx|ts|tsx)$/,
               include: paths.appSrc,
-              loader: require.resolve('babel-loader'),
-              options: {
-                customize: require.resolve(
-                  'babel-preset-react-app/webpack-overrides'
-                ),
-                
-                plugins: [
-                  [
-                    require.resolve('babel-plugin-named-asset-import'),
-                    {
-                      loaderMap: {
-                        svg: {
-                          ReactComponent:
-                            '@svgr/webpack?-svgo,+titleProp,+ref![path]',
+              use: [
+                {
+                  loader: require.resolve('babel-loader'),
+                  options: {
+                    customize: require.resolve(
+                      'babel-preset-react-app/webpack-overrides'
+                    ),
+                    plugins: [
+                      [
+                        require.resolve('babel-plugin-named-asset-import'),
+                        {
+                          loaderMap: {
+                            svg: {
+                              ReactComponent:
+                                '@svgr/webpack?-svgo,+titleProp,+ref![path]',
+                            },
+                          },
                         },
-                      },
-                    },
-                  ],
-                ],
-                // This is a feature of `babel-loader` for webpack (not Babel itself).
-                // It enables caching results in ./node_modules/.cache/babel-loader/
-                // directory for faster rebuilds.
-                cacheDirectory: true,
-                // See #6846 for context on why cacheCompression is disabled
-                cacheCompression: false,
-                compact: isEnvProduction,
-              },
+                      ],
+                    ],
+                    // This is a feature of `babel-loader` for webpack (not Babel itself).
+                    // It enables caching results in ./node_modules/.cache/babel-loader/
+                    // directory for faster rebuilds.
+                    cacheDirectory: true,
+                    // See #6846 for context on why cacheCompression is disabled
+                    cacheCompression: false,
+                    compact: isEnvProduction,
+                  },
+                },
+                {
+                  loader: require.resolve('linaria/loader'),
+                  options: {
+                    sourceMap: isEnvDevelopment,
+                    cacheDirectory: './src/.linaria-cache'
+                  },
+                }
+              ],
+              // loader: require.resolve('babel-loader'),
+              // options: {
+              //   customize: require.resolve(
+              //     'babel-preset-react-app/webpack-overrides'
+              //   ),
+
+              //   plugins: [
+              //     [
+              //       require.resolve('babel-plugin-named-asset-import'),
+              //       {
+              //         loaderMap: {
+              //           svg: {
+              //             ReactComponent:
+              //               '@svgr/webpack?-svgo,+titleProp,+ref![path]',
+              //           },
+              //         },
+              //       },
+              //     ],
+              //   ],
+              //   // This is a feature of `babel-loader` for webpack (not Babel itself).
+              //   // It enables caching results in ./node_modules/.cache/babel-loader/
+              //   // directory for faster rebuilds.
+              //   cacheDirectory: true,
+              //   // See #6846 for context on why cacheCompression is disabled
+              //   cacheCompression: false,
+              //   compact: isEnvProduction,
+              // },
             },
             // Process any JS outside of the app with Babel.
             // Unlike the application JS, we only compile the standard ES features.
@@ -406,12 +444,12 @@ module.exports = function(webpackEnv) {
                   [
                     require.resolve('babel-preset-react-app/dependencies'),
                     { helpers: true },
-                  ],
+                  ]
                 ],
                 cacheDirectory: true,
                 // See #6846 for context on why cacheCompression is disabled
                 cacheCompression: false,
-                
+
                 // Babel sourcemaps are needed for debugging into node_modules
                 // code.  Without the options below, debuggers like VSCode
                 // show incorrect code and set breakpoints on the wrong lines.
@@ -567,12 +605,21 @@ module.exports = function(webpackEnv) {
       // See https://github.com/facebook/create-react-app/issues/186
       isEnvDevelopment &&
         new WatchMissingNodeModulesPlugin(paths.appNodeModules),
+      // isEnvProduction &&
+      //   new MiniCssExtractPlugin({
+      //     // Options similar to the same options in webpackOptions.output
+      //     // both options are optional
+      //     filename: 'static/css/[name].[contenthash:8].css',
+      //     chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
+      //   }),
+      isEnvDevelopment &&
+        new MiniCssExtractPlugin({
+          filename: 'styles.css'
+        }),
+
       isEnvProduction &&
         new MiniCssExtractPlugin({
-          // Options similar to the same options in webpackOptions.output
-          // both options are optional
-          filename: 'static/css/[name].[contenthash:8].css',
-          chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
+          filename: 'styles-[contenthash].css'
         }),
       // Generate an asset manifest file with the following content:
       // - "files" key: Mapping of all asset filenames to their corresponding
