@@ -2,11 +2,11 @@ import React from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import './Main.css';
 import { TextTitle } from './components/TextTitle';
-import { PaneOne } from './branded/PaneOne';
-import { HeadingOne } from './HeadingOne';
+import { HeadingOne } from './branded/HeadingOne';
 import { theme } from './theme';
-import { HeadingOneStyled } from './HeadingOneStyled';
+import { HeadingOneStyled } from './branded/HeadingOneStyled';
 import { HeadingOneEmotion } from './branded/HeadingOneEmotion';
+import { PrimaryButton } from './branded/PrimaryButton';
 
 const Main = () => {
   return (
@@ -16,19 +16,12 @@ const Main = () => {
           <TextTitle text="Oh Heyyyyy" />
           <HeadingOne tag="h1" text="My Heading" />
           <HeadingOneEmotion tag="h1" text="Emotion" />
-          <HeadingOneEmotion tag="h1" text="Emotion Using an Obj" jssObj/>
+          <HeadingOneEmotion tag="h1" text="Emotion Using an Obj" jssObj />
           <HeadingOneStyled tag="h1" text="My Styled Heading" />
           <HeadingOneStyled isMaterial tag="h1" text="My Styled Material Heading" />
         </section>
         <section style={{ margin: 'auto' }}>
-          <PaneOne
-            bar="hi"
-            content={(
-              <div>
-                <p>this is my lazy attempt at content</p>
-                <p>as long as it looks okay <span role="img" aria-label="ayyy">👍</span></p>
-              </div>)}
-          />
+          <PrimaryButton label="click me" size="small"/>
         </section>
       </div>
     </ThemeProvider>

@@ -1,4 +1,4 @@
-export const mapColors = {
+export const mapColors: Record<string, string> = {
   global          : "hsla(0, 0%, 15%, 1)",
   globalLight1    : "hsla(0, 0%, 25%, 1)",
   globalDark1     : "hsla(0, 0%, 5%, 1)",

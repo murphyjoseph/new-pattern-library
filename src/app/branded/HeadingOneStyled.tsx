@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { IText } from '../foundation/text/text.interface';
-import { Text } from './components/Text-styled';
+import { IText } from '../../foundation/text/text.interface';
+import { Text } from '../components/Text-styled';
 
 export interface IPropsHeadingOne {
   text: string;
