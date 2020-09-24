@@ -6,6 +6,7 @@ import { PaneOne } from './branded/PaneOne';
 import { HeadingOne } from './HeadingOne';
 import { theme } from './theme';
 import { HeadingOneStyled } from './HeadingOneStyled';
+import { HeadingOneEmotion } from './branded/HeadingOneEmotion';
 
 const Main = () => {
   return (
@@ -14,6 +15,8 @@ const Main = () => {
         <section>
           <TextTitle text="Oh Heyyyyy" />
           <HeadingOne tag="h1" text="My Heading" />
+          <HeadingOneEmotion tag="h1" text="Emotion" />
+          <HeadingOneEmotion tag="h1" text="Emotion Using an Obj" jssObj/>
           <HeadingOneStyled tag="h1" text="My Styled Heading" />
           <HeadingOneStyled isMaterial tag="h1" text="My Styled Material Heading" />
         </section>
