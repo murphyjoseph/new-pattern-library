@@ -17,7 +17,7 @@ import {createUseStyles} from 'react-jss'
 import { stylePadding } from './shared/styles-js/config/utilities/padding';
 // import { cx, css } from 'emotion'
 import { css, cx } from 'linaria';
-import { linariaPadding } from './shared/styles-js/config/utilities/linaria-padding';
+import { linariaPadding, utilityPadding } from './shared/styles-js/config/utilities/linaria-padding';
 // import classes
 
 function App() {
@@ -59,7 +59,9 @@ function App() {
     font-size: 14px;
   `;
 
-  const padding = linariaPadding("all", "size5")
+  const padding = linariaPadding("all", "size5");
+
+  console.log(utilityPadding)
 
 
   // const padding = linariaPadding({direction: "all", size: "size5"})

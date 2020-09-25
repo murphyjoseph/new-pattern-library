@@ -8,6 +8,18 @@ interface IStylesSpacingJS {
   size: TLabelsSpacing
 }
 
+export let utilityPadding: any = {}
+
+Object.keys(mapLabels.directions.spacing).forEach(direction => {
+  Object.keys(mapLabels.sizes).forEach(size => {
+    console.log(size)
+    let style = {padding: `${mapSizes.spacing[size]}em`}
+    utilityPadding[`${direction}${size}`] = css`${style}`
+  })
+});
+
+
+
 export const linariaPadding = (_direction: TSpacingDirections, _size: any) => {
   return (
 

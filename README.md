@@ -75,3 +75,27 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+
+
+STYLABLE (wix)
+https://stylable.io/docs/get-started
+https://24ways.org/2017/styling-components-typed-css-with-stylable/
+
+CSS BLOCKS (linkedin)
+https://css-blocks.com/
+
+Comparisons
+https://github.com/wix/stylable/issues/359
+
+CSS in JS libraries still present same problem of doing scoped CSS which is that there are global styles. Scoped css is good for tree shaking but creates lots of redundancies and can also make it more difficult to be able to create global styles to acheive consistency that could be done with our existing system. But SASS isn't necessarily the future and that's something that I acknolwedge. The two css processesors above feel like the future to me and seem to be a better bridge between javascript and css than sass is.
+
+https://www.npmtrends.com/css-blocks-vs-radium-vs-stylable-vs-styled-components
+
+
+
+?? https://blog.logrocket.com/5-things-you-can-do-in-css-in-js-that-you-didnt-know-about-c422fb67ceb6/
+
+
