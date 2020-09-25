@@ -10,7 +10,6 @@ interface ISetSizesParams {
 }
 
 export const setSizes = (params: ISetSizesParams) => {
-  console.log('SET SIZES');
   let {
     multiplier,
     floor,

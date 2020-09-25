@@ -1,11 +1,12 @@
 import { stylesConfig } from "./map-config";
-import round from 'lodash'
 
-// function roundToTwo(val: any) {
-//   return +(Math.round(val + "e+2")  + "e-2");
-// }
-
-export const createSizeMap = (multiplier: number, floor?: number, ceiling?: number, sizePrefix?: string, sizeSuffix?: string) => {
+export const createSizeMap = (
+  multiplier: number,
+  floor?: number,
+  ceiling?: number,
+  sizePrefix?: string,
+  sizeSuffix?: string
+) => {
 
   const {
     labels: {
@@ -29,14 +30,14 @@ export const createSizeMap = (multiplier: number, floor?: number, ceiling?: numb
 
   sizeFloor = sizeFloor * multiplier;
   sizeCeiling = sizeCeiling * multiplier;
-  const sizeIncrement = (sizeCeiling - sizeFloor)/sizeLabelLength;
+  const sizeIncrement = (sizeCeiling - sizeFloor) / sizeLabelLength;
   let size = 0
 
   for (let key of Object.keys(LABEL_SIZES)) {
 
     size = size === 0 ? sizeFloor : size + sizeIncrement;
     //turns out rounding decimals in javascript is a little bit tricky...
-    Object.assign(newSizeValues, {[key]: Math.round( 100 * size )/ 100})
+    Object.assign(newSizeValues, { [key]: Math.round(100 * size) / 100 })
   }
 
   console.log(newSizeValues)
