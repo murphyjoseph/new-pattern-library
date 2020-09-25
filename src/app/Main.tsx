@@ -7,6 +7,7 @@ import { theme } from './theme';
 import { HeadingOneStyled } from './branded/HeadingOneStyled';
 import { HeadingOneEmotion } from './branded/HeadingOneEmotion';
 import { PrimaryButton } from './branded/PrimaryButton';
+import { HeadingOneAphrodite } from './branded/HeadingOneAphrodite';
 
 const Main = () => {
   return (
@@ -14,11 +15,12 @@ const Main = () => {
       <div className="main">
         <section>
           <TextTitle text="Oh Heyyyyy" />
-          <HeadingOne tag="h1" text="My Heading" />
-          <HeadingOneEmotion tag="h1" text="Emotion" />
-          <HeadingOneEmotion tag="h1" text="Emotion Using an Obj" jssObj />
+          <HeadingOne tag="h1" text="Styled with React-JSS" />
+          <HeadingOneEmotion tag="h1" text="Styled with Emotion" />
+          <HeadingOneEmotion tag="h1" text="Styled Emotion Using an Obj" jssObj />
           <HeadingOneStyled tag="h1" text="My Styled Heading" />
           <HeadingOneStyled isMaterial tag="h1" text="My Styled Material Heading" />
+          <HeadingOneAphrodite tag="h1" text="Styled with Aphrodite" />
         </section>
         <section style={{ margin: 'auto' }}>
           <PrimaryButton label="click me" size="small"/>

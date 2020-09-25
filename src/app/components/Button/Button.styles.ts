@@ -57,6 +57,8 @@ export const setButtonTheme = (
     border-color: ${borderColor};
     color: ${text};
   `;
+
+
 export const getButtonTheme = (variant: any) => {
   console.log(theme)
   const { btns: { skins } } = theme;
