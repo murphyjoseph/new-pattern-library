@@ -61,7 +61,22 @@ function App() {
 
   const padding = linariaPadding("all", "size5");
 
-  console.log(utilityPadding)
+  // console.log(utilityPadding);
+  let myStyles: any = {};
+
+  ['all', 'top', 'bottom', 'right', 'left'].forEach(direction => {
+    ['size1', 'size2', 'size3', 'size4', 'size5'].forEach(size => {
+      console.log(direction)
+      // let style = {padding: `${mapSizes.spacing[size]}em`}
+      // utilityPadding[`${direction}${size}`] = css`${style}`
+      myStyles = css`
+        .myPadding${direction}${size}: {
+          padding: ${size}em;
+        }
+      `
+
+    })
+  });
 
 
   // const padding = linariaPadding({direction: "all", size: "size5"})
