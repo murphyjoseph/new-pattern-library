@@ -8,6 +8,7 @@ import { HeadingOneStyled } from './branded/HeadingOneStyled';
 import { HeadingOneEmotion } from './branded/HeadingOneEmotion';
 import { PrimaryButton } from './branded/PrimaryButton';
 import { HeadingOneAphrodite } from './branded/HeadingOneAphrodite';
+import { PrimaryOutlineButton } from './branded/PrimaryOutlineButton';
 
 const Main = () => {
   return (
@@ -24,6 +25,7 @@ const Main = () => {
         </section>
         <section style={{ margin: 'auto' }}>
           <PrimaryButton label="click me" size="small"/>
+          <PrimaryOutlineButton label="or click me" size="medium"/>
         </section>
       </div>
     </ThemeProvider>

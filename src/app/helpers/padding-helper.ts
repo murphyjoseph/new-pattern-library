@@ -79,4 +79,3 @@ export const getPaddingStyled = (padding: any) => {
   return setDirectionStyled(direction, size);
 }
 
-

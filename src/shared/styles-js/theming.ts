@@ -26,6 +26,18 @@ export const theme: Record<string, any> = {
           border: mapColors['primaryLight1'],
           text: mapColors['white']
         }
+      },
+      primaryOutline: {
+        main: {
+          bg: mapColors['white'],
+          border: mapColors['primary'],
+          text: mapColors['primary']
+        },
+        hover: {
+          bg: mapColors['primaryLight1'],
+          border: mapColors['primaryLight1'],
+          text: mapColors['primaryDark1']
+        }
       }
     }
   }

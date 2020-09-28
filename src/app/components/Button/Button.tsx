@@ -7,10 +7,9 @@ interface ITraits {
 
 export const Button = ({ traits }: any) => {
   const { label, size, variant } = traits;
-  console.log(getButtonTheme(variant))
-  return <button css={
-    [buttonBase,
-      getButtonSize(size),
-      getButtonTheme(variant)
-    ]}>{label}</button>
+
+  return <button css={[buttonBase,
+    getButtonSize(size),
+    getButtonTheme(variant)
+  ]}>{label}</button>
 }

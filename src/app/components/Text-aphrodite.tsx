@@ -17,10 +17,6 @@ const styles = StyleSheet.create({
   }
 });
 
-// const altStyle = (jssObj: any) => (css({
-//   color: 'goldenrod',
-//   textTransform: jssObj ? 'uppercase' : 'lowercase'
-// }))
 export const TextAphrodite = ({ traits }: any) => {
   const { tag: _tag, text } = traits;
   const Tag = !!_tag ? _tag : "span";

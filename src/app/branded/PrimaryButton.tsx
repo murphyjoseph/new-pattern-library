@@ -8,7 +8,7 @@ export const PrimaryButton = ({
   const settings: any = {
     variant: 'primary',
     label,
-    size
+    size,
   };
   return <Button traits={settings} />
 }
