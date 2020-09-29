@@ -3,6 +3,8 @@ import styles from "../styles/styles.module.scss";
 import { IStylesBorder, IStylesMaxWidth, IStylesRounded, IStylesColor, IStylesPosition, IStylesSpacing, IStylesOverflow, IStylesShadow } from '../interfaces/styles.interface';
 import { TWhiteSpace, TDisplaySettings, TAlignmentText, TColors } from '../types/util-types';
 import { isRoundedFull, isRounded } from '../styles/styles.module.scss';
+import '@compiled/css-in-js';
+import { mapColors } from '../styles-js/config/map-colors';
 
 const Styles = styles as { [key: string]: string };
 
@@ -12,9 +14,10 @@ export const styleBorder = (border: IStylesBorder) => {
       const size = `-${border.size}`;
       const direction = `-${border.direction}`;
       const color = `-${border.color}`;
-      return (
-        Styles[`mo-color-border${direction}${color}${size}`]
-      )
+      // return (
+      //   Styles[`mo-color-border${direction}${color}${size}`]
+      // )
+      return {}
     } else {
       console.warn("No size, color, and or direction was set on border object.");
     }
@@ -28,60 +31,72 @@ export const styleMaxWidth = (maxWidth: IStylesMaxWidth) => {
         const size = `-${maxWidth.size}`
         const breakpointName = !!maxWidth.breakpointName ? `-${maxWidth.breakpointName}` : ""
         const breakpointDirection = !!maxWidth.breakpointDirection ? `-${maxWidth.breakpointDirection}` : ""
-        return (
-          Styles[`ut-max-width${size}${breakpointDirection}${breakpointName}`]
-        )
+        // return (
+        //   Styles[`ut-max-width${size}${breakpointDirection}${breakpointName}`]
+        // )
+        return {}
       });
     } else {
       const size = `-${maxWidth.size}`
       const breakpointName = `-${maxWidth.breakpointName}`
       const breakpointDirection = `-${maxWidth.breakpointDirection}`
-      return (
-        Styles[`ut-max-width${size}${breakpointDirection}${breakpointName}`]
-      )
+      // return (
+      //   Styles[`ut-max-width${size}${breakpointDirection}${breakpointName}`]
+      // )
+      return {}
     }
   }
 }
 
-export const styleWhiteSpace = (whiteSpace: TWhiteSpace) => {
-  return Styles[`ut-white-space-${whiteSpace}`]
+export const styleWhiteSpace = (_whiteSpace: TWhiteSpace) => {
+  // return Styles[`ut-white-space-${_whiteSpace}`]
+  return { whiteSpace: _whiteSpace }
 }
 
-export const styleDisplay = (display: TDisplaySettings) => {
-  return Styles[`ut-display-${display}`]
+export const styleDisplay = (_display: TDisplaySettings) => {
+  // return Styles[`ut-display-${_display}`]
+  return { display: _display }
 }
 
-export const styleTextAlignment = (textAlignment: TAlignmentText) => {
-  return Styles[`ut-align-text-${textAlignment}`]
+export const styleTextAlignment = (_textAlignment: TAlignmentText) => {
+  // return Styles[`ut-align-text-${textAlignment}`]
+  return { textAlignment: _textAlignment }
 }
 
 // add pointer if element has click event
 export const styleOnClick = (onClick: () => void) => {
-  if (!!onClick) return Styles['ut-clicker-pointer']
+  // if (!!onClick) return Styles['ut-clicker-pointer']
+  if (!!onClick) return { cursor: "pointer" }
 }
 
 export const styleIsRounded = (isRounded: IStylesRounded) => {
-  return Styles['ut-rounded']
+  // return Styles['ut-rounded']
+  return {}
 }
 
 export const styleIsRoundedFull = (isRoundedFull: IStylesRounded) => {
-  return Styles['ut-rounded-full']
+  // return Styles['ut-rounded-full']
+  return {}
 }
 
 export const styleColorStroke = (colorStroke: TColors) => {
-  return Styles[`mo-color-stroke-${colorStroke}`]
+  // return Styles[`mo-color-stroke-${colorStroke}`]
+  return {}
 }
 
 export const styleColorFill = (colorFill: TColors) => {
-  return Styles[`mo-color-fill-${colorFill}`]
+  // return Styles[`mo-color-fill-${colorFill}`]
+  return {}
 }
 
 export const styleColorBackground = (colorBackground: TColors) => {
-  return Styles[`mo-color-bg-${colorBackground}`]
+  // return Styles[`mo-color-bg-${colorBackground}`]
+  return { background: mapColors[colorBackground] }
 }
 
 export const styleColorText = (colorText: TColors) => {
-  return Styles[`mo-color-text-${colorText}`]
+  // return Styles[`mo-color-text-${colorText}`]
+  return { color: mapColors[colorText] }
 }
 
 // IStylesPosition
@@ -95,7 +110,8 @@ export const stylePosition = (position: any) => {
       console.warn("A minimum of direction and type must be defined for adding position.");
     if (!!size && !sizeType || !size && !!sizeType)
       console.warn("You must include both sizeType and size or neither for adding position.");
-      return Styles[`ut-position${type}${direction}${sizeType}${size}`]
+      // return Styles[`ut-position${type}${direction}${sizeType}${size}`]
+      return {}
   }
 }
 
@@ -106,7 +122,8 @@ export const stylePadding = (padding: IStylesSpacing) => {
       const size = `-${padding.size}`;
       const breakpointName = !!padding.breakpointName ? `-${padding.breakpointName}` : "";
       const breakpointDirection = !!padding.breakpointDirection ? `-${padding.breakpointDirection}` : "";
-      return Styles[`ut-padding${direction}${size}${breakpointDirection}${breakpointName}`]
+      // return Styles[`ut-padding${direction}${size}${breakpointDirection}${breakpointName}`]
+      return {}
     });
   } else {
     const direction = `-${padding.direction}`;
@@ -114,7 +131,8 @@ export const stylePadding = (padding: IStylesSpacing) => {
     const breakpointName = !!padding.breakpointName ? `-${padding.breakpointName}` : "";
     const breakpointDirection = !!padding.breakpointDirection ? `-${padding.breakpointDirection}` : "";
     console.log(`ut-padding${direction}${size}${breakpointDirection}${breakpointName}`)
-    return Styles[`ut-padding${direction}${size}${breakpointDirection}${breakpointName}`];
+    // return Styles[`ut-padding${direction}${size}${breakpointDirection}${breakpointName}`];
+    return {}
   }
 }
 
@@ -125,14 +143,16 @@ export const styleMargin = (margin: IStylesSpacing) => {
       const size = `-${margin.size}`;
       const breakpointName = !!margin.breakpointName ? `-${margin.breakpointName}` : "";
       const breakpointDirection = !!margin.breakpointDirection ? `-${margin.breakpointDirection}` : "";
-      return Styles[`ut-margin${direction}${size}${breakpointDirection}${breakpointName}`]
+      // return Styles[`ut-margin${direction}${size}${breakpointDirection}${breakpointName}`]
+      return {}
     });
   } else {
     const direction = `-${margin.direction}`;
     const size = `-${margin.size}`;
     const breakpointName = !!margin.breakpointName ? `-${margin.breakpointName}` : ""
     const breakpointDirection = !!margin.breakpointDirection ? `-${margin.breakpointDirection}` : ""
-    return Styles[`ut-margin${direction}${size}${breakpointDirection}${breakpointName}`]
+    // return Styles[`ut-margin${direction}${size}${breakpointDirection}${breakpointName}`]
+    return {}
   }
 }
 
@@ -143,7 +163,8 @@ export const styleOverflow = (overflow: IStylesOverflow) => {
   }
   const direction = `-${overflow.direction}`;
   const type = `-${overflow.type}`;
-  return Styles[`ut-overflow${direction}${type}`]
+  // return Styles[`ut-overflow${direction}${type}`]
+  return {}
 }
 
 // SHADOW CONCATENATION
@@ -151,7 +172,8 @@ export const styleShadow = (shadow: IStylesShadow) => {
   if (!!shadow.size && !!shadow.direction) {
     const direction = `-${shadow.direction}`;
     const size = `-${shadow.size}`;
-    return Styles[`ut-shadow${direction}${size}`]
+    // return Styles[`ut-shadow${direction}${size}`]
+    return {}
   }
 }
 
@@ -201,7 +223,16 @@ export const styler = ({shadow, overflow, margin, padding, position, colorText, 
     if (!!css.internal) CssClassesArray.push(css.internal)
   }
 
-  return CssClassesArray;
+  // return CssClassesArray;
+
+  let cssProperties = {}
+  cssProperties = {
+    ...!!colorBackground && styleColorBackground(colorBackground),
+    ...!!colorText && styleColorText(colorText),
+    ...!!display && styleDisplay(display)
+  }
+
+  return cssProperties
 
   // const _shadow = !!shadow ? styleShadow(shadow) : "";
   // const _overflow = !!overflow ? styleOverflow(overflow) : "";
@@ -226,6 +257,10 @@ export const styler = ({shadow, overflow, margin, padding, position, colorText, 
 
 export const stylerAttributeAndClassSetup = (bindings: any) => {
   const stylerClasses = styler(bindings)
-  if (!!stylerClasses && stylerClasses.length > 0) return { className: stylerClasses }
+  console.log("FUCK")
+  console.log(stylerClasses)
+  // if (!!stylerClasses && stylerClasses.length > 0) return { className: stylerClasses }
+  // if (!!stylerClasses && stylerClasses.length > 0) return { css: stylerClasses }
+  return { css: styler(bindings) }
   return
 }

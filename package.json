@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.9.0",
+    "@compiled/babel-plugin-css-in-js": "^0.4.7",
+    "@compiled/css-in-js": "^0.4.7",
+    "@compiled/ts-transform-css-in-js": "^0.4.7",
     "@storybook/addon-actions": "6.0.21",
     "@storybook/addon-docs": "6.0.21",
     "@storybook/addon-essentials": "6.0.21",
@@ -120,6 +123,7 @@
     "@storybook/react": "^6.0.20",
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1",
+    "ttypescript": "^1.5.12",
     "typed-scss-modules": "^2.0.1"
   },
   "jest": {

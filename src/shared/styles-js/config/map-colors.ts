@@ -1,4 +1,4 @@
-export const mapColors = {
+export const mapColors: any = {
   global          : "hsla(0, 0%, 15%, 1)",
   globalLight1    : "hsla(0, 0%, 25%, 1)",
   globalDark1     : "hsla(0, 0%, 5%, 1)",
@@ -30,3 +30,5 @@ export const mapColors = {
   neutralDark2    : "hsla(0, 0%, 25%, 1)",
   neutralDark3    : "hsla(0, 0%, 22%, 1)",
 }
+
+// hsla(200, 37%, 52%, 1)

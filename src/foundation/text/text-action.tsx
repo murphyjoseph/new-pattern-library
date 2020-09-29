@@ -6,6 +6,7 @@ import stylesTextBtn from './text-btn.module.scss';
 import { stylerAttributeAndClassSetup } from "../../shared/services/styler";
 import { convertToKabob } from "../../shared/utilities/convertToKabob";
 import classNames from "classnames";
+import '@compiled/css-in-js';
 
 interface ITraits {
   traits: ITextAction
