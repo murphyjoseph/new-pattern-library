@@ -15,7 +15,7 @@ export const ButtonA = ({ traits }: any) => {
       classes.buttonBase,
       classes[variant],
       classes[size],
-      ut.utAlign.alignVerticalA().ut_align_vertical_bottom
+      ut.utAlign.alignVerticalA.ut_align_vertical_bottom
     )
   }
   >

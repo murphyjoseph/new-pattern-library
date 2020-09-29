@@ -27,7 +27,6 @@ export const buttonBase = css`
 export const getButtonSize = (size: any) => {
   let buttonSize = '';
   const unit = mapSizes.spacing.unitOfMeasurement;
-  console.log('getting button sizes');
   switch (size) {
     case BUTTON_SIZES.SMALL:
       buttonSize = `padding: ${mapSizes.spacing['size1']}${unit} ${mapSizes.spacing['size3']}${unit}`;
@@ -53,10 +52,8 @@ export const setButtonTheme = (
 
 
 export const getButtonTheme = (variant: any) => {
-  console.log(theme)
   const { btns: { skins } } = theme;
   const { main, hover } = skins[variant];
-  console.log(skins[variant])
   return css`
     label: theme_${variant};
     ${setButtonTheme(main.bg, main.border, main.text)}
