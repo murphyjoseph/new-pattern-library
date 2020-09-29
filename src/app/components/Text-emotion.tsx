@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
+import omit from 'lodash/omit';
 import { IText } from '../../foundation/text/text.interface';
 // import { getPaddingStyled, stylePadding } from '../helpers/padding-helper';
 
@@ -20,5 +21,6 @@ export const TextEmotion = ({ traits }: any) => {
   const { tag: _tag, text, jssObj } = traits;
   const Tag = !!_tag ? _tag : "span";
   const style = jssObj ? altStyle(jssObj) : rootStyle;
-  return (<Tag css={style} {...traits}>{text}</Tag>)
+  const filteredTraits = omit(traits, ['jssObj'])
+  return (<Tag css={style} {...filteredTraits}>{text}</Tag>)
 }
