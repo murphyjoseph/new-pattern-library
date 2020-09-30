@@ -1,7 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { jsx, css } from '@emotion/core'
+import { shallow, render } from 'enzyme';
 import { matchers } from 'jest-emotion'
-import { TextEmotion } from '../Text-emotion';
+import { TextEmotion, rootStyle } from '../Text-emotion';
 
 expect.extend(matchers);
 
@@ -36,8 +37,8 @@ describe('Base Text with Emotion', () => {
     expect(wrapper.text()).toEqual('this is title');
   });
   it('styles', () => {
-    const { wrapper } = setup();
-    console.log(wrapper);
+    const Comp = () => (<div css={rootStyle}>hi</div>);
+    const wrapper = render(<Comp />);
     expect(wrapper.render()).toHaveStyleRule('color', 'firebrick');
     expect(wrapper.render()).toHaveStyleRule('font-size', '2.5rem');
   });

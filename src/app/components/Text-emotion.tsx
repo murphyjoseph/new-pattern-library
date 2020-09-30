@@ -8,7 +8,7 @@ interface ITraits {
   traits: IText;
 }
 
-const rootStyle = css`
+export const rootStyle = css`
   color: firebrick;
   font-size: 2.5rem;
 `;
