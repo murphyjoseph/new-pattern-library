@@ -9,7 +9,7 @@ interface ITraits {
 export const Button = ({ traits }: any) => {
   const { label, size, variant } = traits;
 
-  return <button css={[buttonBase,
+  return <button style={{ padding: 0 }} css={[buttonBase,
     getButtonSize(size),
     getButtonTheme(variant),
     ut.utAlign.alignVertical('top'),

@@ -31,6 +31,12 @@ export const getButtonSize = (size: any) => {
     case BUTTON_SIZES.SMALL:
       buttonSize = `padding: ${mapSizes.spacing['size1']}${unit} ${mapSizes.spacing['size3']}${unit}`;
       break;
+    case BUTTON_SIZES.MEDIUM:
+      buttonSize = `padding: ${mapSizes.spacing['size3']}${unit} ${mapSizes.spacing['size5']}${unit}`;
+      break;
+    case BUTTON_SIZES.LARGE:
+      buttonSize = `padding: ${mapSizes.spacing['size5']}${unit} ${mapSizes.spacing['size7']}${unit}`;
+      break;
     default:
       buttonSize = `padding: ${mapSizes.spacing['size2']}${unit} ${mapSizes.spacing['size5']}${unit}`
   }
