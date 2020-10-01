@@ -11,10 +11,19 @@ import { PrimaryButton } from './branded/PrimaryButton';
 import { HeadingOneAphrodite } from './branded/HeadingOneAphrodite';
 import { PrimaryOutlineButton } from './branded/PrimaryOutlineButton';
 import * as ut from './helpers';
+import { TextAction } from '../base/text/text-action';
+import { HawtButton } from './components/murph/HawtButton';
+import { Container } from '../base/container/container';
 
 const Main = () => {
+
+  const clickme = () => {
+    console.log("you have clicked me.")
+  }
+
   return (
     <ThemeProvider theme={theme}>
+      <Container traits={({padding: {direction: "all", size: "size12"}})}>
       <div className="main">
         <section>
           <TextTitle text="Oh Heyyyyy" />
@@ -24,6 +33,8 @@ const Main = () => {
           <HeadingOneStyled tag="h1" text="My Styled Heading" />
           <HeadingOneStyled isMaterial tag="h1" text="My Styled Material Heading" />
           <HeadingOneAphrodite tag="h1" text="Styled with Aphrodite" />
+          <TextAction traits={({text: "click me", onClick: clickme, variant: "pr", size: "small" })} />
+          <HawtButton text="Hawt Button" onClick={clickme} />
         </section>
         <section style={{ margin: 'auto' }}>
           <PrimaryButton label="click me" size="small"/>
@@ -33,6 +44,7 @@ const Main = () => {
           </div>
         </section>
       </div>
+      </Container>
     </ThemeProvider>
   );
 };

@@ -26,11 +26,11 @@ function App() {
 
   // REACT-JSS
 
-  const useStyles = createUseStyles({
-    padding: {...stylePadding({direction: "all", size: "size4"})}
-  })
+  // const useStyles = createUseStyles({
+  //   padding: {...stylePadding({direction: "all", size: "size4"})}
+  // })
 
-  const classes = useStyles()
+  // const classes = useStyles()
 
   // EMOTION
   // https://emotion.sh/docs/emotion
@@ -52,7 +52,7 @@ function App() {
       <header>
 
       </header>
-      <main className={classes.padding}>
+      <main>
         <PageMarketing title="Examples">
           <HeadingOne tag="h1" text="Heading One" />
           {/* <div className={padding({size: "size12", direction: "all"})} /> */}

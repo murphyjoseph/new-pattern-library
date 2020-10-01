@@ -46,7 +46,7 @@ export const mapSizes: ISizes | any = {
   }
 }
 
-export const SIZES = {
+export const SIZES: any = {
   general: {
     unitOfMeasurement: "em",
     size1: 0.25,

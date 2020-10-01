@@ -4,8 +4,9 @@ export interface IPattern {
   tabindex?: string,
   hidden?: boolean
   css?: {
-    classes?: string,
-    internal?: string,
-    styles?: React.CSSProperties
+    classes?: any, // MAYBE NOT NEEDED ANYMORE?
+    internal?: any, // FOR USES INSIDE BRANDING
+    container?: any, // FOR USES OUTSIDE OF BRANDING
+    styles?: React.CSSProperties // INLINE STYLES
   }
 }
