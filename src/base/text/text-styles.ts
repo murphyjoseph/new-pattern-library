@@ -1,7 +1,7 @@
 import { StyleSheet, css } from 'aphrodite';
 import { getColor, getSizeButton, getSizeSpacing } from '../../shared/styles-js/config/utilities/getters';
 
-export const StylesText: any = StyleSheet.create({
+export let StylesText: any = StyleSheet.create({
   btn: {
     display: "block",
     minHeight: getSizeButton("size2"),

@@ -16,8 +16,31 @@ export const HawtButton: FC<IPropsTextTitle> = ({
   onClick: _onClick,
 }: IPropsTextTitle) => {
 
-  const updatedBtn = StyleSheet.create({
+  // StylesText = StyleSheet.create({
+  //   btn: {
+  //     background: "red",
+  //     color: "white",
+  //     ':hover': {
+  //       background: "yellow"
+  //     }
+  //   }
+
+  // })
+
+
+  // const updatedBtn = StyleSheet.create({
+  //   btn: {
+  //     background: "red",
+  //     ':hover': {
+  //       background: "pink"
+  //     }
+  //   }
+  // })
+
+  // css(StylesText.btn, updatedBtn.btn)
+  const styles = StyleSheet.create({
     btn: {
+      color: "white",
       background: "red",
       ':hover': {
         background: "pink"
@@ -25,13 +48,12 @@ export const HawtButton: FC<IPropsTextTitle> = ({
     }
   })
 
-  css(StylesText.btn, updatedBtn.btn)
-
   const settings: ITextAction = {
     variant: 'primary',
     text: _text,
     onClick: _onClick,
-    size: "medium"
+    size: "medium",
+    styles: styles.btn
   };
 
   return <TextAction traits={settings} />;

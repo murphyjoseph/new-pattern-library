@@ -28,8 +28,7 @@ export const TextAction: FC<ITraits> = ({
     StylesText.btn,
     StylesText.hover,
     StylesText[size],
-    !!remainder.css && !!remainder.css.internal && remainder.css.internal,
-    !!remainder.css && !!remainder.css.container && remainder.css.container
+    !!remainder.styles && remainder.styles
   ]
 
   const optionalAttributes: any = {

@@ -15,9 +15,6 @@ export const Container: FC<ITraits> = ({
   children
 }) => {
 
-  console.log("FUCK ME")
-  console.log({...!!traits.padding && stylePadding(traits.padding)})
-
   const styles = StyleSheet.create({
     classes: {
       ...!!traits.padding && stylePadding(traits.padding),

@@ -3,6 +3,7 @@ export interface IPattern {
   title?: string,
   tabindex?: string,
   hidden?: boolean
+  styles?: any,
   css?: {
     classes?: any, // MAYBE NOT NEEDED ANYMORE?
     internal?: any, // FOR USES INSIDE BRANDING
