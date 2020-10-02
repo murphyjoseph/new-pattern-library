@@ -14,12 +14,16 @@ import * as ut from './helpers';
 import { TextAction } from '../base/text/text-action';
 import { HawtButton } from './components/murph/HawtButton';
 import { Container } from '../base/container/container';
+import { mapColors } from '../shared/styles-js/config/map-colors';
 
 const Main = () => {
 
   const clickme = () => {
     console.log("you have clicked me.")
   }
+
+  document.documentElement.style.setProperty('--color-global', 'green');
+  // setTokenColor('global', 'value')
 
   return (
     <ThemeProvider theme={theme}>

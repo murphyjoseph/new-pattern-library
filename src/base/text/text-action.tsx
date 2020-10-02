@@ -6,7 +6,7 @@ import stylesTextBtn from './text-btn.module.scss';
 import { stylerAttributeAndClassSetup } from "../../shared/services/styler";
 import { convertToKabob } from "../../shared/utilities/convertToKabob";
 import classNames from "classnames";
-import { StylesText } from './text-styles';
+import { StylesButton } from './text-styles';
 import { StyleSheet, css } from 'aphrodite/no-important';
 
 interface ITraits {
@@ -17,7 +17,7 @@ export const TextAction: FC<ITraits> = ({
   traits
 }) => {
 
-  const { onClick, size, text: _text, ...remainder} = traits;
+  const { onClick, size, text: _text, variant, ...remainder} = traits;
 
   const handleClick = (event?: React.SyntheticEvent): void => {
     if (!onClick) return
@@ -25,9 +25,10 @@ export const TextAction: FC<ITraits> = ({
   };
 
   const classes = [
-    StylesText.btn,
-    StylesText.hover,
-    StylesText[size],
+    StylesButton.base,
+    StylesButton.hover,
+    StylesButton[variant],
+    StylesButton[size],
     !!remainder.styles && remainder.styles
   ]
 

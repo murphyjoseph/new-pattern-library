@@ -4,7 +4,6 @@ import { IText } from '../../../foundation/text/text.interface';
 import { StyleSheet, css } from 'aphrodite';
 import { TextAction } from '../../../base/text/text-action';
 import { ITextAction } from '../../../base/text/text.interface';
-import { StylesText } from '../../../base/text/text-styles';
 
 export interface IPropsTextTitle {
   text: string,
@@ -16,44 +15,13 @@ export const HawtButton: FC<IPropsTextTitle> = ({
   onClick: _onClick,
 }: IPropsTextTitle) => {
 
-  // StylesText = StyleSheet.create({
-  //   btn: {
-  //     background: "red",
-  //     color: "white",
-  //     ':hover': {
-  //       background: "yellow"
-  //     }
-  //   }
 
-  // })
-
-
-  // const updatedBtn = StyleSheet.create({
-  //   btn: {
-  //     background: "red",
-  //     ':hover': {
-  //       background: "pink"
-  //     }
-  //   }
-  // })
-
-  // css(StylesText.btn, updatedBtn.btn)
-  const styles = StyleSheet.create({
-    btn: {
-      color: "white",
-      background: "red",
-      ':hover': {
-        background: "pink"
-      }
-    }
-  })
 
   const settings: ITextAction = {
-    variant: 'primary',
+    variant: 'global',
     text: _text,
     onClick: _onClick,
-    size: "medium",
-    styles: styles.btn
+    size: "medium"
   };
 
   return <TextAction traits={settings} />;

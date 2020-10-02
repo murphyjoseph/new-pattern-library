@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+:root {
+  --color-global: #262626;
+  --color-global-light1: #404040;
+  --color-global-dark1: #0d0d0d;
+  --color-primary: #5794b2;
+  --color-primary-light1: #73a6bf;
+  --color-primary-dark1: #477e9a;
+  --color-secondary: #6420BD;
+  --color-secondary-light1: #A972F2;
+  --color-secondary-dark1: #4F3570;
+  --color-success: #85af41;
+  --color-success-light1: #9fc563;
+  --color-success-dark1: #668632;
+  --color-disabled: #dedede;
+  --color-disabled-light1: #f2f2f2;
+  --color-disabled-dark1: #c2c2c2;
+  --color-warning: #da5a49;
+  --color-warning-light1: #e79388;
+  --color-warning-dark1: #c33a28;
+  --color-info: #ffcb6b;
+  --color-info-light1: #ffdb99;
+  --color-info-dark1: #ffbb3d;
+  --color-white: white;
+  --color-black: black;
+  --color-grey: #999999;
+  --color-grey-light1: #e6e6e6;
+  --color-grey-light2: #ededed;
+  --color-grey-light3: #f2f2f2;
+  --color-grey-light4: #fafafa;
+  --color-grey-dark1: #545454;
+  --color-grey-dark2: #404040;
+  --color-smoke: rgba(255, 255, 255, 0.75);
+  --color-transparent: rgba(9, 6, 6, 0);
+  --color-shadow: rgba(77, 77, 77, 0.3);
+}

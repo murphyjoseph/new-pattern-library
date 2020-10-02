@@ -1,8 +1,8 @@
 import { StyleSheet, css } from 'aphrodite';
 import { getColor, getSizeButton, getSizeSpacing } from '../../shared/styles-js/config/utilities/getters';
 
-export let StylesText: any = StyleSheet.create({
-  btn: {
+export const StylesButton: any = StyleSheet.create({
+  base: {
     display: "block",
     minHeight: getSizeButton("size2"),
     padding: getSizeSpacing("size2"),
@@ -15,13 +15,31 @@ export let StylesText: any = StyleSheet.create({
       transition: "200ms"
     }
   },
-  btnSizeLg: {
+  primary: {
+    background: getColor("primary"),
+    ':hover': {
+      background: getColor('primaryLight1')
+    }
+  },
+  secondary: {
+    background: getColor("secondary"),
+    ':hover': {
+      background: getColor("secondaryLight1")
+    }
+  },
+  global: {
+    background: getColor("global"),
+    ':hover': {
+      background: getColor("globalLight1")
+    }
+  },
+  large: {
     height: getSizeButton("size4")
   },
-  btnSizeMd: {
+  medium: {
     height: getSizeButton("size3")
   },
-  btnSizeSm: {
+  small: {
     height: getSizeButton("size1")
   }
 })
