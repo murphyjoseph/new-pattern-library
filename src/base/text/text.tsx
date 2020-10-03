@@ -13,8 +13,6 @@ export const Text: FC<ITraits> = ({ traits }) => {
   const { tag: _tag, variant, text, title, ...remainder } = traits
   const Tag: keyof JSX.IntrinsicElements = !!_tag ? _tag : "span"
 
-  console.log(cssTextVariant)
-
   const classes = [
     cssText.base,
     cssTextVariant[variant],

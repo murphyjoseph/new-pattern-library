@@ -1,7 +1,0 @@
-// # ========= --- Column Count --- ========= # \\
-
-@for $i from 1 through 10 {
-  .st-col-count-#{$i} {
-    column-count: $i;
-  }
-}

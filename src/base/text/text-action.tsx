@@ -4,7 +4,6 @@ import { Text } from "./text";
 import _isFunction from 'lodash/isFunction';
 import { cssButton, cssButtonVariant, cssButtonSize } from './_css-button';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import { TTextPatterns } from '../../shared/types/util-types';
 
 interface ITraits {
   traits: ITextAction

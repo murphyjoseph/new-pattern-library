@@ -3,7 +3,7 @@ import { ITypography } from '../../shared/interfaces/typography.interface';
 import { IPattern } from '../../shared/interfaces/pattern.interface';
 import { ILink } from '../../shared/interfaces/link.interface';
 import { IEvent } from '../../shared/interfaces/event.interface';
-import { TTextPatterns, TBranding, TSizesButton } from '../../shared/types/util-types';
+import { TVariantText, TBranding, TSizesButton } from '../../shared/types/util-types';
 
 type ElementType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div" | "figcaption" | "legend";
 
@@ -12,7 +12,7 @@ export interface IText extends IPattern, ITypography, IStylesColor {
   margin?: IStylesSpacing | IStylesSpacing[],
   padding?: IStylesSpacing | IStylesSpacing[],
   title?: string,
-  variant: TTextPatterns
+  variant: TVariantText
 }
 
 export interface ITextAction extends IEvent, IPattern {
@@ -35,8 +35,9 @@ export interface ITextLink extends ILink, IPattern {
   isFaux?: boolean
 }
 
-export interface ITextForm extends Omit<IText, "tag"> {
-  size: TSizesButton
+export interface ITextForm extends Omit<IText, "tag" | "variant"> {
+  size: TSizesButton,
+  variant: TBranding
 }
 
 export interface ITextActionLink extends Omit<IText, "tag">, IEvent, ILink {

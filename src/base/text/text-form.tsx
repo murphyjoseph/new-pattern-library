@@ -23,7 +23,6 @@ export const TextForm: FC<ITraits> = ({
     !!remainder.styles && remainder.styles
   ]
   const optionalAttributes: any = {
-    ...(!!remainder.css && !!remainder.css.styles && { style: remainder.css.styles }),
     ...(!!traits.id && { id: traits.id })
   };
 

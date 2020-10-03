@@ -1,13 +1,13 @@
 import { TWhiteSpace } from '../types/util-types';
 import { TBreakpoints,
          TColors,
-         TSizeLabels,
-         TPositionLabels,
-         TDirectionLabels,
+         TLabelSize,
+         TLabelPosition,
+         TLabelDirection,
          TAlignmentText,
          TBranding,
          TPositionTypes,
-         TSpacingDirections,
+         TDirectionSpacing,
          TDisplaySettings } from '../types/util-types';
 
 export interface IStylesGrid {
@@ -33,8 +33,8 @@ export interface IStylesColor {
 
 export interface IStylesBorder {
   color?: TColors,
-  size?: TSizeLabels,
-  direction?: TSpacingDirections
+  size?: TLabelSize,
+  direction?: TDirectionSpacing
 }
 
 export interface IStylesColorSvg {
@@ -43,8 +43,8 @@ export interface IStylesColorSvg {
 }
 
 export interface IStylesSpacing extends IStylesBreakpoint {
-  size?: TSizeLabels,
-  direction?: TSpacingDirections
+  size: TLabelSize,
+  direction: TDirectionSpacing
 }
 
 export interface IStylesTextAlign {
@@ -56,12 +56,12 @@ export interface IStylesDisplay {
 }
 
 export interface IStylesShadow {
-  size?: TSizeLabels,
-  direction?: TDirectionLabels
+  size?: TLabelSize,
+  direction?: TLabelDirection
 }
 
 export interface IStylesMaxWidth extends IStylesBreakpoint {
-  size?: TSizeLabels
+  size?: TLabelSize
 }
 
 export interface IStylesOverflow {
@@ -70,7 +70,7 @@ export interface IStylesOverflow {
 }
 
 export interface IStylesText extends IStylesTextAlign, IStylesDisplay {
-  characterWidth?: TPositionLabels,
+  characterWidth?: TLabelPosition,
   isTiny?: boolean,
   isBig?: boolean,
   isNowrap?: boolean,
@@ -86,7 +86,7 @@ export interface IStylesText extends IStylesTextAlign, IStylesDisplay {
 }
 
 export interface IStylesPosition {
-  direction?: TPositionLabels,
+  direction?: TLabelPosition,
   type?: TPositionTypes
 }
 

@@ -1,5 +1,5 @@
 import { StyleSheet, css } from 'aphrodite';
-import { getColor, getSizeButton, getSizeSpacing } from '../../shared/styles-js/config/utilities/getters';
+import { getColor, getSizeButton, getSizeSpacing } from '../../shared/styles/getters';
 import { theme } from '../../theme';
 
 export const cssButton: any = StyleSheet.create({

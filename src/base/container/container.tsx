@@ -2,9 +2,9 @@ import React, { FC } from "react";
 
 import { IContainer } from './container.interface';
 // import { stylePadding, stylerAttributeAndClassSetup } from "../../shared/services/styler";
-import { stylePadding } from '../../shared/styles-js/config/utilities/padding';
+import { stylePadding } from '../../shared/styles/padding';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import { styleMargin } from "../../shared/styles-js/config/utilities/margin";
+import { styleMargin } from "../../shared/styles/margin";
 
 interface ITraits {
   traits: IContainer;

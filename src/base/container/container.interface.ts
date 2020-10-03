@@ -2,7 +2,7 @@ import { IPattern } from '../../shared/interfaces/pattern.interface';
 import { IStylesColor, IStylesSpacing, IStylesBorder, IStylesPosition,
          IStylesRounded, IStylesShadow, IStylesDisplay, IStylesTextAlign,
          IStylesOverflow, IStylesMaxWidth } from '../../shared/interfaces/styles.interface';
-import { TSizeLabels } from '../../shared/types/util-types';
+import { TLabelSize } from '../../shared/types/util-types';
 import { IEvent } from '../../shared/interfaces/event.interface';
 import { ILink } from '../../shared/interfaces/link.interface';
 
@@ -12,8 +12,8 @@ export interface IContainer extends IPattern, IStylesColor, IStylesRounded, ISty
   margin?: IStylesSpacing,
   position?: IStylesPosition,
   shadow?: IStylesShadow,
-  minHeight?: TSizeLabels,
-  maxHeight?: TSizeLabels,
+  minHeight?: TLabelSize,
+  maxHeight?: TLabelSize,
   maxWidth?: IStylesMaxWidth | IStylesMaxWidth[],
   overflow?: IStylesOverflow
 }

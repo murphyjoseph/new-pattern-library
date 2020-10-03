@@ -1,5 +1,5 @@
 import { StyleSheet, css } from 'aphrodite';
-import { getColor, getSizeButton, getSizeSpacing } from '../../shared/styles-js/config/utilities/getters';
+import { getColor, getSizeButton, getSizeSpacing } from '../../shared/styles/getters';
 import { theme } from '../../theme';
 
 export const cssLink: any = StyleSheet.create({
@@ -17,51 +17,51 @@ export const cssLink: any = StyleSheet.create({
 
 export const cssLinkVariant: any = StyleSheet.create({
   global: {
-    background: theme.color.global,
+    color: theme.color.global,
     ':hover': {
-      background: theme.color.globalLight1
+      color: theme.color.globalLight1
     }
   },
   primary: {
-    background: theme.color.primary,
+    color: theme.color.primary,
     ':hover': {
-      background: theme.color.primaryLight1
+      color: theme.color.primaryLight1
     }
   },
   secondary: {
-    background: theme.color.secondary,
+    color: theme.color.secondary,
     ':hover': {
-      background: theme.color.secondaryLight1
+      color: theme.color.secondaryLight1
     }
   },
   neutral: {
-    background: theme.color.neutral,
+    color: theme.color.neutral,
     ':hover': {
-      background: theme.color.neutralLight1
+      color: theme.color.neutralLight1
     }
   },
   warning: {
-    background: theme.color.warning,
+    color: theme.color.warning,
     ':hover': {
-      background: theme.color.warningLight1
+      color: theme.color.warningLight1
     }
   },
   info: {
-    background: theme.color.info,
+    color: theme.color.info,
     ':hover': {
-      background: theme.color.infoLight1
+      color: theme.color.infoLight1
     }
   },
   disabled: {
-    background: theme.color.disabled,
+    color: theme.color.disabled,
     ':hover': {
-      background: theme.color.disabledLight1
+      color: theme.color.disabledLight1
     }
   },
   inactive: {
-    background: theme.color.inactive,
+    color: theme.color.inactive,
     ':hover': {
-      background: theme.color.inactiveLight1
+      color: theme.color.inactiveLight1
     }
   }
 })
