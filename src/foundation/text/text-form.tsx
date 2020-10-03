@@ -3,7 +3,7 @@ import { ITextForm, IText } from './text.interface';
 import { Text } from "./text";
 import _isFunction from 'lodash/isFunction';
 import { stylerAttributeAndClassSetup } from "../../shared/services/styler";
-import stylesTextAction from './text-action.module.scss';
+import stylesTextAction from './text-btn.module.scss';
 
 interface ITraits {
   traits: ITextForm
@@ -29,7 +29,7 @@ export const TextForm: FC<ITraits> = ({
 
   const traitsForText: IText = {
     text: _text,
-    variant: "btn"
+    variant: "button"
   }
 
   return (

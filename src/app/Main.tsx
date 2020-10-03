@@ -25,6 +25,8 @@ const Main = () => {
   document.documentElement.style.setProperty('--color-global', 'green');
   // setTokenColor('global', 'value')
 
+
+
   return (
     <ThemeProvider theme={theme}>
       <Container traits={({padding: {direction: "all", size: "size12"}})}>

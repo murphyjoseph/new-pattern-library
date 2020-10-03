@@ -42,7 +42,7 @@ export const TextAction: FC<ITraits> = ({
   };
 
   const traitsForText: IText = {
-    variant: "btn",
+    variant: "button",
     text: _text,
   }
 

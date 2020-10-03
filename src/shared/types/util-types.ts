@@ -9,15 +9,18 @@ import ConstantsTextPatterns from '../styles/constants/constant-text-pattern.mod
 import ConstantsColAuto from '../styles/constants/constant-col-auto.module.scss'
 import ConstantsColPercent from '../styles/constants/constant-col-percent.module.scss'
 import ConstantsColFixed from '../styles/constants/constant-col-width.module.scss'
+import { theme } from '../../theme';
 
 export type TBreakpoints = (typeof ConstantsBreakpoints)[keyof typeof ConstantsBreakpoints]
 export type TColors = (typeof ConstantsColors)[keyof typeof ConstantsColors]
 export type TSizeLabels = (typeof ConstantsLabelsSize)[keyof typeof ConstantsLabelsSize]
 export type TPositionLabels = (typeof ConstantsLabelsPosition)[keyof typeof ConstantsLabelsPosition]
 export type TDirectionLabels = (typeof ConstantsLabelsDirection)[keyof typeof ConstantsLabelsDirection]
-export type TBranding = (typeof ConstantsBranding)[keyof typeof ConstantsBranding]
+// export type TBranding = (typeof ConstantsBranding)[keyof typeof ConstantsBranding]
+export type TBranding = "disabled" | "global" | "inactive" | "info" | "neutral" | "none" | "primary" | "root" | "secondary" | "warning"
 export type TSpacingDirections = (typeof ConstantsDirectionsSpacing)[keyof typeof ConstantsDirectionsSpacing]
-export type TTextPatterns = (typeof ConstantsTextPatterns)[keyof typeof ConstantsTextPatterns]
+// export type TTextPatterns = (typeof ConstantsTextPatterns)[keyof typeof ConstantsTextPatterns]
+export type TTextPatterns = "headingOne" | "headingTwo" | "headingThree" | "titleOne" | "titleTwo" | "bodyOne" | "bodyTwo" | "description" | "list" | "button" | "link" | "labelOne" | "labelTwo" | "input" | "placeholder" | "icon" | "option" | "invalid" | "counter" | "figcaption"
 export type TColAuto = (typeof ConstantsColAuto)[keyof typeof ConstantsColAuto]
 export type TColPercent = (typeof ConstantsColPercent)[keyof typeof ConstantsColPercent]
 export type TColFixed = (typeof ConstantsColFixed)[keyof typeof ConstantsColFixed]
@@ -25,10 +28,11 @@ export type TColFixed = (typeof ConstantsColFixed)[keyof typeof ConstantsColFixe
 export type TAlignmentText = "left" | "right" | "center"
 export type TDisplaySettings = "inline" | "inline-block" | "block" | "none";
 export type TTextStyles = "bold" | "italic";
-export type TColSizes = "auto1" | "auto2" | "auto3" | "auto4" | "auto5" | "auto6" | "auto7" | "auto8" | "auto9" | "auto10" | TSizeLabels | "percent10" | "percent20" | "percent25" | "percent33" | "percent40" | "percent50" | "percent66" | "percent75" | "percent100" | "none";
 export type TGridType = "wrapper" | "column";
 export type TGridDisplay = "flex" | "grid";
 export type TWhiteSpace = "pre" | "preLine";
 export type TPositionTypes = "absolute" | "relative" | "fixed" | "sticky" | "static" | "none" | "none";
-export type TBtnSizes = "small" | "medium" | "large" | "default"
+export type TSizesButton = "small" | "medium" | "large" | "default"
+export type TSizesText = "small" | "medium" | "large" | "default"
+export type TSizesCol = "auto1" | "auto2" | "auto3" | "auto4" | "auto5" | "auto6" | "auto7" | "auto8" | "auto9" | "auto10" | TSizeLabels | "percent10" | "percent20" | "percent25" | "percent33" | "percent40" | "percent50" | "percent66" | "percent75" | "percent100" | "none";
 export type TUnitOfMeasurement = "em" | "rem" | "px" | "none"

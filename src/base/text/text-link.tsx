@@ -2,7 +2,8 @@ import React, { FC } from "react";
 import { ITextLink, IText } from './text.interface';
 import { Text } from "./text";
 import _isFunction from 'lodash/isFunction';
-import { stylerAttributeAndClassSetup } from "../../shared/services/styler";
+import { cssLink, cssLinkVariant } from "./_css-link";
+import { css } from "aphrodite/no-important";
 
 interface ITraits {
   traits: ITextLink
@@ -12,12 +13,18 @@ export const TextLink: FC<ITraits> = ({
   traits
 }) => {
 
-  const { text: _text, rel: _rel, target: _target, href: _href, ...remainder} = traits;
+  const { text: _text, rel: _rel, variant, target: _target, href: _href, ...remainder} = traits;
+
+  const classes = [
+    cssLink.base,
+    cssLink.hover,
+    cssLinkVariant[variant],
+    !!remainder.styles && remainder.styles
+  ]
 
   const optionalAttributes: any = {
     ...(!!_target && { target: _target }),
     ...(!!_rel && { rel: _rel }),
-    ...(!!remainder.css && !!remainder.css.styles && { style: remainder.css.styles }),
     ...(!!traits.id && { id: traits.id })
   };
 
@@ -28,8 +35,8 @@ export const TextLink: FC<ITraits> = ({
 
   return (
     <a href={_href}
-       {...optionalAttributes}
-       {...stylerAttributeAndClassSetup(remainder)}>
+       className={css(classes)}
+       {...optionalAttributes}>
       <Text traits={traitsForText} />
     </a>
   )

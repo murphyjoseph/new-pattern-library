@@ -2,12 +2,9 @@ import React, { FC } from "react";
 import { ITextAction, IText } from './text.interface';
 import { Text } from "./text";
 import _isFunction from 'lodash/isFunction';
-import stylesTextBtn from './text-btn.module.scss';
-import { stylerAttributeAndClassSetup } from "../../shared/services/styler";
-import { convertToKabob } from "../../shared/utilities/convertToKabob";
-import classNames from "classnames";
-import { StylesButton } from './text-styles';
+import { cssButton, cssButtonVariant, cssButtonSize } from './_css-button';
 import { StyleSheet, css } from 'aphrodite/no-important';
+import { TTextPatterns } from '../../shared/types/util-types';
 
 interface ITraits {
   traits: ITextAction
@@ -25,10 +22,10 @@ export const TextAction: FC<ITraits> = ({
   };
 
   const classes = [
-    StylesButton.base,
-    StylesButton.hover,
-    StylesButton[variant],
-    StylesButton[size],
+    cssButton.base,
+    cssButton.hover,
+    cssButtonVariant[variant],
+    cssButtonSize[size],
     !!remainder.styles && remainder.styles
   ]
 
@@ -37,7 +34,7 @@ export const TextAction: FC<ITraits> = ({
   };
 
   const traitsForText: IText = {
-    variant: "btn",
+    variant: "button",
     text: _text,
   }
 

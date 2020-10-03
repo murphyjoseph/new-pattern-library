@@ -1,51 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
-import { TextLink } from './foundation/text/text-link';
-import { TextAction } from './foundation/text/text-action';
-import { TextCTA } from './foundation/text/text-cta';
-import { HeadingOne } from './components/typography/heading-one';
-import { BodyOne } from './components/typography/body-one';
-import { BtnPrimary } from './components/btn/btn-primary';
-import { BtnUtility } from './components/btn/btn-utility';
-import { BodyTwo } from './components/typography/body-two';
-import { PageMarketing } from './components/pages/page-marketing';
-import { mapVariants } from './shared/styles-js/config/map-variants';
-import { setSizes } from './shared/styles-js/config/set-sizes';
-import { mapSizes } from './shared/styles-js/config/map-sizes';
-import {render} from 'react-dom'
-import {createUseStyles} from 'react-jss'
-import { stylePadding } from './shared/styles-js/config/utilities/padding';
-import { cx, css } from 'emotion'
-
-// import classes
+import './App.css';
+// import { Text } from './base/text/text';
+import { Text } from './foundation/text/text';
 
 function App() {
-  const myClickEvent = () => {
-    console.log('you clicked.');
-  };
-
-  // REACT-JSS
-
-  // const useStyles = createUseStyles({
-  //   padding: {...stylePadding({direction: "all", size: "size4"})}
-  // })
-
-  // const classes = useStyles()
-
-  // EMOTION
-  // https://emotion.sh/docs/emotion
-
-  const cls1 = css`
-    font-size: 20px;
-    background: green;
-  `
-  const cls2 = css`
-    font-size: 20px;
-    background: blue;
-  `
-
-  const foo = true
-  const bar = false
 
   return (
     <div className="App">
@@ -53,21 +11,54 @@ function App() {
 
       </header>
       <main>
-        <PageMarketing title="Examples">
-          <HeadingOne tag="h1" text="Heading One" />
-          {/* <div className={padding({size: "size12", direction: "all"})} /> */}
-          <BodyOne text="body one Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" />
-          <BodyTwo text="body two Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" />
-          <BtnPrimary text="Fire Event" onClick={myClickEvent} size="medium" />
-          <div
-            className={cx(
-              { [cls1]: foo },
-              { [cls2]: bar }
-            )}>
-              Emotion Example
-          </div>
-        </PageMarketing>
-
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
+        <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+        <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
+        <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
+        <Text traits={({variant: "titleOne", text: "yo"})} />
       </main>
     </div>
   );
