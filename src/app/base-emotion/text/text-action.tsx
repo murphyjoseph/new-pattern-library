@@ -3,7 +3,7 @@ import { ITextAction, IText } from './text.interface';
 import { Text } from "./text";
 import _isFunction from 'lodash/isFunction';
 import { cssButton, cssButtonVariant, cssButtonSize } from './_css-button';
-import { StyleSheet, css } from 'aphrodite/no-important';
+import { jsx } from '@emotion/core'
 
 interface ITraits {
   traits: ITextAction
@@ -20,13 +20,13 @@ export const TextAction: FC<ITraits> = ({
     if (_isFunction(onClick)) onClick(event);
   };
 
-  const classes = [
-    cssButton.base,
-    cssButton.hover,
-    cssButtonVariant[variant],
-    cssButtonSize[size],
-    !!styles && styles
-  ]
+  const classes = {
+    ...cssButton.base,
+    ...cssButton.hover,
+    ...cssButtonVariant[variant],
+    ...cssButtonSize[size],
+    ...!!styles && styles
+  }
 
   const optionalAttributes: any = {
     ...(!!_id && { id: _id })
@@ -39,7 +39,7 @@ export const TextAction: FC<ITraits> = ({
 
   return (
     <button onClick={handleClick}
-            className={css(classes)}
+            css={classes}
             {...optionalAttributes}>
       <Text traits={traitsForText} />
     </button>

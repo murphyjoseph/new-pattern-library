@@ -3,7 +3,7 @@ import { ITextLink, IText } from './text.interface';
 import { Text } from "./text";
 import _isFunction from 'lodash/isFunction';
 import { cssLink, cssLinkVariant } from "./_css-link";
-import { css } from "aphrodite/no-important";
+import { jsx } from '@emotion/core'
 
 interface ITraits {
   traits: ITextLink
@@ -15,12 +15,12 @@ export const TextLink: FC<ITraits> = ({
 
   const { text: _text, rel: _rel, variant, target: _target, href: _href, id: _id, styles} = traits;
 
-  const classes = [
-    cssLink.base,
-    cssLink.hover,
-    cssLinkVariant[variant],
-    !!styles && styles
-  ]
+  const classes = {
+    ...cssLink.base,
+    ...cssLink.hover,
+    ...cssLinkVariant[variant],
+    ...!!styles && styles
+  }
 
   const optionalAttributes: any = {
     ...(!!_target && { target: _target }),
@@ -35,7 +35,7 @@ export const TextLink: FC<ITraits> = ({
 
   return (
     <a href={_href}
-       className={css(classes)}
+       css={classes}
        {...optionalAttributes}>
       <Text traits={traitsForText} />
     </a>

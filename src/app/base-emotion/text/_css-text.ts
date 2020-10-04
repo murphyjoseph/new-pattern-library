@@ -1,18 +1,16 @@
-import { StyleSheet, css } from 'aphrodite';
-import { getColor, getSizeButton, getSizeSpacing } from '../../styles-aphrodite/getters';
 import { theme } from '../../../theme';
 
 // how do we enforce types here? e.g. have a type of text elements?
 
-export const cssText = StyleSheet.create({
+export const cssText = {
   base: {
     color: theme.color.black,
     fontWeight: "normal",
     lineHeight: 1.1
   }
-})
+}
 
-export const cssTextWeight = StyleSheet.create({
+export const cssTextWeight = {
   bold: {
     fontWeight: "bold"
   },
@@ -25,9 +23,9 @@ export const cssTextWeight = StyleSheet.create({
   normal: {
     fontWeight: "normal"
   }
-})
+}
 
-export const cssTextStyle = StyleSheet.create({
+export const cssTextStyle = {
   italic: {
     fontStyle: "italic"
   },
@@ -43,9 +41,9 @@ export const cssTextStyle = StyleSheet.create({
   capitalize: {
     textTransform: "uppercase"
   }
-})
+}
 
-export const cssTextVariant = StyleSheet.create({
+export const cssTextVariant = {
   headingOne: {
     ...theme.typography.headingOne
   },
@@ -106,8 +104,4 @@ export const cssTextVariant = StyleSheet.create({
   figcaption: {
     ...theme.typography.figcaption
   }
-})
-
-// export const cssTextSize = StyleSheet.create({
-
-// })
+}

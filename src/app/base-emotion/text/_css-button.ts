@@ -1,8 +1,6 @@
-import { StyleSheet, css } from 'aphrodite';
-import { getColor, getSizeButton, getSizeSpacing } from '../../styles-aphrodite/getters';
 import { theme } from '../../../theme';
 
-export const cssButton: any = StyleSheet.create({
+export const cssButton: any = {
   base: {
     display: "block",
     minHeight: `${theme.size.button.size2}${theme.size.button.unit}`,
@@ -16,9 +14,9 @@ export const cssButton: any = StyleSheet.create({
       transition: "200ms"
     }
   }
-})
+}
 
-export const cssButtonVariant: any = StyleSheet.create({
+export const cssButtonVariant: any = {
   global: {
     background: theme.color.global,
     ':hover': {
@@ -67,16 +65,16 @@ export const cssButtonVariant: any = StyleSheet.create({
       background: theme.color.inactiveLight1
     }
   }
-})
+}
 
-export const cssButtonSize: any = StyleSheet.create({
+export const cssButtonSize: any = {
   large: {
-    minHeight: getSizeButton("size4")
+    minHeight: `${theme.size.button.size3}${theme.size.button.unit}`
   },
   medium: {
-    minHeight: getSizeButton("size3")
+    minHeight: `${theme.size.button.size3}${theme.size.button.unit}`
   },
   small: {
-    minHeight: getSizeButton("size1")
+    minHeight: `${theme.size.button.size3}${theme.size.button.unit}`
   }
-})
+}

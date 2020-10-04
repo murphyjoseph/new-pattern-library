@@ -3,7 +3,7 @@ import { ITextForm, IText } from './text.interface';
 import { Text } from "./text";
 import _isFunction from 'lodash/isFunction';
 import { cssButton, cssButtonVariant, cssButtonSize } from "./_css-button";
-import { css } from "aphrodite/no-important";
+import { jsx } from '@emotion/core'
 
 interface ITraits {
   traits: ITextForm
@@ -15,13 +15,14 @@ export const TextForm: FC<ITraits> = ({
 
   const { text: _text, variant, size, styles } = traits;
 
-  const classes = [
-    cssButton.base,
-    cssButton.hover,
-    cssButtonVariant[variant],
-    cssButtonSize[size],
-    !!styles && styles
-  ]
+  const classes = {
+    ...cssButton.base,
+    ...cssButton.hover,
+    ...cssButtonVariant[variant],
+    ...cssButtonSize[size],
+    ...!!styles && styles
+  }
+
   const optionalAttributes: any = {
     ...(!!traits.id && { id: traits.id })
   };
@@ -33,7 +34,7 @@ export const TextForm: FC<ITraits> = ({
 
   return (
     <button type="submit"
-            className={css(classes)}
+            css={classes}
             {...optionalAttributes}>
       <Text traits={traitsForText} />
     </button>

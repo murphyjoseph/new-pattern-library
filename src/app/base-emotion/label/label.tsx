@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Text } from '../text/text';
 import { IText } from '../text/text.interface';
 import { ILabel } from './label.interface';
-import { css } from "aphrodite/no-important";
+import { jsx } from '@emotion/core'
 
 export interface ITraits {
   traits: ILabel
@@ -30,12 +30,12 @@ export const Label: FC<ITraits> = ({ traits }) => {
     }
   }
 
-  const classes = [
-    !!styles && styles
-  ]
+  const classes = {
+    ...!!styles && styles
+  }
 
   return (
-    <label className={css(classes)}
+    <label css={classes}
            htmlFor={traits.for}>
       {
         !!traitsForMain &&

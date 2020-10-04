@@ -1,8 +1,6 @@
-import { StyleSheet, css } from 'aphrodite';
-import { getColor, getSizeButton, getSizeSpacing } from '../../styles-aphrodite/getters';
 import { theme } from '../../../theme';
 
-export const cssFieldInput = StyleSheet.create({
+export const cssFieldInput = {
   base: {
     display: "block",
   },
@@ -11,4 +9,4 @@ export const cssFieldInput = StyleSheet.create({
     borderWidth: `${theme.size.border.size2}${theme.size.border.unit}`,
     borderColor: theme.color.global
   }
-})
+}

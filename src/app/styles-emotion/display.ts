@@ -1,6 +1,4 @@
-import { StyleSheet } from 'aphrodite/no-important';
-
-export const cssDisplay = StyleSheet.create({
+export const cssDisplay = {
   block: {
     display: "block"
   },
@@ -10,4 +8,4 @@ export const cssDisplay = StyleSheet.create({
   inline: {
     display: "inline"
   }
-})
+}

@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import { IContainerAction } from './container.interface';
 import _isFunction from 'lodash/isFunction';
-import { stylePadding } from '../../styles-aphrodite/padding';
-import { StyleSheet, css } from 'aphrodite/no-important';
-import { styleMargin } from "../../styles-aphrodite/margin";
-import { cssDisplay } from '../../styles-aphrodite/display';
+import { stylePadding } from '../../styles-emotion/padding';
+import { jsx } from '@emotion/core'
+import { styleMargin } from "../../styles-emotion/margin";
+import { cssDisplay } from '../../styles-emotion/display';
 
 interface ITraits {
   traits: IContainerAction
@@ -17,12 +17,12 @@ export const ContainerAction: FC<ITraits> = ({
 
   const { onClick: _onClick, padding, margin, styles } = traits;
 
-  const classes = [
+  const classes = {
     ...!!padding && stylePadding(padding),
     ...!!margin && styleMargin(margin),
-    cssDisplay.block,
+    ...cssDisplay.block,
     ...!!styles && styles,
-  ]
+  }
 
   const handleClick = (event?: React.SyntheticEvent): void => {
     if (!_onClick) return
@@ -30,7 +30,7 @@ export const ContainerAction: FC<ITraits> = ({
   };
 
   return (
-    <div className={css(classes)}
+    <div css={classes}
          onClick={handleClick}>
       {children}
     </div>

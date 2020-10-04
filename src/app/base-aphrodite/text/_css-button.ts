@@ -1,5 +1,4 @@
-import { StyleSheet, css } from 'aphrodite';
-import { getColor, getSizeButton, getSizeSpacing } from '../../styles-aphrodite/getters';
+import { StyleSheet } from 'aphrodite';
 import { theme } from '../../../theme';
 
 export const cssButton: any = StyleSheet.create({
@@ -71,12 +70,12 @@ export const cssButtonVariant: any = StyleSheet.create({
 
 export const cssButtonSize: any = StyleSheet.create({
   large: {
-    minHeight: getSizeButton("size4")
+    minHeight: `${theme.size.button.size3}${theme.size.button.unit}`
   },
   medium: {
-    minHeight: getSizeButton("size3")
+    minHeight: `${theme.size.button.size3}${theme.size.button.unit}`
   },
   small: {
-    minHeight: getSizeButton("size1")
+    minHeight: `${theme.size.button.size3}${theme.size.button.unit}`
   }
 })

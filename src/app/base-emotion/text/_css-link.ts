@@ -1,8 +1,6 @@
-import { StyleSheet, css } from 'aphrodite';
-import { getColor, getSizeButton, getSizeSpacing } from '../../styles-aphrodite/getters';
 import { theme } from '../../../theme';
 
-export const cssLink: any = StyleSheet.create({
+export const cssLink: any = {
   base: {
     color: theme.color.global,
     textUnderline: "underline"
@@ -13,9 +11,9 @@ export const cssLink: any = StyleSheet.create({
       transition: "200ms"
     }
   }
-})
+}
 
-export const cssLinkVariant: any = StyleSheet.create({
+export const cssLinkVariant: any = {
   global: {
     color: theme.color.global,
     ':hover': {
@@ -64,4 +62,4 @@ export const cssLinkVariant: any = StyleSheet.create({
       color: theme.color.inactiveLight1
     }
   }
-})
+}

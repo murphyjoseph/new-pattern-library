@@ -1,5 +1,4 @@
-import { StyleSheet, css } from 'aphrodite';
-import { getColor, getSizeButton, getSizeSpacing } from '../../styles-aphrodite/getters';
+import { StyleSheet } from 'aphrodite';
 import { theme } from '../../../theme';
 
 export const cssLink: any = StyleSheet.create({

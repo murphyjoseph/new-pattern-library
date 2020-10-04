@@ -3,8 +3,8 @@ import React, { FC } from "react";
 import { IFieldInput } from './field-input.interface';
 import { Label } from '../label/label';
 import { cssTextVariant } from "../text/_css-text";
-import { css } from "aphrodite/no-important";
 import { cssFieldInput } from "./_css-field-input";
+import { jsx } from '@emotion/core'
 
 interface ITraits {
   traits: IFieldInput;
@@ -14,13 +14,18 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
 
   const { kind, traitLabel, isRequired, for: _for, styles } = traits;
 
-  const classes = [
-    cssFieldInput.base,
-    !!styles && styles
-  ]
+  const classesForDiv = {
+    ...cssFieldInput.base,
+    ...!!styles && styles
+  }
+
+  const classesForInput = {
+    ...cssFieldInput.input,
+    ...cssTextVariant.placeholder
+  }
 
   return (
-    <div className={css(classes)}>
+    <div css={classesForDiv}>
       <Label traits={({
         main: traitLabel?.main,
         secondary: traitLabel?.secondary,
@@ -28,7 +33,7 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
         for: _for
       })} />
 
-      <input className={css(cssFieldInput.input, cssTextVariant.placeholder)}
+      <input css={classesForInput}
              id={_for}
              type={kind} />
     </div>

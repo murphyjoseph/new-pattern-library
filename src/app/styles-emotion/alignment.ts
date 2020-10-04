@@ -1,6 +1,4 @@
-import { StyleSheet } from 'aphrodite/no-important';
-
-export const cssTextAlignment = StyleSheet.create({
+export const cssTextAlignment = {
   center: {
     textAlign: "center"
   },
@@ -10,4 +8,4 @@ export const cssTextAlignment = StyleSheet.create({
   left: {
     textAlign: "left"
   }
-})
+}
