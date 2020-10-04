@@ -1,5 +1,5 @@
 import { StyleSheet, css } from 'aphrodite';
-import { getColor, getSizeButton, getSizeSpacing } from '../../styles/getters';
+import { getColor, getSizeButton, getSizeSpacing } from '../../styles-aphrodite/getters';
 import { theme } from '../../../theme';
 
 // how do we enforce types here? e.g. have a type of text elements?

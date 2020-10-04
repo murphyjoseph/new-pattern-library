@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { TextAction } from '../../base/text/text-action';
-import { ITextAction } from '../../base/text/text.interface';
+import { TextAction } from '../../base-aphrodite/text/text-action';
+import { ITextAction } from '../../base-aphrodite/text/text.interface';
 
 export interface IPropsTextTitle {
   text: string,

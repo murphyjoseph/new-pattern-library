@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { IText } from '../../base/text/text.interface';
-import { Text } from '../../base/text/text';
+import { IText } from '../../base-aphrodite/text/text.interface';
+import { Text } from '../../base-aphrodite/text/text';
 
 interface IPropsTextTitlePrimary {
   text: string

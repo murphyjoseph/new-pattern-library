@@ -2,10 +2,10 @@ import React, { FC } from "react";
 
 import { IContainer } from './container.interface';
 // import { stylePadding, stylerAttributeAndClassSetup } from "../../shared/services/styler";
-import { stylePadding } from '../../styles/padding';
+import { stylePadding } from '../../styles-aphrodite/padding';
 import { StyleSheet, css } from 'aphrodite/no-important';
-import { styleMargin } from "../../styles/margin";
-import { cssDisplay } from '../../styles/display';
+import { styleMargin } from "../../styles-aphrodite/margin";
+import { cssDisplay } from '../../styles-aphrodite/display';
 
 interface ITraits {
   traits: IContainer;

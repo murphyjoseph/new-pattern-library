@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import { Text } from './app/base/text/text';
+import { Text } from './app/base-aphrodite/text/text';
 import { TextTitleSecondary } from './app/branded/typography/text-title-secondary';
 import { FieldText } from './app/branded/fields/field-text';
 import { ButtonPrimary } from './app/branded/buttons/button-primary';
 import { css } from 'aphrodite/no-important';
-import { cssTextAlignment } from './app/styles/alignment';
-import { cssDisplay } from './app/styles/display';
+import { cssTextAlignment } from './app/styles-aphrodite/alignment';
+import { cssDisplay } from './app/styles-aphrodite/display';
 
 function App() {
 

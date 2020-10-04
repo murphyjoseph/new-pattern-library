@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { css } from "aphrodite/no-important";
 import { IContainerLink } from './container.interface';
-import { cssDisplay } from '../../styles/display';
+import { cssDisplay } from '../../styles-aphrodite/display';
 
 interface ITraits {
   traits: IContainerLink

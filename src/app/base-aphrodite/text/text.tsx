@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import { IText } from './text.interface';
 import { cssText, cssTextVariant, cssTextStyle } from './_css-text';
 import { css } from "aphrodite/no-important";
-import { cssTextAlignment } from '../../styles/alignment';
+import { cssTextAlignment } from '../../styles-aphrodite/alignment';
 
 interface ITraits {
   traits: IText;

@@ -61,14 +61,13 @@
   --color-info-dark1: #ffbb3d;
   --color-white: white;
   --color-black: black;
-  --color-grey: #999999;
-  --color-grey-light1: #e6e6e6;
-  --color-grey-light2: #ededed;
-  --color-grey-light3: #f2f2f2;
-  --color-grey-light4: #fafafa;
-  --color-grey-dark1: #545454;
-  --color-grey-dark2: #404040;
-  --color-smoke: rgba(255, 255, 255, 0.75);
+  --color-neutral: #999999;
+  --color-neutral-light1: #e6e6e6;
+  --color-neutral-light2: #ededed;
+  --color-neutral-light3: #f2f2f2;
+  --color-neutral-dark1: #545454;
+  --color-neutral-dark2: #404040;
+  --color-neutral-dark3: #400000;
   --color-transparent: rgba(9, 6, 6, 0);
   --color-shadow: rgba(77, 77, 77, 0.3);
 
@@ -333,16 +332,16 @@
   --branding-disabled  : 'disabled';
   --branding-inactive  : 'inactive';
 
-  --breakpoint-breakpoint1  : '350px';
-  --breakpoint-breakpoint2  : '560px';
-  --breakpoint-breakpoint3  : '850px';
-  --breakpoint-breakpoint4  : '1000px';
-  --breakpoint-breakpoint5  : '1100px';
-  --breakpoint-breakpoint6  : '1250px';
-  --breakpoint-breakpoint7  : '1400px';
-  --breakpoint-breakpoint8  : '1750px';
-  --breakpoint-breakpoint9  : '2000px';
-  --breakpoint-breakpoint10 : '2200px';
-  --breakpoint-main         : '1000px';
+  --breakpoint1     : '350px';
+  --breakpoint2     : '560px';
+  --breakpoint3     : '850px';
+  --breakpoint4     : '1000px';
+  --breakpoint5     : '1100px';
+  --breakpoint6     : '1250px';
+  --breakpoint7     : '1400px';
+  --breakpoint8     : '1750px';
+  --breakpoint9     : '2000px';
+  --breakpoint10    : '2200px';
+  --breakpoint-main : '1000px';
 
 }
