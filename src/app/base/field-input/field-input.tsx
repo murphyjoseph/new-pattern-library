@@ -12,11 +12,11 @@ interface ITraits {
 
 export const FieldInput: FC<ITraits> = ({ traits }) => {
 
-  const { kind, traitLabel, isRequired, for: _for, ...remainder } = traits;
+  const { kind, traitLabel, isRequired, for: _for, styles } = traits;
 
   const classes = [
     cssFieldInput.base,
-    !!remainder.styles && remainder.styles
+    !!styles && styles
   ]
 
   return (
@@ -28,7 +28,9 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
         for: _for
       })} />
 
-      <input className={css(cssFieldInput.input, cssTextVariant.placeholder)} id={_for} type={kind}  />
+      <input className={css(cssFieldInput.input, cssTextVariant.placeholder)}
+             id={_for}
+             type={kind} />
     </div>
   )
 }

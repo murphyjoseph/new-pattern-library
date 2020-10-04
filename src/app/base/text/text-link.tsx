@@ -13,19 +13,19 @@ export const TextLink: FC<ITraits> = ({
   traits
 }) => {
 
-  const { text: _text, rel: _rel, variant, target: _target, href: _href, ...remainder} = traits;
+  const { text: _text, rel: _rel, variant, target: _target, href: _href, id: _id, styles} = traits;
 
   const classes = [
     cssLink.base,
     cssLink.hover,
     cssLinkVariant[variant],
-    !!remainder.styles && remainder.styles
+    !!styles && styles
   ]
 
   const optionalAttributes: any = {
     ...(!!_target && { target: _target }),
     ...(!!_rel && { rel: _rel }),
-    ...(!!traits.id && { id: traits.id })
+    ...(!!_id && { id: _id })
   };
 
   const traitsForText: IText = {

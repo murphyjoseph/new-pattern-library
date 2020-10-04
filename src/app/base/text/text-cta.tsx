@@ -13,14 +13,14 @@ export const TextCTA: FC<ITraits> = ({
   traits
 }) => {
 
-  const { text: _text, rel: _rel, target: _target, href: _href, variant, size, ...remainder} = traits;
+  const { text: _text, rel: _rel, target: _target, href: _href, variant, size, styles } = traits;
 
   const classes = [
     cssButton.base,
     cssButton.hover,
     cssButtonVariant[variant],
     cssButtonSize[size],
-    !!remainder.styles && remainder.styles
+    !!styles && styles
   ]
 
   const optionalAttributes: any = {

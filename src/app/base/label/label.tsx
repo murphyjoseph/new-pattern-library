@@ -10,7 +10,7 @@ export interface ITraits {
 
 export const Label: FC<ITraits> = ({ traits }) => {
 
-  const { isRequired, main, secondary, ...remainder } = traits
+  const { isRequired, main, secondary, styles } = traits
 
   if (!main && !secondary) return <></>
 
@@ -31,7 +31,7 @@ export const Label: FC<ITraits> = ({ traits }) => {
   }
 
   const classes = [
-    !!remainder.styles && remainder.styles
+    !!styles && styles
   ]
 
   return (

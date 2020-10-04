@@ -1,6 +1,7 @@
 import React, { FC } from "react";
+import { css } from "aphrodite/no-important";
 import { IContainerLink } from './container.interface';
-import { stylerAttributeAndClassSetup } from "../../shared/services/styler";
+import { cssDisplay } from '../../styles/display';
 
 interface ITraits {
   traits: IContainerLink
@@ -11,14 +12,21 @@ export const ContainerLink: FC<ITraits> = ({
   children
 }) => {
 
-  const { href: _href, target: _target, css, ...remainder } = traits;
+  const { href: _href, target: _target, styles } = traits;
+
+  const classes = [
+    !!styles && styles,
+    cssDisplay.block
+  ]
 
   const optionalAttributes: React.HTMLProps<HTMLAnchorElement> = {
     ...(!!_target && { target: _target })
   };
 
   return (
-    <a {...stylerAttributeAndClassSetup(remainder)} {...optionalAttributes}>
+    <a  className={css(classes)}
+        href={_href}
+        {...optionalAttributes}>
       {children}
     </a>
   )

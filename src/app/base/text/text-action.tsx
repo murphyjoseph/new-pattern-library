@@ -13,7 +13,7 @@ export const TextAction: FC<ITraits> = ({
   traits
 }) => {
 
-  const { onClick, size, text: _text, variant, ...remainder} = traits;
+  const { onClick, size, text: _text, variant, id: _id, styles } = traits;
 
   const handleClick = (event?: React.SyntheticEvent): void => {
     if (!onClick) return
@@ -25,11 +25,11 @@ export const TextAction: FC<ITraits> = ({
     cssButton.hover,
     cssButtonVariant[variant],
     cssButtonSize[size],
-    !!remainder.styles && remainder.styles
+    !!styles && styles
   ]
 
   const optionalAttributes: any = {
-    ...(!!traits.id && { id: traits.id })
+    ...(!!_id && { id: _id })
   };
 
   const traitsForText: IText = {

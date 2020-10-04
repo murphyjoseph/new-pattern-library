@@ -5,6 +5,7 @@ import { IContainer } from './container.interface';
 import { stylePadding } from '../../styles/padding';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import { styleMargin } from "../../styles/margin";
+import { cssDisplay } from '../../styles/display';
 
 interface ITraits {
   traits: IContainer;
@@ -15,16 +16,17 @@ export const Container: FC<ITraits> = ({
   children
 }) => {
 
-  const styles = StyleSheet.create({
-    classes: {
-      ...!!traits.padding && stylePadding(traits.padding),
-      ...!!traits.margin && styleMargin(traits.margin),
-      display: "block"
-    }
-  })
+  const { padding, margin, styles } = traits;
+
+  const classes = [
+    ...!!padding && stylePadding(padding),
+    ...!!margin && styleMargin(margin),
+    cssDisplay.block,
+    ...!!styles && styles
+  ]
 
   return (
-    <div className={css(styles.classes)}>
+    <div className={css(classes)}>
       {children}
     </div>
   )

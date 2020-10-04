@@ -11,7 +11,8 @@ export const TextTitlePrimary: FC<IPropsTextTitlePrimary> = ({ text: _text }) =>
   const settings: IText = {
     text: _text,
     variant: "titleOne",
-    tag: "h4"
+    tag: "h4",
+    textAlignment: "right"
   }
 
   return (

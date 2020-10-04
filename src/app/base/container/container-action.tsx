@@ -1,7 +1,10 @@
 import React, { FC } from "react";
 import { IContainerAction } from './container.interface';
 import _isFunction from 'lodash/isFunction';
-import { stylerAttributeAndClassSetup } from "../../shared/services/styler";
+import { stylePadding } from '../../styles/padding';
+import { StyleSheet, css } from 'aphrodite/no-important';
+import { styleMargin } from "../../styles/margin";
+import { cssDisplay } from '../../styles/display';
 
 interface ITraits {
   traits: IContainerAction
@@ -12,7 +15,14 @@ export const ContainerAction: FC<ITraits> = ({
   children
 }) => {
 
-  const { onClick: _onClick, css, ...remainder } = traits;
+  const { onClick: _onClick, padding, margin, styles } = traits;
+
+  const classes = [
+    ...!!padding && stylePadding(padding),
+    ...!!margin && styleMargin(margin),
+    cssDisplay.block,
+    ...!!styles && styles,
+  ]
 
   const handleClick = (event?: React.SyntheticEvent): void => {
     if (!_onClick) return
@@ -20,7 +30,8 @@ export const ContainerAction: FC<ITraits> = ({
   };
 
   return (
-    <div {...stylerAttributeAndClassSetup(remainder)} onClick={handleClick}>
+    <div className={css(classes)}
+         onClick={handleClick}>
       {children}
     </div>
   )

@@ -13,14 +13,14 @@ export const TextForm: FC<ITraits> = ({
   traits
 }) => {
 
-  const { text: _text, variant, size, ...remainder} = traits;
+  const { text: _text, variant, size, styles } = traits;
 
   const classes = [
     cssButton.base,
     cssButton.hover,
     cssButtonVariant[variant],
     cssButtonSize[size],
-    !!remainder.styles && remainder.styles
+    !!styles && styles
   ]
   const optionalAttributes: any = {
     ...(!!traits.id && { id: traits.id })

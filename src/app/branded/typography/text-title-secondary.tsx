@@ -11,7 +11,8 @@ export const TextTitleSecondary: FC<IPropsTextTitleSecondary> = ({ text: _text }
   const settings: IText = {
     text: _text,
     variant: "titleTwo",
-    tag: "h5"
+    tag: "h5",
+    textAlignment: "left"
   }
 
   return (
