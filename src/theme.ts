@@ -39,7 +39,7 @@ theme.color = {
   neutralDark3    : "hsla(0, 0%, 22%, 1)"
 }
 
-theme.sizes = {
+theme.size = {
   general: {
     unit: "em",
     size1: 0.25,
@@ -115,7 +115,7 @@ theme.sizes = {
     size11: 25.4,
     size12: 27.69
   },
-  fonts: {
+  font: {
     unit: "em",
     size1: 0.6,
     size2: 0.8,
@@ -145,7 +145,7 @@ theme.sizes = {
     size11: 0.78,
     size12: 0.85
   },
-  icons: {
+  icon: {
     unit: "em",
     size1: 0.25,
     size2: 0.48,
@@ -343,19 +343,19 @@ theme.typography = {}
 theme.typography.headingOne = {
   fontFamily: "Apercu",
   fontWeight: "normal",
-  fontSize: `${theme.sizes.fonts.size11}em`
+  fontSize: `${theme.size.font.size11}${theme.size.font.unit}`
 }
 
 theme.typography.headingTwo = {
   fontFamily: "Apercu",
   fontWeight: "thinner",
-  fontSize: `${theme.sizes.fonts.size10}em`
+  fontSize: `${theme.size.font.size10}${theme.size.font.unit}`
 }
 
 theme.typography.headingThree = {
   fontFamily: "Apercu",
   fontWeight: "bold",
-  fontSize: `${theme.sizes.fonts.size9}em`,
+  fontSize: `${theme.size.font.size9}${theme.size.font.unit}`,
   textTransform: "uppercase"
 }
 
@@ -447,7 +447,7 @@ theme.typography.counter = {
 
 theme.typography.figcaption = {
   fontFamily: "Ogg",
-  fontSize: `${theme.sizes.fonts.size5}em`
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`
 }
 
 

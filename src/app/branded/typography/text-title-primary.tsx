@@ -2,11 +2,11 @@ import React, { FC } from 'react';
 import { IText } from '../../../base/text/text.interface';
 import { Text } from '../../../base/text/text';
 
-interface IPropsTextTitleSecondary {
+interface IPropsTextTitlePrimary {
   text: string
 }
 
-export const TextTitleSecondary: FC<IPropsTextTitleSecondary> = ({ text: _text }) => {
+export const TextTitlePrimary: FC<IPropsTextTitlePrimary> = ({ text: _text }) => {
 
   const settings: IText = {
     text: _text,

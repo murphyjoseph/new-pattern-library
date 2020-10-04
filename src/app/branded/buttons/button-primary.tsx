@@ -7,7 +7,7 @@ export interface IPropsTextTitle {
   onClick: (e?: React.SyntheticEvent) => void
 }
 
-export const HawtButton: FC<IPropsTextTitle> = ({
+export const ButtonPrimary: FC<IPropsTextTitle> = ({
   text: _text,
   onClick: _onClick,
 }: IPropsTextTitle) => {

@@ -5,8 +5,8 @@ import { theme } from '../../theme';
 export const cssButton: any = StyleSheet.create({
   base: {
     display: "block",
-    minHeight: theme.size.button.size2 + "em",
-    padding: theme.size.spacing.size2 + "em",
+    minHeight: `${theme.size.button.size2}${theme.size.button.unit}`,
+    padding: `${theme.size.spacing.size2}${theme.size.spacing.unit}`,
     cursor: "pointer",
     background: theme.color.global,
   },

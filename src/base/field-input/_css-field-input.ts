@@ -8,7 +8,7 @@ export const cssFieldInput = StyleSheet.create({
   },
   input: {
     borderStyle: "solid",
-    borderWidth: `${theme.sizes.border.size2}${theme.sizes.border.unit}`,
+    borderWidth: `${theme.size.border.size2}${theme.size.border.unit}`,
     borderColor: theme.color.global
   }
 })
