@@ -362,95 +362,93 @@ theme.typography.headingThree = {
 theme.typography.titleOne = {
   fontFamily: "Proxima Nova",
   fontWeight: "bold",
-  fontSize: "size7"
+  fontSize: `${theme.size.font.size7}${theme.size.font.unit}`
 }
 
 theme.typography.titleTwo = {
   fontFamily: "Proxima Nova",
   fontWeight: "normal",
-  fontSize: "size7",
+  fontSize: `${theme.size.font.size7}${theme.size.font.unit}`,
   textTransform: "uppercase"
 }
 
 theme.typography.bodyOne = {
   fontFamily: "Ogg",
-  fontSize: "size5"
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`
 }
 
 theme.typography.bodyTwo = {
   fontFamily: "Ogg",
-  fontSize: "size4"
+  fontSize: `${theme.size.font.size4}${theme.size.font.unit}`
 }
 
 theme.typography.description = {
   fontFamily: "Ogg",
-  fontSize: "size3"
+  fontSize: `${theme.size.font.size3}${theme.size.font.unit}`
 }
 
 theme.typography.list = {
   fontFamily: "Ogg",
-  fontSize: "size5"
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`
 }
 
 theme.typography.button = {
   fontFamily: "Ogg",
-  fontSize: "size5",
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`,
   textTransform: "uppercase"
 }
 
 theme.typography.link = {
   fontFamily: "Ogg",
-  fontSize: "size5",
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`,
   textDecoration: "underline"
 }
 
 theme.typography.labelOne = {
   fontFamily: "Ogg",
-  fontSize: "size5",
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`,
   fontWeight: "bold"
 }
 
 theme.typography.labelTwo = {
   fontFamily: "Ogg",
-  fontSize: "size5"
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`
 }
 
 theme.typography.input = {
   fontFamily: "Ogg",
-  fontSize: "size5"
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`
 }
 
 theme.typography.placeholder = {
   fontFamily: "Ogg",
-  fontSize: "size5"
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`
 }
 
 theme.typography.icon = {
   fontFamily: "Ogg",
-  fontSize: "size5"
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`
 }
 
 theme.typography.option = {
   fontFamily: "Ogg",
-  fontSize: "size5"
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`
 }
 
 theme.typography.invalid = {
   fontFamily: "Ogg",
-  fontSize: "size5"
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`
 }
 
 theme.typography.counter = {
   fontFamily: "Ogg",
-  fontSize: "size5"
+  fontSize: `${theme.size.font.size5}${theme.size.font.unit}`
 }
 
 theme.typography.figcaption = {
   fontFamily: "Ogg",
   fontSize: `${theme.size.font.size5}${theme.size.font.unit}`
 }
-
-
 
 
 

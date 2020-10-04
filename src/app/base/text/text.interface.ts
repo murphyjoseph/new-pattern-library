@@ -1,9 +1,9 @@
-import { IStylesColor, IStylesSpacing } from '../../shared/interfaces/styles.interface';
-import { ITypography } from '../../shared/interfaces/typography.interface';
-import { IPattern } from '../../shared/interfaces/pattern.interface';
-import { ILink } from '../../shared/interfaces/link.interface';
-import { IEvent } from '../../shared/interfaces/event.interface';
-import { TVariantText, TBranding, TSizesButton } from '../../shared/types/util-types';
+import { IStylesColor, IStylesSpacing } from '../../interfaces/styles.interface';
+import { ITypography } from '../../interfaces/typography.interface';
+import { IPattern } from '../../interfaces/pattern.interface';
+import { ILink } from '../../interfaces/link.interface';
+import { IEvent } from '../../interfaces/event.interface';
+import { TVariantText, TBranding, TSizesButton } from '../../types/util-types';
 
 type ElementType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div" | "figcaption" | "legend";
 

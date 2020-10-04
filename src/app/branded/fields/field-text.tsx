@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { IFieldInput } from '../../../base/field-input/field-input.interface';
-import { FieldInput } from '../../../base/field-input/field-input';
+import { IFieldInput } from '../../base/field-input/field-input.interface';
+import { FieldInput } from '../../base/field-input/field-input';
 
 interface IPropsFieldText {
   textMain: string

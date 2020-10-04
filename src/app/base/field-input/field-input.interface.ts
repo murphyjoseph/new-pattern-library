@@ -1,8 +1,8 @@
 import { ILabel } from "../label/label.interface";
 import { IText } from "../text/text.interface";
-import { IPattern } from "../../shared/interfaces/pattern.interface";
-import { IState } from "../../shared/interfaces/state.interface";
-import { IStylesColor, IStylesSpacing } from "../../shared/interfaces/styles.interface";
+import { IPattern } from "../../interfaces/pattern.interface";
+import { IState } from "../../interfaces/state.interface";
+import { IStylesColor, IStylesSpacing } from "../../interfaces/styles.interface";
 
 type TKinds = "text" | "tel" | "email" | "password" | "checkbox" | "radio" | "number" | "zipcode" | "hidden";
 

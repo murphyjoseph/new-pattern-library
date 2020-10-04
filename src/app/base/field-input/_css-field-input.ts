@@ -1,6 +1,6 @@
 import { StyleSheet, css } from 'aphrodite';
-import { getColor, getSizeButton, getSizeSpacing } from '../../shared/styles/getters';
-import { theme } from '../../theme';
+import { getColor, getSizeButton, getSizeSpacing } from '../../styles/getters';
+import { theme } from '../../../theme';
 
 export const cssFieldInput = StyleSheet.create({
   base: {

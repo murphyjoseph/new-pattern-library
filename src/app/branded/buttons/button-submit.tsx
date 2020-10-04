@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { TextForm } from '../../../base/text/text-form';
-import { ITextForm } from '../../../base/text/text.interface';
+import { TextForm } from '../../base/text/text-form';
+import { ITextForm } from '../../base/text/text.interface';
 
 export interface IPropsTextTitle {
   text: string,

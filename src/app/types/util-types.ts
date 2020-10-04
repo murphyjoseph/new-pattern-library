@@ -115,7 +115,8 @@ export type TDirectionSpacing =
  "right" |
  "left" |
  "horizontal" |
- "vertical"
+ "vertical" |
+ "none"
 
 export type TVariantText =
 "headingOne" |

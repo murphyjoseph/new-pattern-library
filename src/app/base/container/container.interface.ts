@@ -1,10 +1,10 @@
-import { IPattern } from '../../shared/interfaces/pattern.interface';
+import { IPattern } from '../../interfaces/pattern.interface';
 import { IStylesColor, IStylesSpacing, IStylesBorder, IStylesPosition,
          IStylesRounded, IStylesShadow, IStylesDisplay, IStylesTextAlign,
-         IStylesOverflow, IStylesMaxWidth } from '../../shared/interfaces/styles.interface';
-import { TLabelSize } from '../../shared/types/util-types';
-import { IEvent } from '../../shared/interfaces/event.interface';
-import { ILink } from '../../shared/interfaces/link.interface';
+         IStylesOverflow, IStylesMaxWidth } from '../../interfaces/styles.interface';
+import { TLabelSize } from '../../types/util-types';
+import { IEvent } from '../../interfaces/event.interface';
+import { ILink } from '../../interfaces/link.interface';
 
 export interface IContainer extends IPattern, IStylesColor, IStylesRounded, IStylesDisplay, IStylesTextAlign {
   border?: IStylesBorder,
