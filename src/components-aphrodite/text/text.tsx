@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
-import { IText } from './text.interface';
-import { cssText, cssTextVariant, cssTextStyle } from './_css-text';
+import { IText } from './Text.interface';
+import { cssText, cssTextVariant, cssTextStyle } from './_cssText';
 import { css } from "aphrodite/no-important";
 import { cssTextAlignment } from '../../styles-aphrodite/alignment';
 

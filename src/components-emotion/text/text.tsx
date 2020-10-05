@@ -1,8 +1,8 @@
 /* @jsx jsx */  import { jsx } from '@emotion/core'
 import React, { FC } from "react";
 
-import { IText } from './text.interface';
-import { cssText, cssTextVariant, cssTextStyle } from './_css-text';
+import { IText } from './Text.interface';
+import { cssText, cssTextVariant, cssTextStyle } from './_cssText';
 import { cssTextAlignment } from '../../styles-emotion/alignment';
 
 interface ITraits {

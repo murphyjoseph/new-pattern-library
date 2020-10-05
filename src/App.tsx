@@ -3,11 +3,11 @@
 
 import React from 'react';
 import './App.css';
-import { Text } from './components-emotion/text/text';
-import { TextTitleSecondary } from './branded-emotion/typography/text-title-secondary';
-import { FieldText } from './branded-emotion/fields/field-text';
-import { ButtonPrimary } from './branded-emotion/buttons/button-primary';
-import { ContainerPrimary } from './branded-emotion/containers/container-primary';
+import { Text } from './components-emotion/text/Text';
+import { TextTitleSecondary } from './branded-emotion/typography/TextTitleSecondary';
+import { FieldText } from './branded-emotion/fields/FieldText';
+import { ButtonPrimary } from './branded-emotion/buttons/ButtonPrimary';
+import { ContainerPrimary } from './branded-emotion/containers/ContainerPrimary';
 
 function App() {
 

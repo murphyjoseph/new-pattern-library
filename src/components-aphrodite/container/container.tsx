@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 
-import { IContainer } from './container.interface';
+import { IContainer } from './Container.interface';
 // import { stylePadding, stylerAttributeAndClassSetup } from "../../shared/services/styler";
 import { stylePadding } from '../../styles-aphrodite/padding';
-import { StyleSheet, css } from 'aphrodite/no-important';
+import { css } from 'aphrodite/no-important';
 import { styleMargin } from "../../styles-aphrodite/margin";
 import { cssDisplay } from '../../styles-aphrodite/display';
 

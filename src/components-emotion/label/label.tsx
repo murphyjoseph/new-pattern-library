@@ -1,9 +1,9 @@
 /* @jsx jsx */  import { jsx } from '@emotion/core'
 
 import React, { FC, Fragment } from "react";
-import { Text } from '../text/text';
-import { IText } from '../text/text.interface';
-import { ILabel } from './label.interface';
+import { Text } from '../text/Text';
+import { IText } from '../text/Text.interface';
+import { ILabel } from './Label.interface';
 
 export interface ITraits {
   traits: ILabel

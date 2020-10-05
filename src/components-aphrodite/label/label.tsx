@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import { Text } from '../text/text';
-import { IText } from '../text/text.interface';
-import { ILabel } from './label.interface';
+import { Text } from '../text/Text';
+import { IText } from '../text/Text.interface';
+import { ILabel } from './Label.interface';
 import { css } from "aphrodite/no-important";
 
 export interface ITraits {

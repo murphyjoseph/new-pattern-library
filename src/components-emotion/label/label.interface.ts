@@ -1,7 +1,5 @@
 import { IPattern } from '../../interfaces/pattern.interface';
-import { IState } from '../../interfaces/state.interface';
-import { IStylesSpacing, IStylesColor, IStylesDisplay } from '../../interfaces/styles.interface';
-import { IText } from '../text/text.interface';
+import { IStylesDisplay } from '../../interfaces/styles.interface';
 
 export interface ILabelText {
   text: string
