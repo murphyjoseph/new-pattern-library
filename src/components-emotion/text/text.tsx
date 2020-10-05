@@ -24,8 +24,6 @@ export const Text: FC<ITraits> = ({ traits }) => {
     ...!!styles && styles
   }
 
-  console.log(classes)
-
   return (
     <Tag css={classes}>
       { text }

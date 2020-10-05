@@ -8,6 +8,7 @@ import { TextTitleSecondary } from './branded-emotion/typography/TextTitleSecond
 import { FieldText } from './branded-emotion/fields/FieldText';
 import { ButtonPrimary } from './branded-emotion/buttons/ButtonPrimary';
 import { ContainerPrimary } from './branded-emotion/containers/ContainerPrimary';
+import { themeCss } from './themeCss';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
       </header>
       <main>
         <ContainerPrimary>
-
+        <div css={{background: themeCss.color.secondary}}> hey </div>
         <ButtonPrimary text="Click Me" onClick={clickme} />
         <TextTitleSecondary text="secondary title bruh" />
         <TextTitleSecondary text="secondary title bruh" />
