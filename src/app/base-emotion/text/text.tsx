@@ -1,8 +1,8 @@
+/* @jsx jsx */  import { jsx } from '@emotion/core'
 import React, { FC } from "react";
 
 import { IText } from './text.interface';
 import { cssText, cssTextVariant, cssTextStyle } from './_css-text';
-import { jsx } from '@emotion/core'
 import { cssTextAlignment } from '../../styles-emotion/alignment';
 
 interface ITraits {
@@ -23,6 +23,8 @@ export const Text: FC<ITraits> = ({ traits }) => {
     ...!!textAlignment && cssTextAlignment[textAlignment],
     ...!!styles && styles
   }
+
+  console.log(classes)
 
   return (
     <Tag css={classes}>

@@ -19,8 +19,13 @@ export const Container: FC<ITraits> = ({
   const { padding, margin, styles } = traits;
 
   const classes = [
-    ...!!padding && stylePadding(padding),
-    ...!!margin && styleMargin(margin),
+
+    (!!padding && !!margin && {
+      spacing: {
+        ...!!padding && stylePadding(padding),
+        ...!!margin && styleMargin(margin),
+      }
+    }),
     cssDisplay.block,
     ...!!styles && styles
   ]

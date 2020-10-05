@@ -1,9 +1,9 @@
+/* @jsx jsx */  import { jsx } from '@emotion/core'
 import React, { FC } from "react";
 import { ITextLink, IText } from './text.interface';
 import { Text } from "./text";
 import _isFunction from 'lodash/isFunction';
 import { cssLink, cssLinkVariant } from "./_css-link";
-import { jsx } from '@emotion/core'
 
 interface ITraits {
   traits: ITextLink

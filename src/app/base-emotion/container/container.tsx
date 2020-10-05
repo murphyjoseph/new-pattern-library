@@ -1,8 +1,8 @@
+/* @jsx jsx */  import { jsx } from '@emotion/core'
 import React, { FC } from "react";
 
 import { IContainer } from './container.interface';
 import { stylePadding } from '../../styles-emotion/padding';
-import { jsx } from '@emotion/core'
 import { styleMargin } from "../../styles-emotion/margin";
 import { cssDisplay } from '../../styles-emotion/display';
 

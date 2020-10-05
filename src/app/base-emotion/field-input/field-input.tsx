@@ -1,10 +1,10 @@
+/* @jsx jsx */  import { jsx } from '@emotion/core'
 import React, { FC } from "react";
 
 import { IFieldInput } from './field-input.interface';
 import { Label } from '../label/label';
 import { cssTextVariant } from "../text/_css-text";
 import { cssFieldInput } from "./_css-field-input";
-import { jsx } from '@emotion/core'
 
 interface ITraits {
   traits: IFieldInput;

@@ -1,9 +1,9 @@
+/* @jsx jsx */  import { jsx } from '@emotion/core'
 import React, { FC } from "react";
 import { ITextForm, IText } from './text.interface';
 import { Text } from "./text";
 import _isFunction from 'lodash/isFunction';
 import { cssButton, cssButtonVariant, cssButtonSize } from "./_css-button";
-import { jsx } from '@emotion/core'
 
 interface ITraits {
   traits: ITextForm
