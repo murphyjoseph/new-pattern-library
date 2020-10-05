@@ -34,8 +34,6 @@ export const textComp: FC<ITraits> = ({ traits, styles }) => {
     // ...!!styles && styles
   }
 
-  console.log(classes)
-
   return (
     <Tag css={classes}>
       { text}

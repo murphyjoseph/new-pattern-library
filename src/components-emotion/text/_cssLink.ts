@@ -1,13 +1,13 @@
-import { theme } from '../../theme';
+import { themeCss } from '../../themeCss';
 
 export const cssLink: any = {
   base: {
-    color: theme.color.global,
+    color: themeCss.color.global,
     textUnderline: "underline"
   },
   hover: {
     ':hover': {
-      color: theme.color.globalLight1,
+      color: themeCss.color.globalLight1,
       transition: "200ms"
     }
   }
@@ -15,51 +15,51 @@ export const cssLink: any = {
 
 export const cssLinkVariant: any = {
   global: {
-    color: theme.color.global,
+    color: themeCss.color.global,
     ':hover': {
-      color: theme.color.globalLight1
+      color: themeCss.color.globalLight1
     }
   },
   primary: {
-    color: theme.color.primary,
+    color: themeCss.color.primary,
     ':hover': {
-      color: theme.color.primaryLight1
+      color: themeCss.color.primaryLight1
     }
   },
   secondary: {
-    color: theme.color.secondary,
+    color: themeCss.color.secondary,
     ':hover': {
-      color: theme.color.secondaryLight1
+      color: themeCss.color.secondaryLight1
     }
   },
   neutral: {
-    color: theme.color.neutral,
+    color: themeCss.color.neutral,
     ':hover': {
-      color: theme.color.neutralLight1
+      color: themeCss.color.neutralLight1
     }
   },
   warning: {
-    color: theme.color.warning,
+    color: themeCss.color.warning,
     ':hover': {
-      color: theme.color.warningLight1
+      color: themeCss.color.warningLight1
     }
   },
   info: {
-    color: theme.color.info,
+    color: themeCss.color.info,
     ':hover': {
-      color: theme.color.infoLight1
+      color: themeCss.color.infoLight1
     }
   },
   disabled: {
-    color: theme.color.disabled,
+    color: themeCss.color.disabled,
     ':hover': {
-      color: theme.color.disabledLight1
+      color: themeCss.color.disabledLight1
     }
   },
   inactive: {
-    color: theme.color.inactive,
+    color: themeCss.color.inactive,
     ':hover': {
-      color: theme.color.inactiveLight1
+      color: themeCss.color.inactiveLight1
     }
   }
 }

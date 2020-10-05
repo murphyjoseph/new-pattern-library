@@ -1,11 +1,11 @@
 import { StyleSheet } from 'aphrodite';
-import { theme } from '../../theme';
+import { themeCss } from '../../themeCss';
 
 // how do we enforce types here? e.g. have a type of text elements?
 
 export const cssText = StyleSheet.create({
   base: {
-    color: theme.color.black,
+    color: themeCss.color.black,
     fontWeight: "normal",
     lineHeight: 1.1
   }
@@ -46,64 +46,64 @@ export const cssTextStyle = StyleSheet.create({
 
 export const cssTextVariant = StyleSheet.create({
   headingOne: {
-    ...theme.typography.headingOne
+    ...themeCss.typography.headingOne
   },
   headingTwo: {
-    ...theme.typography.headingTwo
+    ...themeCss.typography.headingTwo
   },
   headingThree: {
-    ...theme.typography.headingThree
+    ...themeCss.typography.headingThree
   },
   titleOne: {
-    ...theme.typography.titleOne
+    ...themeCss.typography.titleOne
   },
   titleTwo: {
-    ...theme.typography.titleTwo
+    ...themeCss.typography.titleTwo
   },
   bodyOne: {
-    ...theme.typography.bodyOne
+    ...themeCss.typography.bodyOne
   },
   bodyTwo: {
-    ...theme.typography.bodyTwo
+    ...themeCss.typography.bodyTwo
   },
   description: {
-    ...theme.typography.description
+    ...themeCss.typography.description
   },
   list: {
-    ...theme.typography.list
+    ...themeCss.typography.list
   },
   button: {
-    ...theme.typography.button
+    ...themeCss.typography.button
   },
   link: {
-    ...theme.typography.link
+    ...themeCss.typography.link
   },
   labelOne: {
-    ...theme.typography.labelOne
+    ...themeCss.typography.labelOne
   },
   labelTwo: {
-    ...theme.typography.labelTwo
+    ...themeCss.typography.labelTwo
   },
   input: {
-    ...theme.typography.input
+    ...themeCss.typography.input
   },
   placeholder: {
-    ...theme.typography.placeholder
+    ...themeCss.typography.placeholder
   },
   icon: {
-    ...theme.typography.icon
+    ...themeCss.typography.icon
   },
   option: {
-    ...theme.typography.option
+    ...themeCss.typography.option
   },
   invalid: {
-    ...theme.typography.invalid
+    ...themeCss.typography.invalid
   },
   counter: {
-    ...theme.typography.counter
+    ...themeCss.typography.counter
   },
   figcaption: {
-    ...theme.typography.figcaption
+    ...themeCss.typography.figcaption
   }
 })
 

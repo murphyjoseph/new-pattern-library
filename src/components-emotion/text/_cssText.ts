@@ -1,4 +1,4 @@
-import { theme } from '../../theme';
+import { themeCss } from '../../themeCss';
 
 // how do we enforce types here? e.g. have a type of text elements?
 

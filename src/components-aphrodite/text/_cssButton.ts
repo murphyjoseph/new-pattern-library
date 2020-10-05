@@ -1,17 +1,17 @@
 import { StyleSheet } from 'aphrodite';
-import { theme } from '../../theme';
+import { themeCss } from '../../themeCss';
 
 export const cssButton: any = StyleSheet.create({
   base: {
     display: "block",
-    minHeight: `${theme.size.button.size2}${theme.size.button.unit}`,
-    padding: `${theme.size.spacing.size2}${theme.size.spacing.unit}`,
+    minHeight: `${themeCss.size.button.size2}${themeCss.size.button.unit}`,
+    padding: `${themeCss.size.spacing.size2}${themeCss.size.spacing.unit}`,
     cursor: "pointer",
-    background: theme.color.global,
+    background: themeCss.color.global,
   },
   hover: {
     ':hover': {
-      background: theme.color.globalLight1,
+      background: themeCss.color.globalLight1,
       transition: "200ms"
     }
   }
@@ -19,63 +19,63 @@ export const cssButton: any = StyleSheet.create({
 
 export const cssButtonVariant: any = StyleSheet.create({
   global: {
-    background: theme.color.global,
+    background: themeCss.color.global,
     ':hover': {
-      background: theme.color.globalLight1
+      background: themeCss.color.globalLight1
     }
   },
   primary: {
-    background: theme.color.primary,
+    background: themeCss.color.primary,
     ':hover': {
-      background: theme.color.primaryLight1
+      background: themeCss.color.primaryLight1
     }
   },
   secondary: {
-    background: theme.color.secondary,
+    background: themeCss.color.secondary,
     ':hover': {
-      background: theme.color.secondaryLight1
+      background: themeCss.color.secondaryLight1
     }
   },
   neutral: {
-    background: theme.color.neutral,
+    background: themeCss.color.neutral,
     ':hover': {
-      background: theme.color.neutralLight1
+      background: themeCss.color.neutralLight1
     }
   },
   warning: {
-    background: theme.color.warning,
+    background: themeCss.color.warning,
     ':hover': {
-      background: theme.color.warningLight1
+      background: themeCss.color.warningLight1
     }
   },
   info: {
-    background: theme.color.info,
+    background: themeCss.color.info,
     ':hover': {
-      background: theme.color.infoLight1
+      background: themeCss.color.infoLight1
     }
   },
   disabled: {
-    background: theme.color.disabled,
+    background: themeCss.color.disabled,
     ':hover': {
-      background: theme.color.disabledLight1
+      background: themeCss.color.disabledLight1
     }
   },
   inactive: {
-    background: theme.color.inactive,
+    background: themeCss.color.inactive,
     ':hover': {
-      background: theme.color.inactiveLight1
+      background: themeCss.color.inactiveLight1
     }
   }
 })
 
 export const cssButtonSize: any = StyleSheet.create({
   large: {
-    minHeight: `${theme.size.button.size3}${theme.size.button.unit}`
+    minHeight: `${themeCss.size.button.size3}${themeCss.size.button.unit}`
   },
   medium: {
-    minHeight: `${theme.size.button.size3}${theme.size.button.unit}`
+    minHeight: `${themeCss.size.button.size3}${themeCss.size.button.unit}`
   },
   small: {
-    minHeight: `${theme.size.button.size3}${theme.size.button.unit}`
+    minHeight: `${themeCss.size.button.size3}${themeCss.size.button.unit}`
   }
 })
