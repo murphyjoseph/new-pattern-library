@@ -1,16 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
+// import { themeObj } from './themeObj';
 
 const ThemeContext = React.createContext({});
 
 const ThemeProvider = ({ theme, children }: any) => {
+  const appChildren = useMemo(() => children, [children]);
+  console.log(children);
   return (
     <ThemeContext.Provider value={theme}>
-      {children}
+      {appChildren}
     </ThemeContext.Provider>
   )
-}
+};
 
-const useStyles = () => {
+const useStyles: any = () => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
     throw new Error('useStyles must be used within a ThemeProvider')
@@ -26,7 +29,7 @@ const withStyles = (...styles: any) => (WrappedComponent: any) => {
       combinedStyles = styles(theme)
     } else {
       styles.forEach((val: any) => {
-        if(typeof val === 'function') {
+        if (typeof val === 'function') {
           combinedStyles = {
             ...combinedStyles,
             ...val(theme)

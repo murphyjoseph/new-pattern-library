@@ -3,14 +3,15 @@ import { IText } from '../../components-emotion/text/Text.interface';
 import { Text } from '../../components-emotion/text/Text';
 
 interface IPropsTextTitleSecondary {
-  text: string
+  text: string;
+  variant?: any;
 }
 
-export const TextTitleSecondary: FC<IPropsTextTitleSecondary> = ({ text: _text }) => {
+export const TextTitleSecondary: FC<IPropsTextTitleSecondary> = ({ text: _text, variant }) => {
 
   const settings: IText = {
     text: _text,
-    variant: "titleTwo",
+    variant: variant || 'titleTwo',
     tag: "h5",
     textAlignment: "left",
     isItalic: true

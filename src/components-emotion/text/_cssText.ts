@@ -44,6 +44,18 @@ export const cssTextStyle = {
 }
 
 export const cssTextVariant = (t: any) => ({
+  headingOne: {
+    ...t.typography.headingOne
+  },
+  headingTwo: {
+    ...t.typography.headingTwo
+  },
+  headingThree: {
+    ...t.typography.headingThree
+  },
+  titleOne: {
+    ...t.typography.titleOne
+  },
   titleTwo: {
     ...t.typography.titleTwo
   },

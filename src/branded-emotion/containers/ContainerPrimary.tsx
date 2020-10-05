@@ -3,23 +3,24 @@ import { Container } from '../../components-emotion/container/Container';
 import { IContainer } from '../../components-emotion/container/Container.interface';
 
 interface IPropsTextTitlePrimary {
-  children: any
+  children: any;
+  paddingSize: any;
 }
 
-export const ContainerPrimary: FC<IPropsTextTitlePrimary> = ({ children }) => {
+export const ContainerPrimary: FC<IPropsTextTitlePrimary> = ({ children, paddingSize }) => {
 
   const settings: IContainer = {
     padding: {
       direction: "all",
-      size: "size5"
+      size: paddingSize || "size5"
     },
     colorBackground: "primary"
   }
 
   return (
     <Container traits={settings}>
-    { children }
-  </Container>
+      { children}
+    </Container>
   )
 
 }
