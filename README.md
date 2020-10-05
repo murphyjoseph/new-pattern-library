@@ -82,13 +82,6 @@ QUESTIONS
 
 - How are we going to handle breakpoints in this scenario?
 
-
-
-
-
-
-
-
 PascalCase for the component names
 camel case for the css files
 two different theme names one for css variables and one for theme provider
