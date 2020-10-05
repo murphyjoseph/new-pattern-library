@@ -7,8 +7,6 @@ import { Text } from './app/base-aphrodite/text/text';
 import { TextTitleSecondary } from './app/branded-aphrodite/typography/text-title-secondary';
 import { FieldText } from './app/branded-aphrodite/fields/field-text';
 import { ButtonPrimary } from './app/branded-aphrodite/buttons/button-primary';
-import { cssTextAlignment } from './app/styles-aphrodite/alignment';
-import { cssDisplay } from './app/styles-aphrodite/display';
 import { ContainerPrimary } from './app/branded-aphrodite/containers/container-primary';
 
 function App() {
