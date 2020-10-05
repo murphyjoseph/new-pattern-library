@@ -2,13 +2,13 @@ import { theme } from '../../theme';
 
 // how do we enforce types here? e.g. have a type of text elements?
 
-export const cssText = {
+export const cssText = (t: any) => ({
   base: {
-    color: theme.color.black,
+    color: t.color.info,
     fontWeight: "normal",
     lineHeight: 1.1
   }
-}
+});
 
 export const cssTextWeight = {
   bold: {
@@ -43,65 +43,71 @@ export const cssTextStyle = {
   }
 }
 
-export const cssTextVariant = {
-  headingOne: {
-    ...theme.typography.headingOne
-  },
-  headingTwo: {
-    ...theme.typography.headingTwo
-  },
-  headingThree: {
-    ...theme.typography.headingThree
-  },
-  titleOne: {
-    ...theme.typography.titleOne
-  },
+export const cssTextVariant = (t: any) => ({
   titleTwo: {
-    ...theme.typography.titleTwo
+    ...t.typography.titleTwo
   },
-  bodyOne: {
-    ...theme.typography.bodyOne
-  },
-  bodyTwo: {
-    ...theme.typography.bodyTwo
-  },
-  description: {
-    ...theme.typography.description
-  },
-  list: {
-    ...theme.typography.list
-  },
-  button: {
-    ...theme.typography.button
-  },
-  link: {
-    ...theme.typography.link
-  },
-  labelOne: {
-    ...theme.typography.labelOne
-  },
-  labelTwo: {
-    ...theme.typography.labelTwo
-  },
-  input: {
-    ...theme.typography.input
-  },
-  placeholder: {
-    ...theme.typography.placeholder
-  },
-  icon: {
-    ...theme.typography.icon
-  },
-  option: {
-    ...theme.typography.option
-  },
-  invalid: {
-    ...theme.typography.invalid
-  },
-  counter: {
-    ...theme.typography.counter
-  },
-  figcaption: {
-    ...theme.typography.figcaption
-  }
-}
+});
+
+// export const cssTextVariant = {
+//   headingOne: {
+//     ...theme.typography.headingOne
+//   },
+//   headingTwo: {
+//     ...theme.typography.headingTwo
+//   },
+//   headingThree: {
+//     ...theme.typography.headingThree
+//   },
+//   titleOne: {
+//     ...theme.typography.titleOne
+//   },
+//   titleTwo: {
+//     ...theme.typography.titleTwo
+//   },
+//   bodyOne: {
+//     ...theme.typography.bodyOne
+//   },
+//   bodyTwo: {
+//     ...theme.typography.bodyTwo
+//   },
+//   description: {
+//     ...theme.typography.description
+//   },
+//   list: {
+//     ...theme.typography.list
+//   },
+//   button: {
+//     ...theme.typography.button
+//   },
+//   link: {
+//     ...theme.typography.link
+//   },
+//   labelOne: {
+//     ...theme.typography.labelOne
+//   },
+//   labelTwo: {
+//     ...theme.typography.labelTwo
+//   },
+//   input: {
+//     ...theme.typography.input
+//   },
+//   placeholder: {
+//     ...theme.typography.placeholder
+//   },
+//   icon: {
+//     ...theme.typography.icon
+//   },
+//   option: {
+//     ...theme.typography.option
+//   },
+//   invalid: {
+//     ...theme.typography.invalid
+//   },
+//   counter: {
+//     ...theme.typography.counter
+//   },
+//   figcaption: {
+//     ...theme.typography.figcaption
+//   }
+// }

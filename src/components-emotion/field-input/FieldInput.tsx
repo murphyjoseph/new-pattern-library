@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 import { IFieldInput } from './FieldInput.interface';
 import { Label } from '../label/Label';
-import { cssTextVariant } from "../text/_cssText";
+// import { cssTextVariant } from "../text/_cssText";
 import { cssFieldInput } from "./_cssFieldInput";
 
 interface ITraits {
@@ -21,7 +21,7 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
 
   const classesForInput = {
     ...cssFieldInput.input,
-    ...cssTextVariant.placeholder
+    // ...cssTextVariant.placeholder
   }
 
   return (

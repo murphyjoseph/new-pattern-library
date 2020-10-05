@@ -8,6 +8,8 @@ import { TextTitleSecondary } from './branded-emotion/typography/TextTitleSecond
 import { FieldText } from './branded-emotion/fields/FieldText';
 import { ButtonPrimary } from './branded-emotion/buttons/ButtonPrimary';
 import { ContainerPrimary } from './branded-emotion/containers/ContainerPrimary';
+import { ThemeProvider } from './ThemeProvider';
+import { theme } from './theme';
 
 function App() {
 
@@ -16,72 +18,73 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <header>
 
-      </header>
-      <main>
-        <ContainerPrimary>
+        </header>
+        <main>
+          <ContainerPrimary>
 
-        <ButtonPrimary text="Click Me" onClick={clickme} />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        <TextTitleSecondary text="secondary title bruh" />
-        </ContainerPrimary>
-        {/* <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
+            <ButtonPrimary text="Click Me" onClick={clickme} />
+            <TextTitleSecondary text="secondary title bruh"/>
+            {/* <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" />
+            <TextTitleSecondary text="secondary title bruh" /> */}
+          </ContainerPrimary>
+          {/* <Text traits={({variant: "headingOne", text: "yo", tag: "h1"})} />
         <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
         <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
         <Text traits={({variant: "titleOne", text: "yo"})} />
@@ -129,8 +132,9 @@ function App() {
         <Text traits={({variant: "headingTwo", text: "yo", tag: "h2"})} />
         <Text traits={({variant: "headingThree", text: "yo", tag: "h3"})} />
         <Text traits={({variant: "titleOne", text: "yo"})} /> */}
-      </main>
-    </div>
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }
 

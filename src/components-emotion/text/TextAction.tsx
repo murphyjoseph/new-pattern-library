@@ -4,6 +4,7 @@ import { ITextAction, IText } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
 import { cssButton, cssButtonVariant, cssButtonSize } from './_cssButton';
+import { useStyles } from '../../ThemeProvider';
 
 interface ITraits {
   traits: ITextAction
@@ -14,7 +15,8 @@ export const TextAction: FC<ITraits> = ({
 }) => {
 
   const { onClick, size, text: _text, variant, id: _id, styles } = traits;
-
+  const styleS = useStyles();
+  console.log(styleS)
   const handleClick = (event?: React.SyntheticEvent): void => {
     if (!onClick) return
     if (_isFunction(onClick)) onClick(event);
