@@ -3,11 +3,11 @@
 
 import React from 'react';
 import './App.css';
-import { Text } from './app/base-aphrodite/text/text';
-import { TextTitleSecondary } from './app/branded-aphrodite/typography/text-title-secondary';
-import { FieldText } from './app/branded-aphrodite/fields/field-text';
-import { ButtonPrimary } from './app/branded-aphrodite/buttons/button-primary';
-import { ContainerPrimary } from './app/branded-aphrodite/containers/container-primary';
+import { Text } from './app/base-emotion/text/text';
+import { TextTitleSecondary } from './app/branded-emotion/typography/text-title-secondary';
+import { FieldText } from './app/branded-emotion/fields/field-text';
+import { ButtonPrimary } from './app/branded-emotion/buttons/button-primary';
+import { ContainerPrimary } from './app/branded-emotion/containers/container-primary';
 
 function App() {
 

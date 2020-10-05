@@ -81,3 +81,15 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 QUESTIONS
 
 - How are we going to handle breakpoints in this scenario?
+
+
+
+
+
+
+
+
+PascalCase for the component names
+camel case for the css files
+two different theme names one for css variables and one for theme provider
+create aphrodite and emotion theme providers

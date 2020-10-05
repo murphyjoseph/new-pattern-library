@@ -1,6 +1,6 @@
 /* @jsx jsx */  import { jsx } from '@emotion/core'
 
-import React, { FC } from "react";
+import React, { FC, Fragment } from "react";
 import { Text } from '../text/text';
 import { IText } from '../text/text.interface';
 import { ILabel } from './label.interface';
@@ -13,7 +13,7 @@ export const Label: FC<ITraits> = ({ traits }) => {
 
   const { isRequired, main, secondary, styles } = traits
 
-  if (!main && !secondary) return <></>
+  if (!main && !secondary) return <Fragment></Fragment>
 
   let traitsForMain: IText | undefined;
   if (!!main) {
@@ -40,23 +40,23 @@ export const Label: FC<ITraits> = ({ traits }) => {
            htmlFor={traits.for}>
       {
         !!traitsForMain &&
-        <>
+        <Fragment>
           <Text traits={traitsForMain} />
           {
             !!isRequired &&
             <abbr title="required" aria-label="required">*</abbr>
           }
-        </>
+        </Fragment>
       }
       {
         !!traitsForSecondary &&
-        <>
+        <Fragment>
           <Text traits={traitsForSecondary} />
           {
             !!isRequired && !traitsForMain &&
             <abbr title="required" aria-label="required">*</abbr>
           }
-        </>
+        </Fragment>
       }
     </label>
   )
