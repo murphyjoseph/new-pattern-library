@@ -4,8 +4,8 @@ import { themeCss } from '../../themeCss';
 export const cssButton: any = StyleSheet.create({
   base: {
     display: "block",
-    minHeight: `${themeCss.size.button.size2}${themeCss.size.button.unit}`,
-    padding: `${themeCss.size.spacing.size2}${themeCss.size.spacing.unit}`,
+    minHeight: themeCss.size.button.size1,
+    padding: themeCss.size.spacing.size2,
     cursor: "pointer",
     background: themeCss.color.global,
   },
@@ -70,12 +70,12 @@ export const cssButtonVariant: any = StyleSheet.create({
 
 export const cssButtonSize: any = StyleSheet.create({
   large: {
-    minHeight: `${themeCss.size.button.size3}${themeCss.size.button.unit}`
+    minHeight: themeCss.size.button.size3
   },
   medium: {
-    minHeight: `${themeCss.size.button.size3}${themeCss.size.button.unit}`
+    minHeight: themeCss.size.button.size2
   },
   small: {
-    minHeight: `${themeCss.size.button.size3}${themeCss.size.button.unit}`
+    minHeight: themeCss.size.button.size1
   }
 })

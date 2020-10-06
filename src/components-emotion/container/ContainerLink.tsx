@@ -3,6 +3,7 @@
 import React, { FC } from "react";
 import { IContainerLink } from './Container.interface';
 import { cssDisplay } from '../../styles-emotion/display';
+import { cssColorBackground } from '../../styles-emotion/color';
 
 interface ITraits {
   traits: IContainerLink
@@ -13,11 +14,12 @@ export const ContainerLink: FC<ITraits> = ({
   children
 }) => {
 
-  const { href: _href, target: _target, styles } = traits;
+  const { href: _href, target: _target, styles, colorBackground } = traits;
 
   const classes = {
-    ...!!styles && styles,
-    ...cssDisplay.block
+    ...!!colorBackground && cssColorBackground[colorBackground],
+    ...cssDisplay.block,
+    ...!!styles && styles
   }
 
   const optionalAttributes: React.HTMLProps<HTMLAnchorElement> = {

@@ -6,6 +6,7 @@ import { stylePadding } from '../../styles-aphrodite/padding';
 import { css } from 'aphrodite/no-important';
 import { styleMargin } from "../../styles-aphrodite/margin";
 import { cssDisplay } from '../../styles-aphrodite/display';
+import { cssColorBackground } from "../../styles-aphrodite/color";
 
 interface ITraits {
   traits: IContainer;
@@ -16,7 +17,7 @@ export const Container: FC<ITraits> = ({
   children
 }) => {
 
-  const { padding, margin, styles } = traits;
+  const { padding, margin, styles, colorBackground } = traits;
 
   const classes = [
 
@@ -27,6 +28,7 @@ export const Container: FC<ITraits> = ({
       }
     }),
     cssDisplay.block,
+    !!colorBackground && cssColorBackground[colorBackground],
     ...!!styles && styles
   ]
 

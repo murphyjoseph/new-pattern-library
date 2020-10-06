@@ -6,6 +6,7 @@ import _isFunction from 'lodash/isFunction';
 import { stylePadding } from '../../styles-emotion/padding';
 import { styleMargin } from "../../styles-emotion/margin";
 import { cssDisplay } from '../../styles-emotion/display';
+import { cssColorBackground } from '../../styles-emotion/color';
 
 interface ITraits {
   traits: IContainerAction
@@ -16,11 +17,12 @@ export const ContainerAction: FC<ITraits> = ({
   children
 }) => {
 
-  const { onClick: _onClick, padding, margin, styles } = traits;
+  const { onClick: _onClick, padding, margin, styles, colorBackground } = traits;
 
   const classes = {
     ...!!padding && stylePadding(padding),
     ...!!margin && styleMargin(margin),
+    ...!!colorBackground && cssColorBackground[colorBackground],
     ...cssDisplay.block,
     ...!!styles && styles,
   }

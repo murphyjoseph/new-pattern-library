@@ -1,19 +1,21 @@
 import React, { FC } from 'react';
 import { Container } from '../../components-emotion/container/Container';
 import { IContainer } from '../../components-emotion/container/Container.interface';
+import { TColors } from '../../types/util-types';
 
 interface IPropsTextTitlePrimary {
-  children: any
+  children: any,
+  background: TColors
 }
 
-export const ContainerPrimary: FC<IPropsTextTitlePrimary> = ({ children }) => {
+export const ContainerPrimary: FC<IPropsTextTitlePrimary> = ({ children, background }) => {
 
   const settings: IContainer = {
     padding: {
       direction: "all",
       size: "size5"
     },
-    colorBackground: "primary"
+    colorBackground: background
   }
 
   return (
