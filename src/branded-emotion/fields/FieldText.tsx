@@ -9,12 +9,13 @@ interface IPropsFieldText {
   styles?: any
 }
 
-export const FieldText: FC<IPropsFieldText> = ({textMain, for: _for, styles: _styles}) => {
+export const FieldText: FC<IPropsFieldText> = ({textMain, for: _for, styles: _styles, onChange: _onChange}) => {
 
   const settings: IFieldInput = {
     for: _for,
     kind: "text",
     styles: _styles,
+    onChange: _onChange,
     traitLabel: {
       for: _for,
       main: {

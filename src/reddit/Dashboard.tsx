@@ -23,17 +23,22 @@ export const Dashboard: FC = () => {
   const [posts, setPosts] = useState({});
 
   const handleSubreddit = (e: any) =>  {
+    console.log("set subreddit");
+    console.log(subreddit);
     setSubreddit(e.target.value)
+    console.log(subreddit);
   }
 
-  const fetchPosts =(event: any, {subreddit, query }: IParams) => {
+  const fetchPosts =({event, subreddit: _subreddit, query }: IParams) => {
     event.preventDefault()
     console.log("Current Posts")
     console.log(posts);
+    console.log(_subreddit);
+
 
     (async () => {
       console.log("awaiting...")
-      const _posts = await api.getPosts({subreddit: subreddit})
+      const _posts = await api.getPosts({subreddit: _subreddit})
       console.log("done awaiting...")
       setPosts(_posts)
     })()
@@ -44,7 +49,7 @@ export const Dashboard: FC = () => {
   return (
     <SettingProvider value={subreddit}>
       <main>
-        <form onSubmit={(event) => fetchPosts(event, {subreddit})} id="subredditSearch">
+        <form onSubmit={(event) => fetchPosts({event, subreddit})} id="subredditSearch">
           <FieldText onChange={(e: React.SyntheticEvent) => handleSubreddit(e)} textMain="Enter Subreddit" for="subreddit" styles={cssDisplay.inlineBlock} />
           <ButtonSubmit text="submit" form="subredditSearch" styles={cssDisplay.inlineBlock} />
         </form>

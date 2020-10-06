@@ -22,6 +22,7 @@ export interface IParams {
   subreddit: string;
   postId?: string;
   query?: string;
+  event?: any;
 }
 
 type RawPosts = IListingRes<IPostRes>;
