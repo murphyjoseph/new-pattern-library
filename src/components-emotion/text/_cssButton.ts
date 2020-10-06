@@ -3,7 +3,7 @@ import { themeCss } from '../../themeCss';
 export const cssButton: any = {
   base: {
     display: "block",
-    minHeight: themeCss.size.button.size2,
+    minWidth: themeCss.size.button.size2,
     padding: themeCss.size.spacing.size2,
     cursor: "pointer",
     background: themeCss.color.global,
@@ -69,12 +69,12 @@ export const cssButtonVariant: any = {
 
 export const cssButtonSize: any = {
   large: {
-    minHeight: themeCss.size.button.size3
+    minWidth: themeCss.size.button.size3
   },
   medium: {
-    minHeight: themeCss.size.button.size3
+    minWidth: themeCss.size.button.size3
   },
   small: {
-    minHeight: themeCss.size.button.size3
+    minWidth: themeCss.size.button.size3
   }
 }

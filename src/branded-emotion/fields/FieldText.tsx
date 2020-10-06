@@ -3,15 +3,18 @@ import { IFieldInput } from '../../components-emotion/field-input/FieldInput.int
 import { FieldInput } from '../../components-emotion/field-input/FieldInput';
 
 interface IPropsFieldText {
-  textMain: string
-  for: string
+  textMain: string,
+  onChange: React.FormEventHandler<HTMLInputElement>,
+  for: string,
+  styles?: any
 }
 
-export const FieldText: FC<IPropsFieldText> = ({textMain, for: _for}) => {
+export const FieldText: FC<IPropsFieldText> = ({textMain, for: _for, styles: _styles}) => {
 
   const settings: IFieldInput = {
     for: _for,
     kind: "text",
+    styles: _styles,
     traitLabel: {
       for: _for,
       main: {

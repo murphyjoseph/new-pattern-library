@@ -4,16 +4,18 @@ import { ITextForm } from '../../components-aphrodite/text/Text.interface';
 
 export interface IPropsTextTitle {
   text: string,
-  onClick: (e?: React.SyntheticEvent) => void
+  form: string
 }
 
 export const ButtonSubmit: FC<IPropsTextTitle> = ({
-  text: _text
+  text: _text,
+  form: _form
 }: IPropsTextTitle) => {
 
   const settings: ITextForm = {
     variant: 'primary',
     text: _text,
+    form: _form,
     size: "medium"
   };
 

@@ -4,15 +4,20 @@ import { ITextForm } from '../../components-emotion/text/Text.interface';
 
 export interface IPropsTextTitle {
   text: string,
-  onClick: (e?: React.SyntheticEvent) => void
+  form: string,
+  styles: any
 }
 
 export const ButtonSubmit: FC<IPropsTextTitle> = ({
-  text: _text
+  text: _text,
+  form: _form,
+  styles: _styles
 }: IPropsTextTitle) => {
 
   const settings: ITextForm = {
     variant: 'primary',
+    styles: _styles,
+    form: _form,
     text: _text,
     size: "medium"
   };

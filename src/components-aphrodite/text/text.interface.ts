@@ -37,7 +37,8 @@ export interface ITextLink extends ILink, IPattern {
 
 export interface ITextForm extends Omit<IText, "tag" | "variant"> {
   size: TSizesButton,
-  variant: TBranding
+  variant: TBranding,
+  form: string
 }
 
 export interface ITextActionLink extends Omit<IText, "tag">, IEvent, ILink {

@@ -1,0 +1,58 @@
+import React, { FC, useState } from "react";
+import api, { IParams } from '../api/redditAPI';
+import { Posts } from "./Posts";
+import { FieldText } from '../branded-emotion/fields/FieldText';
+import { ButtonSubmit } from "../branded-emotion/buttons/ButtonSubmit";
+import { cssDisplay } from '../styles-emotion/display';
+
+function createCtx<A>() {
+  const ctx = React.createContext<A | undefined>(undefined);
+  function useCtx() {
+    const c = React.useContext(ctx);
+    if (!c) throw new Error("useCtx must be inside a Provider with a value");
+    return c;
+  }
+  return [useCtx, ctx.Provider] as const; // make TypeScript infer a tuple, not an array of union types
+}
+
+export const [useCtx, SettingProvider] = createCtx<string>(); // specify type, but no need to specify value upfront!
+
+export const Dashboard: FC = () => {
+
+  const [subreddit, setSubreddit] = useState("all");
+  const [posts, setPosts] = useState({});
+
+  const handleSubreddit = (e: any) =>  {
+    setSubreddit(e.target.value)
+  }
+
+  const fetchPosts =(event: any, {subreddit, query }: IParams) => {
+    event.preventDefault()
+    console.log("Current Posts")
+    console.log(posts);
+
+    (async () => {
+      console.log("awaiting...")
+      const _posts = await api.getPosts({subreddit: subreddit})
+      console.log("done awaiting...")
+      setPosts(_posts)
+    })()
+  }
+
+  // VIEW
+
+  return (
+    <SettingProvider value={subreddit}>
+      <main>
+        <form onSubmit={(event) => fetchPosts(event, {subreddit})} id="subredditSearch">
+          <FieldText onChange={(e: React.SyntheticEvent) => handleSubreddit(e)} textMain="Enter Subreddit" for="subreddit" styles={cssDisplay.inlineBlock} />
+          <ButtonSubmit text="submit" form="subredditSearch" styles={cssDisplay.inlineBlock} />
+        </form>
+        {
+          !!posts &&
+          <Posts posts={posts} />
+        }
+      </main>
+    </SettingProvider>
+  );
+}
