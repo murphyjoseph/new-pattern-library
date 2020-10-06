@@ -7,6 +7,8 @@ import { Dashboard } from './reddit/Dashboard';
 import { TestingGround } from './TestingGround';
 
 function App() {
+  // let root = document.documentElement;
+  // root.style.setProperty('--color-primary', "red");
 
   return (
     <div className="App">

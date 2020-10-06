@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { IFieldInput } from '../../components-aphrodite/field-input/FieldInput.interface';
 import { FieldInput } from '../../components-aphrodite/field-input/FieldInput';
+import { themeCss } from '../../themeCss';
 
 interface IPropsFieldText {
   textMain: string
@@ -18,6 +19,9 @@ export const FieldText: FC<IPropsFieldText> = ({textMain, for: _for, onChange: _
       for: _for,
       main: {
         text: textMain
+      },
+      styles: {
+        paddingRight: themeCss.size.spacing.size3
       }
     }
   }

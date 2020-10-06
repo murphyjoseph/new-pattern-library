@@ -370,12 +370,12 @@ themeCss.typography.titleTwo = {
 
 themeCss.typography.bodyOne = {
   fontFamily: "Ogg",
-  fontSize: themeCss.size.font.size5
+  fontSize: themeCss.size.font.size4
 }
 
 themeCss.typography.bodyTwo = {
   fontFamily: "Ogg",
-  fontSize: themeCss.size.font.size4
+  fontSize: themeCss.size.font.size3
 }
 
 themeCss.typography.description = {

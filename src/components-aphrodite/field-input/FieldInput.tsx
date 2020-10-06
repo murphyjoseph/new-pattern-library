@@ -35,10 +35,9 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
   return (
     <div className={css(classes)}>
       <Label traits={({
-        main: traitLabel?.main,
-        secondary: traitLabel?.secondary,
         isRequired: isRequired,
-        for: _for
+        for: _for,
+        ...traitLabel
       })} />
 
       <input className={css(cssFieldInput.input, cssTextVariant.placeholder)}

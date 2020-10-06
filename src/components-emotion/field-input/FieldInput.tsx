@@ -40,10 +40,9 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
   return (
     <div css={classesForDiv}>
       <Label traits={({
-        main: traitLabel?.main,
-        secondary: traitLabel?.secondary,
         isRequired: isRequired,
-        for: _for
+        for: _for,
+        ...traitLabel
       })} />
 
       <input css={classesForInput}
