@@ -31,7 +31,7 @@ export const Label: FC<ITraits> = ({ traits }) => {
   }
 
   const classes = clsx(
-    !!styles && styles()
+    !!styles && styles
   )
 
   return (

@@ -20,7 +20,7 @@ export const TextForm: FC<ITraits> = ({
     cssButton().hover,
     cssButtonVariant()[variant],
     cssButtonSize()[size],
-    !!styles && styles()
+    !!styles && styles
   )
 
   const optionalAttributes: any = {

@@ -5,7 +5,7 @@ import { ITextForm } from '../../components-emotion/text/Text.interface';
 export interface IPropsTextTitle {
   text: string,
   form: string,
-  styles: any
+  styles?: any
 }
 
 export const ButtonSubmit: FC<IPropsTextTitle> = ({

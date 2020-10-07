@@ -19,7 +19,7 @@ export const TextLink: FC<ITraits> = ({
     cssLink().base,
     cssLink().hover,
     cssLinkVariant()[variant],
-    !!styles && styles()
+    !!styles && styles
   )
 
   const optionalAttributes: any = {

@@ -24,7 +24,7 @@ export const Text: FC<ITraits> = ({ traits }) => {
     !!isCrossedOut && cssTextStyle().crossedOut,
     !!isUnderlined && cssTextStyle().underlined,
     !!textAlignment && cssTextAlignment()[textAlignment],
-    !!styles && styles()
+    !!styles && styles
   )
 
   return (

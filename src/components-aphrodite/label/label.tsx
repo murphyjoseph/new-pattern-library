@@ -3,6 +3,7 @@ import { Text } from '../text/Text';
 import { IText } from '../text/Text.interface';
 import { ILabel } from './Label.interface';
 import { css } from "aphrodite";
+import { cssDisplay } from '../../styles-aphrodite/display';
 
 export interface ITraits {
   traits: ILabel

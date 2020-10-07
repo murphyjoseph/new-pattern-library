@@ -20,31 +20,29 @@ export const Container: FC<ITraits> = ({
 
   const { padding, margin, styles, colorBackground } = traits;
 
-  // let spacing = createUseStyles{(
-  //   padding: {},
-  //   margin: {}
-  // )}
+  let cssPadding: any = {padding: undefined};
+  let cssMargin: any = {margin: undefined};
 
-  // const testPadding = !!padding ? stylePadding(padding) : {paddingTop: "0"}
-  // const testMargin = !!margin ? styleMargin(margin) : {paddingTop: "0"}
+  if (!!padding)
+  cssPadding = createUseStyles({
+    padding: {
+      ...stylePadding(padding)
+    }
+  })
 
-    const spacing = createUseStyles({
-      padding: {
-        paddingTop: "15px"
-      },
-      margin: {
-        marginTop: "15px"
-      }
-    })
-
-
+  if (!!margin)
+  cssMargin = createUseStyles({
+    margin: {
+      ...styleMargin(margin)
+    }
+  })
 
   const classes = clsx(
-    spacing().padding,
-    spacing().margin,
+    !!cssMargin.margin && cssMargin().margin,
+    !!cssPadding.padding && cssPadding().padding,
     cssDisplay().block,
     !!colorBackground && cssColorBackground()[colorBackground],
-    ...!!styles && styles()
+    !!styles && styles
   )
 
   return (

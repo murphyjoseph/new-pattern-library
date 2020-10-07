@@ -23,7 +23,7 @@ export const ContainerAction: FC<ITraits> = ({
     ...!!margin && styleMargin(margin),
     cssDisplay.block,
     !!colorBackground && cssColorBackground[colorBackground],
-    ...!!styles && styles,
+    !!styles && styles,
   ]
 
   const handleClick = (event?: React.SyntheticEvent): void => {

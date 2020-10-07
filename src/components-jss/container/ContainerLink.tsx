@@ -18,7 +18,7 @@ export const ContainerLink: FC<ITraits> = ({
   const classes = clsx(
     cssDisplay().block,
     !!colorBackground && cssColorBackground()[colorBackground],
-    !!styles && styles()
+    !!styles && styles
   )
 
   const optionalAttributes: React.HTMLProps<HTMLAnchorElement> = {

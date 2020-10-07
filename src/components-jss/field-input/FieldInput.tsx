@@ -17,7 +17,7 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
 
   const classes = clsx(
     cssFieldInput().base,
-    !!styles && styles()
+    !!styles && styles
   )
 
   const handleChange = (event?: React.SyntheticEvent): void => {

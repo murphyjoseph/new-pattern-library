@@ -16,8 +16,8 @@ function App() {
 
       </header>
       <main>
-        {/* <Dashboard /> */}
-        <TestingGround />
+        <Dashboard />
+        {/* <TestingGround /> */}
       </main>
     </div>
   );
