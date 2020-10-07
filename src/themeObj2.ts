@@ -1,27 +1,27 @@
-// themeObj Object Literal No CSS Variables
+// themeObj2 Object Literal No CSS Variables
 
-export let themeObj: any = {};
-themeObj.name = 'one';
-themeObj.color = {
-  global          : "hsla(0, 0%, 15%, 1)",
-  globalLight1    : "hsla(0, 0%, 25%, 1)",
-  globalDark1     : "hsla(0, 0%, 5%, 1)",
-  primary         : "hsla(200, 37%, 52%, 1)",
-  primaryLight1   : "hsla(200, 37%, 60%, 1)",
-  primaryDark1    : "hsla(200, 37%, 44%, 1)",
-  secondary       : "hsla(200, 37%, 52%, 1)",
-  secondaryLight1 : "hsla(200, 37%, 60%, 1)",
-  secondaryDark1  : "hsla(200, 37%, 44%, 1)",
-  success         : "hsla(83, 46%, 47%, 1)",
-  successLight1   : "hsla(83, 46%, 58%, 1)",
-  successDark1    : "hsla(83, 46%, 36%, 1)",
+export let themeObj2: any = {};
+themeObj2.name = 'two';
+themeObj2.color = {
+  global          : "#264653",
+  globalLight1    : "#264653",
+  globalDark1     : "#264653",
+  primary         : "#2a9d8f",
+  primaryLight1   : "#2a9d8f",
+  primaryDark1    : "#2a9d8f",
+  secondary       : "#e9c46a",
+  secondaryLight1 : "#e9c46a",
+  secondaryDark1  : "#e9c46a",
+  success         : "#2a9d8f",
+  successLight1   : "#2a9d8f",
+  successDark1    : "#2a9d8f",
   disabled        : "hsla(0, 0%, 87%, 1)",
   disabledLight1  : "hsla(0, 0%, 95%, 1)",
   disabledDark1   : "hsla(0, 0%, 76%, 1)",
   warning         : "hsla(7, 66%, 57%, 1)",
   warningLight1   : "hsla(7, 66%, 72%, 1)",
   warningDark1    : "hsla(7, 66%, 46%, 1)",
-  info            : "hsla(39, 100%, 71%, 1)",
+  info            : "#2a9d8f",
   infoLight1      : "hsla(39, 100%, 80%, 1)",
   infoDark1       : "hsla(39, 100%, 62%, 1)",
   white           : "hsla(0, 100%, 100%, 1)",
@@ -35,7 +35,7 @@ themeObj.color = {
   neutralDark3    : "hsla(0, 0%, 22%, 1)"
 }
 
-themeObj.size = {
+themeObj2.size = {
   general: {
     unit: "em",
     size1: 0.25,
@@ -310,7 +310,7 @@ themeObj.size = {
   }
 }
 
-themeObj.branding = {
+themeObj2.branding = {
   global    : 'global',
   primary   : 'primary',
   secondary : 'secondary',
@@ -321,7 +321,7 @@ themeObj.branding = {
   inactive  : 'inactive'
 }
 
-themeObj.breakpoint = {
+themeObj2.breakpoint = {
   breakpoint1  : '350px',
   breakpoint2  : '560px',
   breakpoint3  : '850px',
@@ -335,113 +335,113 @@ themeObj.breakpoint = {
   main         : '1000px'
 }
 
-themeObj.typography = {}
-themeObj.typography.headingOne = {
-  fontFamily: "Apercu",
+themeObj2.typography = {}
+themeObj2.typography.headingOne = {
+  fontFamily: "Sanista Swashed",
   fontWeight: "normal",
-  fontSize: `${themeObj.size.font.size11}${themeObj.size.font.unit}`
+  fontSize: `${themeObj2.size.font.size11}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.headingTwo = {
-  fontFamily: "Apercu",
+themeObj2.typography.headingTwo = {
+  fontFamily: "Sanista Swashed",
   fontWeight: "thinner",
-  fontSize: `${themeObj.size.font.size10}${themeObj.size.font.unit}`
+  fontSize: `${themeObj2.size.font.size10}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.headingThree = {
-  fontFamily: "Apercu",
+themeObj2.typography.headingThree = {
+  fontFamily: "Sanista Swashed",
   fontWeight: "bold",
-  fontSize: `${themeObj.size.font.size9}${themeObj.size.font.unit}`,
+  fontSize: `${themeObj2.size.font.size9}${themeObj2.size.font.unit}`,
   textTransform: "uppercase"
 }
 
-themeObj.typography.titleOne = {
-  fontFamily: "Proxima Nova",
+themeObj2.typography.titleOne = {
+  fontFamily: "Roboto",
   fontWeight: "bold",
-  fontSize: `${themeObj.size.font.size7}${themeObj.size.font.unit}`
+  fontSize: `${themeObj2.size.font.size7}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.titleTwo = {
-  fontFamily: "Proxima Nova",
+themeObj2.typography.titleTwo = {
+  fontFamily: "Roboto",
   fontWeight: "normal",
-  fontSize: `${themeObj.size.font.size7}${themeObj.size.font.unit}`,
+  fontSize: `${themeObj2.size.font.size7}${themeObj2.size.font.unit}`,
   textTransform: "uppercase"
 }
 
-themeObj.typography.bodyOne = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`
+themeObj2.typography.bodyOne = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.bodyTwo = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size4}${themeObj.size.font.unit}`
+themeObj2.typography.bodyTwo = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size4}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.description = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size3}${themeObj.size.font.unit}`
+themeObj2.typography.description = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size3}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.list = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`
+themeObj2.typography.list = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.button = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`,
+themeObj2.typography.button = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`,
   textTransform: "uppercase"
 }
 
-themeObj.typography.link = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`,
+themeObj2.typography.link = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`,
   textDecoration: "underline"
 }
 
-themeObj.typography.labelOne = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`,
+themeObj2.typography.labelOne = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`,
   fontWeight: "bold"
 }
 
-themeObj.typography.labelTwo = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`
+themeObj2.typography.labelTwo = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.input = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`
+themeObj2.typography.input = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.placeholder = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`
+themeObj2.typography.placeholder = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.icon = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`
+themeObj2.typography.icon = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.option = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`
+themeObj2.typography.option = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.invalid = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`
+themeObj2.typography.invalid = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.counter = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`
+themeObj2.typography.counter = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`
 }
 
-themeObj.typography.figcaption = {
-  fontFamily: "Ogg",
-  fontSize: `${themeObj.size.font.size5}${themeObj.size.font.unit}`
+themeObj2.typography.figcaption = {
+  fontFamily: "Roboto",
+  fontSize: `${themeObj2.size.font.size5}${themeObj2.size.font.unit}`
 }

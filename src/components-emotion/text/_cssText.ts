@@ -2,13 +2,21 @@ import { themeCss } from '../../themeCss';
 
 // how do we enforce types here? e.g. have a type of text elements?
 
-export const cssText = (t: any) => ({
+export const cssTextTP = (t: any) => ({
   base: {
     color: t.color.info,
     fontWeight: "normal",
     lineHeight: 1.1
   }
 });
+
+export const cssText = {
+  base: {
+    color: 'var(--color-info)',
+    fontWeight: "normal",
+    lineHeight: 1.1
+  }
+};
 
 export const cssTextWeight = {
   bold: {
@@ -43,7 +51,7 @@ export const cssTextStyle = {
   }
 }
 
-export const cssTextVariant = (t: any) => ({
+export const cssTextVariantTP = (t: any) => ({
   headingOne: {
     ...t.typography.headingOne
   },
@@ -61,65 +69,65 @@ export const cssTextVariant = (t: any) => ({
   },
 });
 
-// export const cssTextVariant = {
-//   headingOne: {
-//     ...themeCss.typography.headingOne
-//   },
-//   headingTwo: {
-//     ...themeCss.typography.headingTwo
-//   },
-//   headingThree: {
-//     ...themeCss.typography.headingThree
-//   },
-//   titleOne: {
-//     ...themeCss.typography.titleOne
-//   },
-//   titleTwo: {
-//     ...themeCss.typography.titleTwo
-//   },
-//   bodyOne: {
-//     ...themeCss.typography.bodyOne
-//   },
-//   bodyTwo: {
-//     ...themeCss.typography.bodyTwo
-//   },
-//   description: {
-//     ...themeCss.typography.description
-//   },
-//   list: {
-//     ...themeCss.typography.list
-//   },
-//   button: {
-//     ...themeCss.typography.button
-//   },
-//   link: {
-//     ...themeCss.typography.link
-//   },
-//   labelOne: {
-//     ...themeCss.typography.labelOne
-//   },
-//   labelTwo: {
-//     ...themeCss.typography.labelTwo
-//   },
-//   input: {
-//     ...themeCss.typography.input
-//   },
-//   placeholder: {
-//     ...themeCss.typography.placeholder
-//   },
-//   icon: {
-//     ...themeCss.typography.icon
-//   },
-//   option: {
-//     ...themeCss.typography.option
-//   },
-//   invalid: {
-//     ...themeCss.typography.invalid
-//   },
-//   counter: {
-//     ...themeCss.typography.counter
-//   },
-//   figcaption: {
-//     ...themeCss.typography.figcaption
-//   }
-// }
+export const cssTextVariant = {
+  headingOne: {
+    ...themeCss.typography.headingOne
+  },
+  headingTwo: {
+    ...themeCss.typography.headingTwo
+  },
+  headingThree: {
+    ...themeCss.typography.headingThree
+  },
+  titleOne: {
+    ...themeCss.typography.titleOne
+  },
+  titleTwo: {
+    ...themeCss.typography.titleTwo
+  },
+  bodyOne: {
+    ...themeCss.typography.bodyOne
+  },
+  bodyTwo: {
+    ...themeCss.typography.bodyTwo
+  },
+  description: {
+    ...themeCss.typography.description
+  },
+  list: {
+    ...themeCss.typography.list
+  },
+  button: {
+    ...themeCss.typography.button
+  },
+  link: {
+    ...themeCss.typography.link
+  },
+  labelOne: {
+    ...themeCss.typography.labelOne
+  },
+  labelTwo: {
+    ...themeCss.typography.labelTwo
+  },
+  input: {
+    ...themeCss.typography.input
+  },
+  placeholder: {
+    ...themeCss.typography.placeholder
+  },
+  icon: {
+    ...themeCss.typography.icon
+  },
+  option: {
+    ...themeCss.typography.option
+  },
+  invalid: {
+    ...themeCss.typography.invalid
+  },
+  counter: {
+    ...themeCss.typography.counter
+  },
+  figcaption: {
+    ...themeCss.typography.figcaption
+  }
+}
