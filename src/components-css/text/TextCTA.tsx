@@ -3,7 +3,7 @@ import { IText, ITextCTA } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
 import clsx from 'clsx';
-import './css-button.css';
+import './_css-button.css';
 
 interface ITraits {
   traits: ITextCTA

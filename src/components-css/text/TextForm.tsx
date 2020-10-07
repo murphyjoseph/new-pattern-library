@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { ITextForm, IText } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
-import './css-button.css';
+import './_css-button.css';
 import clsx from 'clsx';
 
 interface ITraits {

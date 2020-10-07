@@ -4,5 +4,5 @@
 }
 
 .field_input_input {
-  border: solid var(--color-size-border-size2) var(--color-global);
+  border: var(--color-size-border-size2) solid var(--color-global);
 }

@@ -4,6 +4,18 @@
 import React, { FC, useState } from 'react';
 import './App.css';
 
+// VANILLA CSS
+import './styles-css/display.css';
+import './styles-css/alignment.css';
+import './styles-css/color.css';
+import './styles-css/margin.css';
+import './styles-css/padding.css';
+import { TextTitleSecondary } from './branded-css/typography/TextTitleSecondary';
+import { ButtonPrimary } from './branded-css/buttons/ButtonPrimary';
+import { ButtonDynamic } from './branded-css/buttons/ButtonDynamic';
+import { TextTitlePrimary } from './branded-css/typography/TextTitlePrimary';
+import { ContainerPrimary } from './branded-css/containers/ContainerPrimary';
+
 // JSS
 // import { TextTitleSecondary } from './branded-jss/typography/TextTitleSecondary';
 // import { ButtonPrimary } from './branded-jss/buttons/ButtonPrimary';
@@ -19,11 +31,11 @@ import './App.css';
 // import { ContainerPrimary } from './branded-aphrodite/containers/ContainerPrimary';
 
 // EMOTION
-import { TextTitleSecondary } from './branded-emotion/typography/TextTitleSecondary';
-import { ButtonPrimary } from './branded-emotion/buttons/ButtonPrimary';
-import { ButtonDynamic } from './branded-emotion/buttons/ButtonDynamic';
-import { TextTitlePrimary } from './branded-emotion/typography/TextTitlePrimary';
-import { ContainerPrimary } from './branded-emotion/containers/ContainerPrimary';
+// import { TextTitleSecondary } from './branded-emotion/typography/TextTitleSecondary';
+// import { ButtonPrimary } from './branded-emotion/buttons/ButtonPrimary';
+// import { ButtonDynamic } from './branded-emotion/buttons/ButtonDynamic';
+// import { TextTitlePrimary } from './branded-emotion/typography/TextTitlePrimary';
+// import { ContainerPrimary } from './branded-emotion/containers/ContainerPrimary';
 
 import { themeCss } from './themeCss';
 
