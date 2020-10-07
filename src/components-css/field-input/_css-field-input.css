@@ -1,0 +1,8 @@
+
+.field_input_base {
+  display: "block";
+}
+
+.field_input_input {
+  border: solid var(--color-size-border-size2) var(--color-global);
+}

@@ -1,0 +1,134 @@
+
+.text_base {
+  color: var(--color-black);
+  font-weight: "normal";
+  line-height: 1.1;
+}
+
+
+.text_bold {
+  font-weight: "bold";
+}
+
+.text_bolder {
+  font-weight: "bolder";
+}
+
+.text_lighter {
+  font-weight: "lighter";
+}
+
+.text_normal {
+  font-weight: "normal";
+}
+
+.text_italic {
+  font-style: "italic"
+}
+
+.text_crossedOut {
+  text-decoration: "line-through"
+}
+
+.text_underlined {
+  text-decoration: "underline"
+}
+
+.text_nowrap {
+  white-space: "nowrap"
+}
+
+.text_capitalize {
+  text-transform: "uppercase"
+}
+
+.text_headingOne {
+  font-size: var(--size-font-size11);
+  font-family: 'Apercu';
+  font-weight: normal;
+}
+.text_headingTwo {
+  font-size: var(--size-font-size10);
+  font-family: 'Apercu';
+  font-weight: thinner;
+}
+.text_headingThree {
+  font-size: var(--size-font-size9);
+  font-family: 'Apercu';
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.text_titleOne {
+  font-size: var(--size-font-size7);
+  font-family: 'Proxima Nova';
+  font-weight: bold;
+}
+.text_titleTwo {
+  font-size: var(--size-font-size7);
+  font-family: 'Proxima Nova';
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.text_bodyOne {
+  font-size: var(--size-font-size4);
+  font-family: 'Ogg';
+}
+.text_bodyTwo {
+  font-size: var(--size-font-size3);
+  font-family: 'Ogg';
+}
+.text_description {
+  font-size: var(--size-font-size3);
+  font-family: 'Ogg';
+}
+.text_list {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+}
+.text_button {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+  text-transform: uppercase;
+}
+.text_link {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+  text-decoration: underline;
+}
+.text_labelOne {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+  font-weight: bold;
+}
+.text_labelTwo {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+}
+.text_input {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+}
+.text_placeholder {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+}
+.text_icon {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+}
+.text_option {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+}
+.text_invalid {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+}
+.text_counter {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+}
+.text_figcaption {
+  font-size: var(--size-font-size5);
+  font-family: 'Ogg';
+}

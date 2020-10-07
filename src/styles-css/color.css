@@ -1,0 +1,185 @@
+
+
+  .css_color_text_global {
+    color: var(--color-global);
+  }
+  .css_color_text_global-light1 {
+    color: var(--color-global-light1);
+  }
+  .css_color_text_global-dark1 {
+    color: var(--color-global-dark1);
+  }
+  .css_color_text_primary {
+    color: var(--color-primary);
+  }
+  .css_color_text_primary-light1 {
+    color: var(--color-primary-light1);
+  }
+  .css_color_text_primary-dark1 {
+    color: var(--color-primary-dark1);
+  }
+  .css_color_text_secondary {
+    color: var(--color-secondary);
+  }
+  .css_color_text_secondary-light1 {
+    color: var(--color-secondary-light1);
+  }
+  .css_color_text_secondary-dark1 {
+    color: var(--color-secondary-dark1);
+  }
+  .css_color_text_success {
+    color: var(--color-success);
+  }
+  .css_color_text_success-light1 {
+    color: var(--color-succes-light1);
+  }
+  .css_color_text_success-dark1 {
+    color: var(--color-success-dark1);
+  }
+  .css_color_text_disabled {
+    color: var(--color-disabled);
+  }
+  .css_color_text_disabled-light1 {
+    color: var(--color-disabled-light1);
+  }
+  .css_color_text_disabled-dark1 {
+    color: var(--color-disabled-dark1);
+  }
+  .css_color_text_warning {
+    color: var(--color-warning);
+  }
+  .css_color_text_warning-light1 {
+    color: var(--color-warning-light1);
+  }
+  .css_color_text_warning-dark1 {
+    color: var(--color-warning-dark1);
+  }
+  .css_color_text_info {
+    color: var(--color-info);
+  }
+  .css_color_text_info-light1 {
+    color: var(--color-info-light1);
+  }
+  .css_color_text_info-dark1 {
+    color: var(--color-info-dark1);
+  }
+  .css_color_text_white {
+    color: var(--color-white);
+  }
+  .css_color_text_black {
+    color: var(--color-black);
+  }
+  .css_color_text_neutral{
+    color: var(--color-neutral);
+  }
+  .css_color_text_neutral-light1 {
+    color: var(--color-neutral-light1);
+  }
+  .css_color_text_neutral-light2 {
+    color: var(--color-neutral-light2);
+  }
+  .css_color_text_neutral-light3 {
+    color: var(--color-neutral-light3);
+  }
+  .css_color_text_neutral-dark1 {
+    color: var(--color-neutral-dark1);
+  }
+  .css_color_text_neutral-dark2 {
+    color: var(--color-neutral-dark2);
+  }
+  .css_color_text_neutral-dark3 {
+    color: var(--color-neutral-dark3);
+  }
+
+
+
+  .css_color_background_global {
+    background: var(--color-global);
+  }
+  .css_color_background_global-light1 {
+    background: var(--color-global-light1);
+  }
+  .css_color_background_global-dark1 {
+    background: var(--color-global-dark1);
+  }
+  .css_color_background_primary {
+    background: var(--color-primary);
+  }
+  .css_color_background_primary-light1 {
+    background: var(--color-primary-light1);
+  }
+  .css_color_background_primary-dark1 {
+    background: var(--color-primary-dark1);
+  }
+  .css_color_background_secondary {
+    background: var(--color-secondary);
+  }
+  .css_color_background_secondary-light1 {
+    background: var(--color-secondary-light1);
+  }
+  .css_color_background_secondary-dark1 {
+    background: var(--color-secondary-dark1);
+  }
+  .css_color_background_success  {
+    background: var(--color-success);
+  }
+  .css_color_background_success-light1 {
+    background: var(--color-succes-light1);
+  }
+  .css_color_background_success-dark1 {
+    background: var(--color-success-dark1);
+  }
+  .css_color_background_disabled {
+    background: var(--color-disabled);
+  }
+  .css_color_background_disabled-light1 {
+    background: var(--color-disabled-light1);
+  }
+  .css_color_background_disabled-dark1 {
+    background: var(--color-disabled-dark1);
+  }
+  .css_color_background_warning {
+    background: var(--color-warning);
+  }
+  .css_color_background_warning-light1 {
+    background: var(--color-warning-light1);
+  }
+  .css_color_background_warning-dark1 {
+    background: var(--color-warning-dark1);
+  }
+  .css_color_background_info {
+    background: var(--color-info);
+  }
+  .css_color_background_info-light1 {
+    background: var(--color-info-light1);
+  }
+  .css_color_background_info-dark1 {
+    background: var(--color-info-dark1);
+  }
+  .css_color_background_white {
+    background: var(--color-white);
+  }
+  .css_color_background_black {
+    background: var(--color-black);
+  }
+  .css_color_background_neutral {
+    background: var(--color-neutral);
+  }
+  .css_color_background_neutral-light1 {
+    background: var(--color-neutral-light1);
+  }
+  .css_color_background_neutral-light2 {
+    background: var(--color-neutral-light2);
+  }
+  .css_color_background_neutral-light3 {
+    background: var(--color-neutral-light3);
+  }
+  .css_color_background_neutral-dark1 {
+    background: var(--color-neutral-dark1);
+  }
+  .css_color_background_neutral-dark2 {
+    background: var(--color-neutral-dark2);
+  }
+  .css_color_background_neutral-dark3 {
+    background: var(--color-neutral-dark3);
+  }
