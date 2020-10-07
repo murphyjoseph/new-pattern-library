@@ -3,7 +3,7 @@ import { ITextAction, IText } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
 import { cssButton, cssButtonVariant, cssButtonSize } from './_cssButton';
-import { css } from 'aphrodite';
+import clsx from 'clsx';
 
 interface ITraits {
   traits: ITextAction
@@ -20,13 +20,13 @@ export const TextAction: FC<ITraits> = ({
     if (_isFunction(onClick)) onClick(event);
   };
 
-  const classes = [
-    cssButton.base,
-    cssButton.hover,
-    cssButtonVariant[variant],
-    cssButtonSize[size],
-    !!styles && styles
-  ]
+  const classes = clsx([
+    cssButton().base,
+    cssButton().hover,
+    cssButtonVariant()[variant],
+    cssButtonSize()[size],
+    !!styles && styles()
+  ])
 
   const optionalAttributes: any = {
     ...(!!_id && { id: _id })
@@ -39,7 +39,7 @@ export const TextAction: FC<ITraits> = ({
 
   return (
     <button onClick={handleClick}
-            className={css(classes)}
+            className={classes}
             {...optionalAttributes}>
       <Text traits={traitsForText} />
     </button>

@@ -1,100 +1,100 @@
 import { themeCss } from "../themeCss"
-import { StyleSheet } from 'aphrodite';
+import { createUseStyles } from 'react-jss'
 
-export const cssColorText: any = StyleSheet.create({
-  global          : {
+export const cssColorText: any = createUseStyles({
+  global: {
     color: themeCss.color.global
   },
-  globalLight1    : {
+  globalLight1: {
     color: themeCss.color.globalLight1
   },
-  globalDark1     : {
+  globalDark1: {
     color: themeCss.color.globalDark1
   },
-  primary         : {
+  primary: {
     color: themeCss.color.primary
   },
-  primaryLight1   : {
+  moColorBorderAllPrimaryLight1Size1: {
     color: themeCss.color.primaryLight1
   },
-  primaryDark1    : {
+  primaryDark1: {
     color: themeCss.color.primaryDark1
   },
-  secondary       : {
+  secondary: {
     color: themeCss.color.secondary
   },
   secondaryLight1 : {
     color: themeCss.color.secondaryLight1
   },
-  secondaryDark1  : {
+  secondaryDark1: {
     color: themeCss.color.secondaryDark1
   },
-  success         : {
+  success: {
     color: themeCss.color.success
   },
-  successLight1   : {
+  successLight1: {
     color: themeCss.color.succesLight1
   },
-  successDark1    : {
+  successDark1: {
     color: themeCss.color.successDark1
   },
-  disabled        : {
+  disabled: {
     color: themeCss.color.disabled
   },
-  disabledLight1  : {
+  disabledLight1: {
     color: themeCss.color.disabledLight1
   },
-  disabledDark1   : {
+  disabledDark1: {
     color: themeCss.color.disabledDark1
   },
-  warning         : {
+  warning: {
     color: themeCss.color.warning
   },
-  warningLight1   : {
+  warningLight1: {
     color: themeCss.color.warningLight1
   },
-  warningDark1    : {
+  warningDark1: {
     color: themeCss.color.warningDark1
   },
-  info            : {
+  info: {
     color: themeCss.color.info
   },
-  infoLight1      : {
+  infoLight1: {
     color: themeCss.color.infoLight1
   },
-  infoDark1       : {
+  infoDark1: {
     color: themeCss.color.infoDark1
   },
-  white           : {
+  white: {
     color: themeCss.color.white
   },
-  black           : {
+  black: {
     color: themeCss.color.black
   },
-  neutral         : {
+  neutral: {
     color: themeCss.color.neutral
   },
-  neutralLight1   : {
+  neutralLight1: {
     color: themeCss.color.neutralLight1
   },
-  neutralLight2   : {
+  neutralLight2: {
     color: themeCss.color.neutralLight2
   },
-  neutralLight3   : {
+  neutralLight3: {
     color: themeCss.color.neutralLight3
   },
-  neutralDark1    : {
+  neutralDark1: {
     color: themeCss.color.neutralDark1
   },
-  neutralDark2    : {
+  neutralDark2: {
     color: themeCss.color.neutralDark2
   },
-  neutralDark3    : {
+  neutralDark3: {
     color: themeCss.color.neutralDark3
   }
 })
 
-export const cssColorBackground: any = StyleSheet.create({
+export const cssColorBackground: any = createUseStyles({
   global          : {
     background: themeCss.color.global
   },

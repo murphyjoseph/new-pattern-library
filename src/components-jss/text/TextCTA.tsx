@@ -3,7 +3,7 @@ import { IText, ITextCTA } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
 import { cssButton, cssButtonVariant, cssButtonSize } from "./_cssButton";
-import { css } from "aphrodite";
+import clsx from 'clsx'
 
 interface ITraits {
   traits: ITextCTA
@@ -15,13 +15,13 @@ export const TextCTA: FC<ITraits> = ({
 
   const { text: _text, rel: _rel, target: _target, href: _href, variant, size, styles } = traits;
 
-  const classes = [
-    cssButton.base,
-    cssButton.hover,
-    cssButtonVariant[variant],
-    cssButtonSize[size],
-    !!styles && styles
-  ]
+  const classes = clsx([
+    cssButton().base,
+    cssButton().hover,
+    cssButtonVariant()[variant],
+    cssButtonSize()[size],
+    !!styles && styles()
+  ])
 
   const optionalAttributes: any = {
     ...(!!_target && { target: _target }),
@@ -36,7 +36,7 @@ export const TextCTA: FC<ITraits> = ({
 
   return (
     <a href={_href}
-       className={css(classes)}
+       className={classes}
        {...optionalAttributes}>
       <Text traits={traitsForText} />
     </a>

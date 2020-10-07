@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import { IContainerAction } from './Container.interface';
 import _isFunction from 'lodash/isFunction';
-import { stylePadding } from '../../styles-aphrodite/padding';
-import { css } from 'aphrodite';
-import { styleMargin } from "../../styles-aphrodite/margin";
-import { cssDisplay } from '../../styles-aphrodite/display';
-import { cssColorBackground } from '../../styles-aphrodite/color';
+import { stylePadding } from '../../styles-jss/padding';
+import clsx from 'clsx'
+import { styleMargin } from "../../styles-jss/margin";
+import { cssDisplay } from '../../styles-jss/display';
+import { cssColorBackground } from '../../styles-jss/color';
 
 interface ITraits {
   traits: IContainerAction
@@ -18,13 +18,13 @@ export const ContainerAction: FC<ITraits> = ({
 
   const { onClick: _onClick, padding, margin, styles, colorBackground } = traits;
 
-  const classes = [
+  const classes = clsx(
     ...!!padding && stylePadding(padding),
     ...!!margin && styleMargin(margin),
-    cssDisplay.block,
-    !!colorBackground && cssColorBackground[colorBackground],
-    ...!!styles && styles,
-  ]
+    cssDisplay().block,
+    !!colorBackground && cssColorBackground()[colorBackground],
+    ...!!styles && styles(),
+  )
 
   const handleClick = (event?: React.SyntheticEvent): void => {
     if (!_onClick) return
@@ -32,7 +32,7 @@ export const ContainerAction: FC<ITraits> = ({
   };
 
   return (
-    <div className={css(classes)}
+    <div className={classes}
          onClick={handleClick}>
       {children}
     </div>

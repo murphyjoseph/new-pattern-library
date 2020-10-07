@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Container } from '../../components-aphrodite/container/Container';
-import { IContainer } from '../../components-aphrodite/container/Container.interface';
+import { Container } from '../../components-jss/container/Container';
+import { IContainer } from '../../components-jss/container/Container.interface';
 import { TColors } from '../../types/util-types';
 
 interface IPropsTextTitlePrimary {

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { IText } from '../../components-aphrodite/text/Text.interface';
-import { Text } from '../../components-aphrodite/text/Text';
+import { IText } from '../../components-jss/text/Text.interface';
+import { Text } from '../../components-jss/text/Text';
 import { TColors } from '../../types/util-types';
 
 interface IPropsTextTitlePrimary {

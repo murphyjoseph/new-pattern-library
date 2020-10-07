@@ -1,6 +1,6 @@
-import { StyleSheet } from 'aphrodite';
+import { createUseStyles } from 'react-jss'
 
-export const cssTextAlignment = StyleSheet.create({
+export const cssTextAlignment: any = createUseStyles({
   center: {
     textAlign: "center"
   },
