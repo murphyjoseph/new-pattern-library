@@ -6,7 +6,7 @@ import { TColors } from '../../types/util-types';
 interface IPropsTextTitlePrimary {
   children: any,
   background?: TColors,
-  paddingSize: any;
+  paddingSize?: any;
 }
 
 export const ContainerPrimary: FC<IPropsTextTitlePrimary> = ({ children, paddingSize, background }) => {
