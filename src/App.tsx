@@ -13,6 +13,7 @@ import { themeObj } from './themeObj';
 import { ThemeProvider } from './ThemeProvider';
 import { makeCssTheme } from './makeCssTheme';
 import { themeObj2 } from './themeObj2';
+import { TestingGround } from './TestingGround';
 
 function App() {
   const [variant, setVariant] = useState('titleTwo');
@@ -36,6 +37,7 @@ function App() {
       </header>
       <main>
         <ContainerPrimary paddingSize={paddingSize}>
+          <TestingGround />
           <div css={{ background: themeCss.color.secondary }}> hey </div>
           <ButtonPrimary text="Click Me" onClick={clickme} />
           <TextTitleSecondary text="secondary title bruh" variant={variant} />

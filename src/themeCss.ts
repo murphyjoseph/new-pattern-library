@@ -339,109 +339,109 @@ themeCss.typography = {}
 themeCss.typography.headingOne = {
   fontFamily: "Apercu",
   fontWeight: "normal",
-  fontSize: `${themeCss.size.font.size11}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size11
 }
 
 themeCss.typography.headingTwo = {
   fontFamily: "Apercu",
   fontWeight: "thinner",
-  fontSize: `${themeCss.size.font.size10}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size10
 }
 
 themeCss.typography.headingThree = {
   fontFamily: "Apercu",
   fontWeight: "bold",
-  fontSize: `${themeCss.size.font.size9}${themeCss.size.font.unit}`,
+  fontSize: themeCss.size.font.size9,
   textTransform: "uppercase"
 }
 
 themeCss.typography.titleOne = {
   fontFamily: "Proxima Nova",
   fontWeight: "bold",
-  fontSize: `${themeCss.size.font.size7}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size7
 }
 
 themeCss.typography.titleTwo = {
   fontFamily: "Proxima Nova",
   fontWeight: "normal",
-  fontSize: `${themeCss.size.font.size7}${themeCss.size.font.unit}`,
+  fontSize: themeCss.size.font.size7,
   textTransform: "uppercase"
 }
 
 themeCss.typography.bodyOne = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size4
 }
 
 themeCss.typography.bodyTwo = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size4}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size3
 }
 
 themeCss.typography.description = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size3}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size3
 }
 
 themeCss.typography.list = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size5
 }
 
 themeCss.typography.button = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`,
+  fontSize: themeCss.size.font.size5,
   textTransform: "uppercase"
 }
 
 themeCss.typography.link = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`,
+  fontSize: themeCss.size.font.size5,
   textDecoration: "underline"
 }
 
 themeCss.typography.labelOne = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`,
+  fontSize: themeCss.size.font.size5,
   fontWeight: "bold"
 }
 
 themeCss.typography.labelTwo = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size5
 }
 
 themeCss.typography.input = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size5
 }
 
 themeCss.typography.placeholder = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size5
 }
 
 themeCss.typography.icon = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size5
 }
 
 themeCss.typography.option = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size5
 }
 
 themeCss.typography.invalid = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size5
 }
 
 themeCss.typography.counter = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size5
 }
 
 themeCss.typography.figcaption = {
   fontFamily: "Ogg",
-  fontSize: `${themeCss.size.font.size5}${themeCss.size.font.unit}`
+  fontSize: themeCss.size.font.size5
 }

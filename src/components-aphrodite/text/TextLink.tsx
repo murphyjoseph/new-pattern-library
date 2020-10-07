@@ -3,7 +3,7 @@ import { ITextLink, IText } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
 import { cssLink, cssLinkVariant } from "./_cssLink";
-import { css } from "aphrodite/no-important";
+import { css } from "aphrodite";
 
 interface ITraits {
   traits: ITextLink

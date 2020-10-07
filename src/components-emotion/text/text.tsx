@@ -5,6 +5,7 @@ import { IText } from './Text.interface';
 import { cssText, cssTextTP, cssTextVariant, cssTextVariantTP, cssTextStyle } from './_cssText';
 import { cssTextAlignment } from '../../styles-emotion/alignment';
 // import { withStyles } from '../../ThemeProvider';
+import { cssColorBackground, cssColorText } from '../../styles-emotion/color';
 
 interface ITraits {
   traits: IText;
@@ -21,11 +22,13 @@ export const Text: FC<ITraits> = ({ traits }) => {
     isCrossedOut,
     isUnderlined,
     textAlignment,
+    colorBackground,
   } = traits;
   const Tag: keyof JSX.IntrinsicElements = !!_tag ? _tag : "span";
     const classes = {
     ...cssText.base,
     ...cssTextVariant[variant],
+    ...!!colorBackground && cssColorBackground[colorBackground],
     // ...!!isItalic && styles.italic,
     // ...!!isCrossedOut && styles.crossedOut,
     // ...!!isUnderlined && styles.underlined,
