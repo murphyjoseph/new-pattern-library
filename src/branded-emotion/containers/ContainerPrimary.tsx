@@ -5,7 +5,7 @@ import { TColors } from '../../types/util-types';
 
 interface IPropsTextTitlePrimary {
   children: any,
-  background: TColors,
+  background?: TColors,
   paddingSize: any;
 }
 
