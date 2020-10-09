@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { css } from "aphrodite";
+import { css } from "aphrodite/no-important";
 import { IContainerLink } from './Container.interface';
 import { cssDisplay } from '../../styles-aphrodite/display';
 import { cssColorBackground } from "../../styles-aphrodite/color";

@@ -3,7 +3,7 @@ import { ITextAction, IText } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
 import { cssButton, cssButtonVariant, cssButtonSize } from './_cssButton';
-import { css } from 'aphrodite';
+import { css } from 'aphrodite/no-important';
 
 interface ITraits {
   traits: ITextAction

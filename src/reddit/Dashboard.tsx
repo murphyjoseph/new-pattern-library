@@ -1,6 +1,9 @@
 import React, { FC, useState } from "react";
 import api, { IParams } from '../api/redditAPI';
 import { Posts } from "./Posts";
+import RawJSONone from '../api/redditPostsRawJSON1.json';
+import RawJSONtwo from '../api/redditPostsRawJSON2.json';
+import { style } from "typestyle";
 
 // APHRODITE
 // import { FieldText } from '../branded-aphrodite/fields/FieldText';
@@ -8,13 +11,13 @@ import { Posts } from "./Posts";
 // import { cssDisplay } from '../styles-aphrodite/display';
 
 // VANILLA CSS
-import '../styles-css/display.css';
-import '../styles-css/alignment.css';
-import '../styles-css/color.css';
-import '../styles-css/margin.css';
-import '../styles-css/padding.css';
-import { FieldText } from '../branded-css/fields/FieldText';
-import { ButtonSubmit } from "../branded-css/buttons/ButtonSubmit";
+// import '../styles-css/display.css';
+// import '../styles-css/alignment.css';
+// import '../styles-css/color.css';
+// import '../styles-css/margin.css';
+// import '../styles-css/padding.css';
+// import { FieldText } from '../branded-css/fields/FieldText';
+// import { ButtonSubmit } from "../branded-css/buttons/ButtonSubmit";
 
 // EMOTION
 // import { FieldText } from '../branded-emotion/fields/FieldText';
@@ -25,6 +28,13 @@ import { ButtonSubmit } from "../branded-css/buttons/ButtonSubmit";
 // import { FieldText } from '../branded-jss/fields/FieldText';
 // import { ButtonSubmit } from "../branded-jss/buttons/ButtonSubmit";
 // import { cssDisplay } from '../styles-jss/display';
+
+// TYPESTYLE
+import { FieldText } from '../branded-typestyle/fields/FieldText';
+import { ButtonSubmit } from "../branded-typestyle/buttons/ButtonSubmit";
+import { cssDisplay } from '../styles-typestyle/utility';
+import { styleDisplay } from '../styles-typestyle/display';
+
 
 function createCtx<A>() {
   const ctx = React.createContext<A | undefined>(undefined);
@@ -44,26 +54,30 @@ export const Dashboard: FC = () => {
   const [posts, setPosts] = useState({});
 
   const handleSubreddit = (e: any) =>  {
-    console.log("set subreddit");
-    console.log(subreddit);
     setSubreddit(e.target.value)
-    console.log(subreddit);
   }
 
   const fetchPosts =({event, subreddit: _subreddit, query }: IParams) => {
-    event.preventDefault()
-    console.log("Current Posts")
-    console.log(posts);
-    console.log(_subreddit);
-
-
+    console.log("fetch posts...");
+    console.log(event);
+    event.preventDefault();
     (async () => {
-      console.log("awaiting...")
-      const _posts = await api.getPosts({subreddit: _subreddit})
-      console.log("done awaiting...")
+      let _posts: any = {};
+      if (_subreddit === "one") {
+        console.log("raw JSON one...");
+        _posts = RawJSONone
+      } else if (_subreddit === "two") {
+        console.log("raw JSON two...");
+        _posts = RawJSONtwo;
+      } else {
+        _posts = await api.getPosts({subreddit: _subreddit})
+      }
+
       setPosts(_posts)
     })()
   }
+
+  const displayInlineBlock = style({ $debugName: "display", display: "inline-block" });
 
   // VIEW
 
@@ -72,12 +86,12 @@ export const Dashboard: FC = () => {
       <main>
         <form onSubmit={(event) => fetchPosts({event, subreddit})} id="subredditSearch">
           {/* FOR CSS IN JS */}
-          {/* <FieldText onChange={(e: React.SyntheticEvent) => handleSubreddit(e)} textMain="Enter Subreddit" for="subreddit" styles={cssDisplay().inlineBlock} />
-          <ButtonSubmit text="submit" form="subredditSearch" styles={cssDisplay().inlineBlock} /> */}
+          <FieldText onChange={(e: React.SyntheticEvent) => handleSubreddit(e)} textMain="Enter Subreddit" for="subreddit" styles={displayInlineBlock} />
+          <ButtonSubmit text="submit" form="subredditSearch" styles={displayInlineBlock} />
 
           {/* FOR JUST CSS */}
-          <FieldText onChange={(e: React.SyntheticEvent) => handleSubreddit(e)} textMain="Enter Subreddit" for="subreddit" styles='css_display_inlineBlock' />
-          <ButtonSubmit text="submit" form="subredditSearch" styles='css_display_inlineBlock' />
+          {/* <FieldText onChange={(e: React.SyntheticEvent) => handleSubreddit(e)} textMain="Enter Subreddit" for="subreddit" styles='css_display_inlineBlock' />
+          <ButtonSubmit text="submit" form="subredditSearch" styles='css_display_inlineBlock' /> */}
         </form>
         {
           !!posts &&

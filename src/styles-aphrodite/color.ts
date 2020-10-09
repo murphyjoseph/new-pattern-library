@@ -1,5 +1,5 @@
 import { themeCss } from "../themeCss"
-import { StyleSheet } from 'aphrodite';
+import { StyleSheet } from 'aphrodite/no-important';
 
 export const cssColorText: any = StyleSheet.create({
   global          : {

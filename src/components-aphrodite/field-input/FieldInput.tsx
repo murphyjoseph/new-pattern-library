@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import { IFieldInput } from './FieldInput.interface';
 import { Label } from '../label/Label';
 import { cssTextVariant } from "../text/_cssText";
-import { css } from "aphrodite";
+import { css } from "aphrodite/no-important";
 import { cssFieldInput } from "./_cssFieldInput";
 import _isFunction from 'lodash/isFunction';
 

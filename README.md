@@ -86,3 +86,19 @@ PascalCase for the component names
 camel case for the css files
 two different theme names one for css variables and one for theme provider
 create aphrodite and emotion theme providers
+
+https://aestheticsuite.dev/docs/design-system/config/themes
+brand - Organization or company brand color.
+primary - Primary color. Typically buttons, links, bars, active states, etc.
+secondary - Accent color. Provides emphasis and contrast to the primary color.
+tertiary - Additional complementary color for more variation.
+neutral - Whites, grays, blacks, etc that make up background, border, shadow, and other layout related pieces.
+muted - Disabled and empty like states.
+info - State that denotes something as informational.
+warning - State that warns the user of something minor.
+danger - State that indicates a destructive, atomic, or irreversible action.
+failure - State when something errors or fails.
+success - State when something succeeds or passes.
+
+
+https://github.com/typestyle/typestyle/blob/master/src/tests/basic.tsx#L10

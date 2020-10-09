@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { IContainerAction } from './Container.interface';
 import _isFunction from 'lodash/isFunction';
 import { stylePadding } from '../../styles-aphrodite/padding';
-import { css } from 'aphrodite';
+import { css } from 'aphrodite/no-important';
 import { styleMargin } from "../../styles-aphrodite/margin";
 import { cssDisplay } from '../../styles-aphrodite/display';
 import { cssColorBackground } from '../../styles-aphrodite/color';
