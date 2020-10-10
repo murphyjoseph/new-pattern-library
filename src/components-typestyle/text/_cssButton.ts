@@ -1,21 +1,50 @@
 import { themeCss } from '../../themeCss';
 import { styleDisplay } from '../../styles-typestyle/display';
+import { TBranding } from '../../types/util-types';
+import { mixinBorder } from '../../styles-typestyle/mixin-border';
 
-export const cssButton: any = {
-  base: {
+export const mixinButtonSolid: any = (brand: TBranding) => (
+  {
     ...styleDisplay('block'),
+    ...mixinBorder(themeCss.size.border.size1, themeCss.color[brand]),
     minWidth: themeCss.size.button.size2,
     padding: themeCss.size.spacing.size2,
     cursor: "pointer",
-    background: themeCss.color.global,
-  },
-  hover: {
-    ':hover': {
-      background: themeCss.color.globalLight1,
-      transition: "200ms"
+    background: themeCss.color[brand],
+    color: themeCss.color[`${brand}Contrast`],
+    // outline is important for accessibility
+    outlineWidth: themeCss.size.border.size1,
+    outlineColor: themeCss.color.transparent,
+    '&:hover': {
+      ...mixinBorder(themeCss.size.border.size1, themeCss.color[`${brand}Light1`]),
+      background: themeCss.color[`${brand}Light1`],
+      transition: "200ms",
     }
   }
+)
+
+export const cssButton: any = {
+  ...styleDisplay('block'),
+  minWidth: themeCss.size.button.size2,
+  padding: themeCss.size.spacing.size2,
+  cursor: "pointer",
+  background: themeCss.color.global,
+  borderWidth: themeCss.size.border.size1,
+  borderStyle: 'solid',
+  borderColor: themeCss.color.global,
+  outlineWidth: themeCss.size.border.size1,
+  outlineColor: themeCss.color.transparent,
+    '&:hover': {
+      background: themeCss.color.globalLight1,
+      transition: "200ms",
+      borderWidth: themeCss.size.border.size1,
+      borderStyle: 'solid',
+      borderColor: themeCss.color.globalLight1,
+    }
+
 }
+
+
 
 export const cssButtonVariant: any = {
   global: {
@@ -26,9 +55,16 @@ export const cssButtonVariant: any = {
   },
   primary: {
     background: themeCss.color.primary,
-    ':hover': {
+    color: "red !important",
+    '&:hover': {
       background: themeCss.color.primaryLight1
+    },
+    $nest: {
+      'span': {
+        color: "red"
+      }
     }
+
   },
   secondary: {
     background: themeCss.color.secondary,

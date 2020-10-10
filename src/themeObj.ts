@@ -11,6 +11,9 @@ themeObj.color = {
   secondary       : "hsla(200, 37%, 52%, 1)",
   secondaryLight1 : "hsla(200, 37%, 60%, 1)",
   secondaryDark1  : "hsla(200, 37%, 44%, 1)",
+  tertiary        : "hsla(400, 38%, 35%, 1)",
+  tertiaryLight1  : "hsla(400, 38%, 40%, 1)",
+  tertiaryDark1   : "hsla(400, 38%, 30%, 1)",
   success         : "hsla(83, 46%, 47%, 1)",
   successLight1   : "hsla(83, 46%, 58%, 1)",
   successDark1    : "hsla(83, 46%, 36%, 1)",
@@ -310,14 +313,15 @@ themeObj.size = {
 }
 
 themeObj.branding = {
-  global    : 'global',
-  primary   : 'primary',
-  secondary : 'secondary',
-  neutral   : 'neutral',
-  warning   : 'warning',
-  info      : 'info',
-  disabled  : 'disabled',
-  inactive  : 'inactive'
+  global    : themeObj.color.global,
+  primary   : themeObj.color.primary,
+  secondary : themeObj.color.secondary,
+  tertiary  : themeObj.color.tertiary,
+  neutral   : themeObj.color.neutral,
+  warning   : themeObj.color.warning,
+  info      : themeObj.color.info,
+  disabled  : themeObj.color.disabled,
+  inactive  : themeObj.color.inactive
 }
 
 themeObj.breakpoint = {

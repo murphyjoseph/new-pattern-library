@@ -77,7 +77,7 @@ export const Dashboard: FC = () => {
     })()
   }
 
-  const displayInlineBlock = style({ $debugName: "display", display: "inline-block" });
+  // const displayInlineBlock = { display: "inline-block" };
 
   // VIEW
 
@@ -86,8 +86,15 @@ export const Dashboard: FC = () => {
       <main>
         <form onSubmit={(event) => fetchPosts({event, subreddit})} id="subredditSearch">
           {/* FOR CSS IN JS */}
-          <FieldText onChange={(e: React.SyntheticEvent) => handleSubreddit(e)} textMain="Enter Subreddit" for="subreddit" styles={displayInlineBlock} />
-          <ButtonSubmit text="submit" form="subredditSearch" styles={displayInlineBlock} />
+          <FieldText
+            onChange={(e: React.SyntheticEvent) => handleSubreddit(e)}
+            textMain="Enter Subreddit"
+            for="subreddit"
+            styles={cssDisplay('inline-block')} />
+          <ButtonSubmit
+            text="submit"
+            form="subredditSearch"
+            styles={cssDisplay('inline-block')} />
 
           {/* FOR JUST CSS */}
           {/* <FieldText onChange={(e: React.SyntheticEvent) => handleSubreddit(e)} textMain="Enter Subreddit" for="subreddit" styles='css_display_inlineBlock' />

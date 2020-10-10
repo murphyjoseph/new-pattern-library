@@ -39,7 +39,7 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
   };
 
   return (
-    <div className={combineClasses(stylesCoreForDiv, !!stylesExternal && stylesExternal)}>
+    <div className={combineClasses(stylesCoreForDiv, stylesExternal)}>
       <Label traits={({
         isRequired: isRequired,
         for: _for,

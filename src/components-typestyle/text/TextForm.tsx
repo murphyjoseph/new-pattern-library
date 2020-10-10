@@ -18,10 +18,10 @@ export const TextForm: FC<ITraits> = ({
 
   const stylesCore = style({
     $debugName: "TextForm",
-    ...cssButton.base,
-    ...cssButton.hover,
+    ...cssButton,
     ...cssButtonVariant[variant],
-    ...cssButtonSize[size]
+    ...cssButtonSize[size],
+    color: "red"
   })
 
   const optionalAttributes: any = {
@@ -35,7 +35,7 @@ export const TextForm: FC<ITraits> = ({
 
   return (
     <button type="submit"
-            className={clsx(stylesCore, stylesExternal)}
+            className={combineClasses(stylesCore, stylesExternal)}
             {...optionalAttributes}>
       <Text traits={traitsForText} />
     </button>

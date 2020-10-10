@@ -4,6 +4,7 @@ import { themeCss } from '../../themeCss';
 export const cssButton: any = StyleSheet.create({
   base: {
     display: "block",
+    color: "red",
     minWidth: themeCss.size.button.size3,
     padding: themeCss.size.spacing.size2,
     cursor: "pointer",

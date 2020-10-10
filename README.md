@@ -102,3 +102,8 @@ success - State when something succeeds or passes.
 
 
 https://github.com/typestyle/typestyle/blob/master/src/tests/basic.tsx#L10
+
+
+
+https://github.com/typestyle/typestyle/issues/95
+interesting idea regarding the css prioritization. i really hate the idea of having to add "important" it just feels so dirty and what happens if you need to override important? its a hack at best and this idea of adding a priority to the styles being added makes a lot of sense.

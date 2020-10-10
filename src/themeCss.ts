@@ -12,6 +12,9 @@ themeCss.color = {
   secondary       : "var(--color-secondary)",
   secondaryLight1 : "var(--color-secondary-light1)",
   secondaryDark1  : "var(--color-secondary-dark1)",
+  tertiary        : "var(--color-tertiary)",
+  tertiaryLight1  : "var(--color-tertiary-light1)",
+  tertiaryDark1   : "var(--color-tertiary-dark1)",
   success         : "var(--color-success)",
   successLight1   : "var(--color-success-light1)",
   successDark1    : "var(--color-success-dark1)",
@@ -311,14 +314,24 @@ themeCss.size = {
 }
 
 themeCss.branding = {
-  global    : 'var(--branding-global)',
-  primary   : 'var(--branding-primary)',
-  secondary : 'var(--branding-secondary)',
-  neutral   : 'var(--branding-neutral)',
-  warning   : 'var(--branding-warning)',
-  info      : 'var(--branding-info)',
-  disabled  : 'var(--branding-disabled)',
-  inactive  : 'var(--branding-inactive)'
+  global            : 'var(--branding-global)',
+  globalContrast    : 'var(--branding-global-contrast)',
+  primary           : 'var(--branding-primary)',
+  primaryContrast   : 'var(--branding-primary-contrast)',
+  secondary         : 'var(--branding-secondary)',
+  secondaryContrast : 'var(--branding-secondary-contrast)',
+  tertiary          : 'var(--branding-tertiary)',
+  tertiaryContrast  : 'var(--branding-tertiary-contrast)',
+  neutral           : 'var(--branding-neutral)',
+  neutralContrast   : 'var(--branding-neutral-contrast)',
+  warning           : 'var(--branding-warning)',
+  warningContrast   : 'var(--branding-warning-contrast)',
+  info              : 'var(--branding-info)',
+  infoContrast      : 'var(--branding-info-contrast)',
+  disabled          : 'var(--branding-disabled)',
+  disabledContrast  : 'var(--branding-disabled-contrast)',
+  inactive          : 'var(--branding-inactive)',
+  inactiveContrast  : 'var(--branding-inactive-contrast)'
 }
 
 themeCss.breakpoint = {
