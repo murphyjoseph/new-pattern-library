@@ -30,12 +30,12 @@ export const Label: FC<ITraits> = ({ traits }) => {
     }
   }
 
-  // const classes = style({
-  //   ...!!styles && styles
-  // })
+  const styleCore = style({
+    ...!!stylesExternal && stylesExternal
+  })
 
   return (
-    <label className={stylesExternal}
+    <label className={styleCore}
            htmlFor={traits.for}>
       {
         !!traitsForMain &&

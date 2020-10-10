@@ -1,18 +1,33 @@
-import { IStylesColor, IStylesSpacing } from '../../interfaces/styles.interface';
+import { IStylesColor, IStylesSpacing, IStylesTextAlign } from '../../interfaces/styles.interface';
 import { ITypography } from '../../interfaces/typography.interface';
 import { IPattern } from '../../interfaces/pattern.interface';
 import { ILink } from '../../interfaces/link.interface';
 import { IEvent } from '../../interfaces/event.interface';
-import { TVariantText, TBranding, TSizesButton } from '../../types/util-types';
+import { TVariantText, TBranding, TSizesButton, TWhiteSpace, TLabelPosition } from '../../types/util-types';
 
 type ElementType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div" | "figcaption" | "legend";
 
-export interface IText extends IPattern, ITypography, IStylesColor {
+// IStylesText was only being extended and not used anywhere else so i probably ever extended thigns...
+export interface IText extends IPattern, IStylesColor, IStylesTextAlign {
   tag?: ElementType,
   margin?: IStylesSpacing | IStylesSpacing[],
   padding?: IStylesSpacing | IStylesSpacing[],
   title?: string,
-  variant: TVariantText
+  variant: TVariantText,
+  text: string,
+  characterWidth?: number,
+  isTiny?: boolean,
+  isBig?: boolean,
+  isNowrap?: boolean,
+  isBold?: boolean,
+  isBolder?: boolean,
+  isLighter?: boolean,
+  isItalic?: boolean,
+  isUnderlined?: boolean,
+  isCrossedOut?: boolean,
+  wordBreak?: "all" | "word",
+  whiteSpace?: TWhiteSpace,
+  textTransform?: "uppercase" | "capitalize"
 }
 
 export interface ITextAction extends IEvent, IPattern {

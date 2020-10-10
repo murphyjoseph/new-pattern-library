@@ -15,7 +15,7 @@ export const ButtonSubmit: FC<IPropsTextTitle> = ({
 }: IPropsTextTitle) => {
 
   const settings: ITextForm = {
-    variant: 'primary',
+    variant: 'tertiary',
     stylesExternal: _styles,
     form: _form,
     text: _text,

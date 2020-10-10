@@ -18,18 +18,18 @@ export const Text: FC<ITraits> = ({ traits }) => {
 
   const stylesCore = style({
     $debugName: 'Text',
-    ...cssText.base,
     ...cssTextVariant[variant],
     ...!!colorText && styleColorText(colorText),
     ...!!colorBackground && styleColorBackground(colorBackground),
     ...!!isItalic && cssTextStyle.italic,
     ...!!isCrossedOut && cssTextStyle.crossedOut,
     ...!!isUnderlined && cssTextStyle.underlined,
-    ...!!textAlignment && styleTextAlignment(textAlignment)
+    ...!!textAlignment && styleTextAlignment(textAlignment),
+    ...!!stylesExternal && stylesExternal
   })
 
   return (
-    <Tag className={combineClasses(stylesCore, !!stylesExternal && stylesExternal)}>
+    <Tag className={combineClasses(stylesCore, 'kitter_text')}>
       { text }
     </Tag>
   )

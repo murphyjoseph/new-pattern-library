@@ -3,7 +3,7 @@ import { IText, ITextCTA } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
 import { cssButton, cssButtonVariant, cssButtonSize } from "./_cssButton";
-import { style } from 'typestyle';
+import { style, classes as combineClasses } from 'typestyle';
 
 interface ITraits {
   traits: ITextCTA
@@ -13,14 +13,14 @@ export const TextCTA: FC<ITraits> = ({
   traits
 }) => {
 
-  const { text: _text, rel: _rel, target: _target, href: _href, variant, size, styles } = traits;
+  const { text: _text, rel: _rel, target: _target, href: _href, variant, size, stylesExternal } = traits;
 
-  const classes = style({
+  const stylesCore = style({
     ...cssButton.base,
     ...cssButton.hover,
     ...cssButtonVariant[variant],
     ...cssButtonSize[size],
-    ...!!styles && styles
+    ...!!stylesExternal && stylesExternal
   })
 
   const optionalAttributes: any = {
@@ -36,7 +36,7 @@ export const TextCTA: FC<ITraits> = ({
 
   return (
     <a href={_href}
-       className={classes}
+       className={combineClasses(stylesCore, 'kitter_textCTA', 'kitter_button')}
        {...optionalAttributes}>
       <Text traits={traitsForText} />
     </a>

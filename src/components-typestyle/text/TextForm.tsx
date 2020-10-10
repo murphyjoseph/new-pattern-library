@@ -4,7 +4,6 @@ import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
 import { cssButton, cssButtonVariant, cssButtonSize } from "./_cssButton";
 import { style, classes as combineClasses } from 'typestyle';
-import clsx from 'clsx';
 
 interface ITraits {
   traits: ITextForm
@@ -21,7 +20,7 @@ export const TextForm: FC<ITraits> = ({
     ...cssButton,
     ...cssButtonVariant[variant],
     ...cssButtonSize[size],
-    color: "red"
+    ...!!stylesExternal && stylesExternal
   })
 
   const optionalAttributes: any = {
@@ -35,7 +34,7 @@ export const TextForm: FC<ITraits> = ({
 
   return (
     <button type="submit"
-            className={combineClasses(stylesCore, stylesExternal)}
+            className={combineClasses(stylesCore, 'kitter_textForm', 'kitter_button')}
             {...optionalAttributes}>
       <Text traits={traitsForText} />
     </button>

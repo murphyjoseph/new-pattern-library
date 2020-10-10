@@ -11,36 +11,18 @@ export const cssText = {
 }
 
 export const cssTextWeight = {
-  bold: {
-    fontWeight: "bold"
-  },
-  bolder: {
-    fontWeight: "bolder"
-  },
-  lighter: {
-    fontWeight: "lighter"
-  },
-  normal: {
-    fontWeight: "normal"
-  }
+  bold: { fontWeight: "bold" },
+  bolder: { fontWeight: "bolder" },
+  lighter: { fontWeight: "lighter" },
+  normal: { fontWeight: "normal" }
 }
 
 export const cssTextStyle = {
-  italic: {
-    fontStyle: "italic"
-  },
-  crossedOut: {
-    textDecoration: "line-through"
-  },
-  underlined: {
-    textDecoration: "underline"
-  },
-  nowrap: {
-    whiteSpace: "nowrap"
-  },
-  capitalize: {
-    textTransform: "uppercase"
-  }
+  italic: { fontStyle: "italic" },
+  crossedOut: { textDecoration: "line-through" },
+  underlined: { textDecoration: "underline" },
+  nowrap: { whiteSpace: "nowrap" },
+  capitalize: { textTransform: "uppercase" }
 }
 
 export const cssTextVariant = {

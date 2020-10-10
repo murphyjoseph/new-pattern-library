@@ -21,6 +21,7 @@ import { ContainerPrimary } from '../branded-typestyle/containers/ContainerPrima
 import { TextBodyPrimary } from "../branded-typestyle/typography/TextBodyPrimary";
 
 import { themeCss } from '../themeCss';
+import { LinkPrimary } from '../branded-typestyle/links/LinkPrimary';
 
 interface Posts {
   posts: any;
@@ -69,7 +70,7 @@ export const Posts: FC<Posts> = ({ posts }) => {
                     <TextBodyPrimary text={post.author} />
 
                     {' + '}
-                    <TextBodyPrimary text={post.url} />
+                    <LinkPrimary text="Post Link" href={post.url} />
 
                     {' + '}
                     <TextBodyPrimary text={setDate(post.created)} />

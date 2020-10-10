@@ -22,7 +22,7 @@ export const FieldText: FC<IPropsFieldText> = ({textMain, for: _for, styles: _st
       main: {
         text: textMain
       },
-      styles: {
+      stylesExternal: {
         paddingRight: themeCss.size.spacing.size3
       }
     }

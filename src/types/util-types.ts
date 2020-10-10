@@ -81,41 +81,42 @@ export type TLabelPosition =
  "topRight"
 
 export type TLabelDirection =
- "all" |
- "bottom" |
- "bottomLeft" |
+ "all"         |
+ "bottom"      |
+ "bottomLeft"  |
  "bottomRight" |
- "center" |
- "horizontal" |
- "left" |
- "middle" |
- "none" |
- "right" |
- "top" |
- "topLeft" |
- "topRight" |
+ "center"      |
+ "horizontal"  |
+ "left"        |
+ "middle"      |
+ "none"        |
+ "right"       |
+ "top"         |
+ "topLeft"     |
+ "topRight"    |
  "vertical"
 
 export type TBranding =
- "disabled" |
- "global" |
- "inactive" |
- "info" |
- "neutral" |
- "none" |
- "primary" |
- "root" |
+ "disabled"  |
+ "global"    |
+ "inactive"  |
+ "info"      |
+ "neutral"   |
+ "none"      |
+ "primary"   |
+ "tertiary"  |
+ "root"      |
  "secondary" |
  "warning"
 
 export type TDirectionSpacing =
- "all" |
- "top" |
- "bottom" |
- "right" |
- "left" |
+ "all"        |
+ "top"        |
+ "bottom"     |
+ "right"      |
+ "left"       |
  "horizontal" |
- "vertical" |
+ "vertical"   |
  "none"
 
 export type TVariantText =

@@ -17,7 +17,8 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
 
   const stylesCoreForDiv = style({
     $debugName: "FieldInputDiv",
-    ...cssFieldInput.base
+    ...cssFieldInput.base,
+    ...!!stylesExternal && stylesExternal
   })
 
   const StylesCoreForInput = style({
@@ -39,7 +40,7 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
   };
 
   return (
-    <div className={combineClasses(stylesCoreForDiv, stylesExternal)}>
+    <div className={stylesCoreForDiv}>
       <Label traits={({
         isRequired: isRequired,
         for: _for,

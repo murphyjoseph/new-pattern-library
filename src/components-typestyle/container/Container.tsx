@@ -23,11 +23,12 @@ export const Container: FC<ITraits> = ({
     $debugName: "Container",
     ...!!padding && stylePadding(padding),
     ...!!margin && styleMargin(margin),
-    ...!!colorBackground && styleColorBackground(colorBackground)
+    ...!!colorBackground && styleColorBackground(colorBackground),
+    ...!!stylesExternal && stylesExternal
   })
 
   return (
-    <div className={combineClasses(stylesCore, !!stylesExternal && stylesExternal)}>
+    <div className={stylesCore}>
       { children }
     </div>
   )

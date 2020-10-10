@@ -107,3 +107,16 @@ https://github.com/typestyle/typestyle/blob/master/src/tests/basic.tsx#L10
 
 https://github.com/typestyle/typestyle/issues/95
 interesting idea regarding the css prioritization. i really hate the idea of having to add "important" it just feels so dirty and what happens if you need to override important? its a hack at best and this idea of adding a priority to the styles being added makes a lot of sense.
+
+
+THings to do
+- all styles psaed in from branding are stylesExternal
+- if no styles except one exist is stylesCore
+- remove interfaces that are only beinge extended and not used anywhere else (IStylesTypography
+)
+- make consistent the way external styles are handled
+- add a base css class to every pattern so you can overwrite styles with nesting
+- externalize icons so that they can be imported (i.e. we shouldnt be using same icons we have in here if we make this public)
+- create other utility classes
+- does it make sense for them to be only mixins or should we also auto generate some utility styling as well? e.g. styleDisplay then cssDisplay which uses style from typestyle
+-

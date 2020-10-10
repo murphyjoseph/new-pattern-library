@@ -11,7 +11,6 @@ export const mixinButtonSolid: any = (brand: TBranding) => (
     padding: themeCss.size.spacing.size2,
     cursor: "pointer",
     background: themeCss.color[brand],
-    color: themeCss.color[`${brand}Contrast`],
     // outline is important for accessibility
     outlineWidth: themeCss.size.border.size1,
     outlineColor: themeCss.color.transparent,
@@ -19,89 +18,29 @@ export const mixinButtonSolid: any = (brand: TBranding) => (
       ...mixinBorder(themeCss.size.border.size1, themeCss.color[`${brand}Light1`]),
       background: themeCss.color[`${brand}Light1`],
       transition: "200ms",
+    },
+    $nest: {
+      '.kitter_text': {
+        color: themeCss.branding[`${brand}Contrast`],
+      }
     }
   }
 )
 
 export const cssButton: any = {
-  ...styleDisplay('block'),
-  minWidth: themeCss.size.button.size2,
-  padding: themeCss.size.spacing.size2,
-  cursor: "pointer",
-  background: themeCss.color.global,
-  borderWidth: themeCss.size.border.size1,
-  borderStyle: 'solid',
-  borderColor: themeCss.color.global,
-  outlineWidth: themeCss.size.border.size1,
-  outlineColor: themeCss.color.transparent,
-    '&:hover': {
-      background: themeCss.color.globalLight1,
-      transition: "200ms",
-      borderWidth: themeCss.size.border.size1,
-      borderStyle: 'solid',
-      borderColor: themeCss.color.globalLight1,
-    }
-
+  ...mixinButtonSolid(themeCss.branding.global)
 }
 
-
-
 export const cssButtonVariant: any = {
-  global: {
-    background: themeCss.color.global,
-    ':hover': {
-      background: themeCss.color.globalLight1
-    }
-  },
-  primary: {
-    background: themeCss.color.primary,
-    color: "red !important",
-    '&:hover': {
-      background: themeCss.color.primaryLight1
-    },
-    $nest: {
-      'span': {
-        color: "red"
-      }
-    }
-
-  },
-  secondary: {
-    background: themeCss.color.secondary,
-    ':hover': {
-      background: themeCss.color.secondaryLight1
-    }
-  },
-  neutral: {
-    background: themeCss.color.neutral,
-    ':hover': {
-      background: themeCss.color.neutralLight1
-    }
-  },
-  warning: {
-    background: themeCss.color.warning,
-    ':hover': {
-      background: themeCss.color.warningLight1
-    }
-  },
-  info: {
-    background: themeCss.color.info,
-    ':hover': {
-      background: themeCss.color.infoLight1
-    }
-  },
-  disabled: {
-    background: themeCss.color.disabled,
-    ':hover': {
-      background: themeCss.color.disabledLight1
-    }
-  },
-  inactive: {
-    background: themeCss.color.inactive,
-    ':hover': {
-      background: themeCss.color.inactiveLight1
-    }
-  }
+  global:    { ...mixinButtonSolid('global') },
+  primary:   { ...mixinButtonSolid('primary') },
+  secondary: { ...mixinButtonSolid('secondary') },
+  tertiary:  { ...mixinButtonSolid('tertiary') },
+  neutral:   { ...mixinButtonSolid('neutral') },
+  warning:   { ...mixinButtonSolid('warning') },
+  info:      { ...mixinButtonSolid('info') },
+  disabled:  { ...mixinButtonSolid('disabled') },
+  inactive:  { ...mixinButtonSolid('inactive') }
 }
 
 export const cssButtonSize: any = {

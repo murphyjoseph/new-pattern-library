@@ -14,14 +14,14 @@ export const ContainerAction: FC<ITraits> = ({
   children
 }) => {
 
-  const { onClick: _onClick, padding, margin, styles, colorBackground } = traits;
+  const { onClick: _onClick, padding, margin, stylesExternal, colorBackground } = traits;
 
-  const cssClasses = classes(
+  const stylesCore = classes(
     !!colorBackground && cssColorBackground(colorBackground),
     !!padding && cssPadding(padding),
     !!margin && cssMargin(margin),
-    !!styles && styles,
-    cssDisplay('block')
+    cssDisplay('block'),
+    ...!!stylesExternal && stylesExternal
   )
 
   const handleClick = (event?: React.SyntheticEvent): void => {
@@ -30,7 +30,7 @@ export const ContainerAction: FC<ITraits> = ({
   };
 
   return (
-    <div className={cssClasses}
+    <div className={stylesCore}
          onClick={handleClick}>
       { children }
     </div>

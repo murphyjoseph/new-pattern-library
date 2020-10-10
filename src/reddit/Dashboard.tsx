@@ -3,7 +3,6 @@ import api, { IParams } from '../api/redditAPI';
 import { Posts } from "./Posts";
 import RawJSONone from '../api/redditPostsRawJSON1.json';
 import RawJSONtwo from '../api/redditPostsRawJSON2.json';
-import { style } from "typestyle";
 
 // APHRODITE
 // import { FieldText } from '../branded-aphrodite/fields/FieldText';
@@ -34,7 +33,10 @@ import { FieldText } from '../branded-typestyle/fields/FieldText';
 import { ButtonSubmit } from "../branded-typestyle/buttons/ButtonSubmit";
 import { cssDisplay } from '../styles-typestyle/utility';
 import { styleDisplay } from '../styles-typestyle/display';
-
+import { style } from 'typestyle'
+import { normalize, setupPage, flex } from "csstips";
+normalize();
+setupPage('#root');
 
 function createCtx<A>() {
   const ctx = React.createContext<A | undefined>(undefined);
@@ -84,17 +86,20 @@ export const Dashboard: FC = () => {
   return (
     <SettingProvider value={subreddit}>
       <main>
-        <form onSubmit={(event) => fetchPosts({event, subreddit})} id="subredditSearch">
+        <form
+          className={style(flex)}
+          onSubmit={(event) => fetchPosts({event, subreddit})}
+          id="subredditSearch">
           {/* FOR CSS IN JS */}
           <FieldText
             onChange={(e: React.SyntheticEvent) => handleSubreddit(e)}
             textMain="Enter Subreddit"
             for="subreddit"
-            styles={cssDisplay('inline-block')} />
+            styles={styleDisplay('inline-block')} />
           <ButtonSubmit
             text="submit"
             form="subredditSearch"
-            styles={cssDisplay('inline-block')} />
+            styles={styleDisplay('inline-block')} />
 
           {/* FOR JUST CSS */}
           {/* <FieldText onChange={(e: React.SyntheticEvent) => handleSubreddit(e)} textMain="Enter Subreddit" for="subreddit" styles='css_display_inlineBlock' />
