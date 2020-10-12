@@ -1,34 +1,34 @@
 
 export type TBreakpoints =
- 'breakpoint1' |
- 'breakpoint2' |
- 'breakpoint3' |
- 'breakpoint4' |
- 'breakpoint5' |
- 'breakpoint6' |
- 'breakpoint7' |
- 'breakpoint8' |
- 'breakpoint9' |
+ 'breakpoint1'  |
+ 'breakpoint2'  |
+ 'breakpoint3'  |
+ 'breakpoint4'  |
+ 'breakpoint5'  |
+ 'breakpoint6'  |
+ 'breakpoint7'  |
+ 'breakpoint8'  |
+ 'breakpoint9'  |
  'breakpoint10' |
  'breakpoint11' |
  'breakpoint12' |
  'main'
 
 export type TColors =
- 'black' |
- 'disabled' |
- 'disabledDark1' |
+ 'black'          |
+ 'disabled'       |
+ 'disabledDark1'  |
  'disabledLight1' |
- 'global' |
- 'globalDark1' |
- 'globalLight1' |
- 'grey' |
- 'greyDark1' |
- 'greyDark2' |
- 'greyLight1' |
- 'greyLight2' |
- 'greyLight3' |
- 'greyLight4' |
+ 'global'         |
+ 'globalDark1'    |
+ 'globalLight1'   |
+ 'neutral'        |
+ 'neutralDark1' |
+ 'neutralDark2' |
+ 'neutralLight1' |
+ 'neutralLight2' |
+ 'neutralLight3' |
+ 'neutralLight4' |
  'info' |
  'infoDark1' |
  'infoLight1' |
@@ -36,6 +36,12 @@ export type TColors =
  'primary' |
  'primaryDark1' |
  'primaryLight1' |
+ 'secondary' |
+ 'secondaryDark1' |
+ 'secondaryLight1' |
+ 'tertiary' |
+ 'tertiaryDark1' |
+ 'tertiaryLight1' |
  'root' |
  'shadow' |
  'smoke' |
@@ -196,7 +202,8 @@ export type TColFixed =
  "widthsize11" |
  "widthsize12"
 
-export type TAlignmentText = "left" | "right" | "center"
+export type TAlignText = "left" | "right" | "center"
+export type TAlignVertical = "baseline" | "text-top" | "text-bottom" | "sub" | "super"
 export type TDisplaySettings = "inline" | "inline-block" | "block" | "none";
 export type TTextStyles = "bold" | "italic";
 export type TGridType = "wrapper" | "column";

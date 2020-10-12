@@ -4,45 +4,12 @@
 import React, { FC, useState } from 'react';
 import './App.css';
 
-// VANILLA CSS
-// import './styles-css/display.css';
-// import './styles-css/alignment.css';
-// import './styles-css/color.css';
-// import './styles-css/margin.css';
-// import './styles-css/padding.css';
-// import { TextTitleSecondary } from './branded-css/typography/TextTitleSecondary';
-// import { ButtonPrimary } from './branded-css/buttons/ButtonPrimary';
-// import { ButtonDynamic } from './branded-css/buttons/ButtonDynamic';
-// import { TextTitlePrimary } from './branded-css/typography/TextTitlePrimary';
-// import { ContainerPrimary } from './branded-css/containers/ContainerPrimary';
-
-// JSS
-// import { TextTitleSecondary } from './branded-jss/typography/TextTitleSecondary';
-// import { ButtonPrimary } from './branded-jss/buttons/ButtonPrimary';
-// import { ButtonDynamic } from './branded-jss/buttons/ButtonDynamic';
-// import { TextTitlePrimary } from './branded-jss/typography/TextTitlePrimary';
-// import { ContainerPrimary } from './branded-jss/containers/ContainerPrimary';
-
-// APHRODITE
-import { TextTitleSecondary } from './branded-aphrodite/typography/TextTitleSecondary';
-import { ButtonPrimary } from './branded-aphrodite/buttons/ButtonPrimary';
-import { ButtonDynamic } from './branded-aphrodite/buttons/ButtonDynamic';
-import { TextTitlePrimary } from './branded-aphrodite/typography/TextTitlePrimary';
-import { ContainerPrimary } from './branded-aphrodite/containers/ContainerPrimary';
-
-// EMOTION
-// import { TextTitleSecondary } from './branded-emotion/typography/TextTitleSecondary';
-// import { ButtonPrimary } from './branded-emotion/buttons/ButtonPrimary';
-// import { ButtonDynamic } from './branded-emotion/buttons/ButtonDynamic';
-// import { TextTitlePrimary } from './branded-emotion/typography/TextTitlePrimary';
-// import { ContainerPrimary } from './branded-emotion/containers/ContainerPrimary';
-
 // TYPESTYLE
-// import { TextTitleSecondary } from './branded-typestyle/typography/TextTitleSecondary';
-// import { ButtonPrimary } from './branded-typestyle/buttons/ButtonPrimary';
-// import { ButtonDynamic } from './branded-typestyle/buttons/ButtonDynamic';
-// import { TextTitlePrimary } from './branded-typestyle/typography/TextTitlePrimary';
-// import { ContainerPrimary } from './branded-typestyle/containers/ContainerPrimary';
+import { TextTitleSecondary } from './branded/typography/TextTitleSecondary';
+import { ButtonPrimary } from './branded/buttons/ButtonPrimary';
+import { ButtonDynamic } from './branded/buttons/ButtonDynamic';
+import { TextTitlePrimary } from './branded/typography/TextTitlePrimary';
+import { ContainerPrimary } from './branded/containers/ContainerPrimary';
 
 import { themeCss } from './themeCss';
 

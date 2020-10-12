@@ -4,7 +4,7 @@ import { TBreakpoints,
          TLabelSize,
          TLabelPosition,
          TLabelDirection,
-         TAlignmentText,
+         TAlignText,
          TBranding,
          TPositionTypes,
          TDirectionSpacing,
@@ -48,7 +48,7 @@ export interface IStylesSpacing extends IStylesBreakpoint {
 }
 
 export interface IStylesTextAlign {
-  textAlignment?: TAlignmentText
+  textAlignment?: TAlignText
 }
 
 export interface IStylesDisplay {
@@ -67,22 +67,6 @@ export interface IStylesMaxWidth extends IStylesBreakpoint {
 export interface IStylesOverflow {
   direction: "x" | "y" | "all"
   type: "hidden" | "auto" | "scroll" | "visible"
-}
-
-export interface IStylesText extends IStylesTextAlign, IStylesDisplay {
-  characterWidth?: TLabelPosition,
-  isTiny?: boolean,
-  isBig?: boolean,
-  isNowrap?: boolean,
-  isBold?: boolean,
-  isBolder?: boolean,
-  isLighter?: boolean,
-  isItalic?: boolean,
-  isUnderlined?: boolean,
-  isCrossedOut?: boolean,
-  wordBreak?: "all" | "word",
-  whiteSpace?: TWhiteSpace,
-  textTransform?: "uppercase" | "capitalize"
 }
 
 export interface IStylesPosition {

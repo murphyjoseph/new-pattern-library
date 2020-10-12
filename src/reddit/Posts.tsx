@@ -1,27 +1,11 @@
 import React, { FC, useState } from "react";
 
-// APHRODITE
-// import { ContainerPrimary } from '../branded-aphrodite/containers/ContainerPrimary';
-// import { TextBodyPrimary } from "../branded-aphrodite/typography/TextBodyPrimary";
-
-// CSS
-// import { ContainerPrimary } from '../branded-css/containers/ContainerPrimary';
-// import { TextBodyPrimary } from "../branded-css/typography/TextBodyPrimary";
-
-// EMOTION
-// import { ContainerPrimary } from '../branded-emotion/containers/ContainerPrimary';
-// import { TextBodyPrimary } from "../branded-emotion/typography/TextBodyPrimary";
-
-// JSS
-// import { ContainerPrimary } from '../branded-jss/containers/ContainerPrimary';
-// import { TextBodyPrimary } from "../branded-jss/typography/TextBodyPrimary";
-
 // TYPESTYLE
-import { ContainerPrimary } from '../branded-typestyle/containers/ContainerPrimary';
-import { TextBodyPrimary } from "../branded-typestyle/typography/TextBodyPrimary";
+import { ContainerPrimary } from '../branded/containers/ContainerPrimary';
+import { TextBodyPrimary } from "../branded/typography/TextBodyPrimary";
 
 import { themeCss } from '../themeCss';
-import { LinkPrimary } from '../branded-typestyle/links/LinkPrimary';
+import { LinkPrimary } from '../branded/links/LinkPrimary';
 
 interface Posts {
   posts: any;
@@ -52,7 +36,7 @@ export const Posts: FC<Posts> = ({ posts }) => {
           console.log(post)
           return (
           <section key={index}>
-            <ContainerPrimary background={themeCss.color.white}>
+            <ContainerPrimary background={'neutral'}>
               <div className='st-flex'>
                 <div className='st-flex__col-auto1'>
                   <img src={post.thumbnail} style={{height: 50, width: 50}} />

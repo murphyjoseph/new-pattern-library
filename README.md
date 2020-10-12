@@ -120,3 +120,45 @@ THings to do
 - create other utility classes
 - does it make sense for them to be only mixins or should we also auto generate some utility styling as well? e.g. styleDisplay then cssDisplay which uses style from typestyle
 -
+
+
+
+- object destructuring how many words before you collapse it?
+
+---------------
+
+the order that things show up in stylesCore
+e.g. mixins come after general properties and stylesexternal always last
+
+---------------
+
+const stylesCore = style({
+    $debugName: "Container",
+    ...!!padding         && mixinPadding(padding),
+    ...!!margin          && mixinMargin(margin),
+    // A
+    ...!!colorBackground && mixinColorBackground(colorBackground),
+    // B
+    ...!!colorBackground && { background: themeCss.color[colorBackground] },
+    ...!!stylesExternal  && stylesExternal
+  })
+
+  ---------------
+
+    <Tag
+      className={combineClasses(stylesCore, 'kitter_text')}
+      {...optionalAttributes}>
+      { text }
+    </Tag>
+
+    <Tag
+      className={combineClasses(stylesCore, 'kitter_text')}
+      {...optionalAttributes}
+    >
+      { text }
+    </Tag>
+
+    <Tag className={combineClasses(stylesCore, 'kitter_text')}
+         {...optionalAttributes}>
+      { text }
+    </Tag>
