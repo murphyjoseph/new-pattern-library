@@ -5,7 +5,7 @@ import { TBreakpoints,
          TLabelPosition,
          TLabelDirection,
          TAlignText,
-         TBranding,
+         TBrand,
          TPositionTypes,
          TDirectionSpacing,
          TDisplaySettings } from '../types/util-types';
@@ -17,7 +17,7 @@ export interface IStylesGrid {
 }
 
 export interface IStylesBrand {
-  brand?: TBranding
+  brand?: TBrand
 }
 
 export interface IStylesRounded {

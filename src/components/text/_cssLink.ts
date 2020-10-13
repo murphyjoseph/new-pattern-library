@@ -1,15 +1,15 @@
-import { themeCss } from '../../themeCss';
-import { TBranding } from '../../types/util-types';
+import { theme } from '../../theme';
+import { TBrand } from '../../types/util-types';
 
-export const mixinLink: any = (brand: TBranding) => (
+export const mixinLink: any = (brand: TBrand) => (
   {
     textDecoration: "none",
     $nest: {
       '.kitter_text': {
         textDecoration: "underline",
-        color: themeCss.color[brand],
+        color: theme.color[brand],
         '&:hover': {
-          color: themeCss.color[`${brand}Light1`],
+          color: theme.color[`${brand}Light1`],
           transition: "200ms",
           textDecoration: "none"
         }

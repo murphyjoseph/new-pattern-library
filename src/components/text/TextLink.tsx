@@ -36,7 +36,8 @@ export const TextLink: FC<ITraits> = ({
   return (
     <a href={_href}
        className={combineClasses(stylesCore, 'kitter_textLink')}
-       {...optionalAttributes}>
+       {...optionalAttributes}
+    >
       <Text traits={traitsForText} />
     </a>
   )

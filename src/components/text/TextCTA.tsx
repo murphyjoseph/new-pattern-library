@@ -36,9 +36,11 @@ export const TextCTA: FC<ITraits> = ({
   }
 
   return (
-    <a href={_href}
-       className={combineClasses(stylesCore, 'kitter_textCTA', 'kitter_button')}
-       {...optionalAttributes}>
+    <a
+      href={_href}
+      className={combineClasses(stylesCore, 'kitter_textCTA', 'kitter_button')}
+      {...optionalAttributes}
+    >
       <Text traits={traitsForText} />
     </a>
   )

@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { TextAction } from '../../components/text/TextAction';
 import { ITextAction } from '../../components/text/Text.interface';
-import { TBranding } from '../../types/util-types';
+import { TBrand } from '../../types/util-types';
 
 export interface IPropsTextTitle {
   text: string,
   onClick: (e?: React.SyntheticEvent) => void,
-  variant: TBranding
+  variant: TBrand
 }
 
 export const ButtonDynamic: FC<IPropsTextTitle> = ({

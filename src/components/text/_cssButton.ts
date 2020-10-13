@@ -1,32 +1,45 @@
 import { theme } from '../../theme';
-import { TBranding } from '../../types/util-types';
+import { TBrand } from '../../types/util-types';
 import { mixinBorder } from '../../styles/mixinBorder';
 
-export const mixinButtonSolid: any = (brand: TBranding) => (
-  {
-    ...mixinBorder(theme.size.border.size1, theme.color[brand]),
+export const mixinButtonSolid: any = (brand: TBrand) => {
+
+  const brandBase = theme.brand[`${brand}Color`];
+  const brandContrast = theme.brand[`${brand}Contrast`];
+  const brandHover = theme.color[`${brand}Light1`];
+
+  return {
+    ...mixinBorder(theme.size.border.size1, brandBase),
     minWidth: theme.size.button.size2,
     padding: theme.size.spacing.size2,
     cursor: "pointer",
-    background: theme.color[brand],
+    background: brandBase,
     // outline is important for accessibility
     outlineWidth: theme.size.border.size1,
     outlineColor: theme.color.transparent,
     '&:hover': {
-      ...mixinBorder(theme.size.border.size1, theme.color[`${brand}Light1`]),
-      background: theme.color[`${brand}Light1`],
+      ...mixinBorder(theme.size.border.size1, brandHover),
+      background: brandHover,
       transition: "200ms",
     },
     $nest: {
       '.kitter_text': {
-        color: theme.branding[`${brand}Contrast`],
+        color: brandContrast,
       }
+    },
+    '&.kitter_disabled': {
+      cursor: "not-allowed",
+      background: theme.color.disabled
+    },
+    '&.kitter_success': {
+      cursor: "not-allowed",
+      background: theme.color.success
+    },
+    '&.kitter_loading': {
+      cursor: "progress",
+      background: theme.color.loading
     }
   }
-)
-
-export const cssButton: any = {
-  ...mixinButtonSolid(theme.branding.global)
 }
 
 export const cssButtonVariant: any = {

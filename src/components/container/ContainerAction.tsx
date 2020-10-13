@@ -1,9 +1,8 @@
 import React, { FC } from "react";
+
 import { IContainerAction } from './Container.interface';
 import _isFunction from 'lodash/isFunction';
-import { cssDisplay } from '../../styles/utility';
-import { style, classes } from 'typestyle';
-import { cssColorBackground, cssMargin, cssPadding } from '../../styles/utility';
+import { style, classes as combineClasses } from 'typestyle';
 import { mixinMargin } from "../../styles/mixinMargin";
 import { mixinPadding } from "../../styles/mixinPadding";
 
@@ -33,7 +32,7 @@ export const ContainerAction: FC<ITraits> = ({
   };
 
   return (
-    <div className={stylesCore}
+    <div className={combineClasses(stylesCore, 'kitter_container')}
          onClick={handleClick}>
       { children }
     </div>

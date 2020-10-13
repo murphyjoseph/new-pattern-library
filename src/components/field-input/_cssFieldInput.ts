@@ -1,12 +1,16 @@
-import { themeCss } from '../../themeCss';
+import { mixinBorder } from '../../styles/mixinBorder';
+import { mixinPadding } from '../../styles/mixinPadding';
+import { theme } from '../../theme';
 
 export const cssFieldInput = {
   base: {
     display: "block",
   },
   input: {
-    borderStyle: "solid",
-    borderWidth: `${themeCss.size.border.size2}${themeCss.size.border.unit}`,
-    borderColor: themeCss.color.global
+    ...mixinBorder('size1', 'black'),
+    ...mixinPadding({direction: 'all', size: 'size1'}),
+    outlineWidth: theme.size.border.size1,
+    outlineColor: theme.color.transparent,
+    display: "block"
   }
 }

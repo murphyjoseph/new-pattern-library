@@ -1,13 +1,13 @@
-import { IStylesColor, IStylesSpacing, IStylesTextAlign } from '../../interfaces/styles.interface';
+import { IStylesColor, IStylesDisplay, IStylesSpacing, IStylesTextAlign } from '../../interfaces/styles.interface';
 import { IPattern } from '../../interfaces/pattern.interface';
 import { ILink } from '../../interfaces/link.interface';
 import { IEvent } from '../../interfaces/event.interface';
-import { TVariantText, TBranding, TSizesButton, TWhiteSpace, TLabelPosition } from '../../types/util-types';
+import { TVariantText, TBrand, TSizesButton, TWhiteSpace, TLabelPosition, TState } from '../../types/util-types';
 
 type ElementType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div" | "figcaption" | "legend";
 
 // IStylesText was only being extended and not used anywhere else so i probably ever extended thigns...
-export interface IText extends IPattern, IStylesColor, IStylesTextAlign {
+export interface IText extends IPattern, IStylesColor, IStylesTextAlign, IStylesDisplay {
   tag?: ElementType,
   margin?: IStylesSpacing | IStylesSpacing[],
   padding?: IStylesSpacing | IStylesSpacing[],
@@ -30,13 +30,15 @@ export interface IText extends IPattern, IStylesColor, IStylesTextAlign {
 }
 
 export interface ITextAction extends IEvent, IPattern {
-  variant: TBranding,
+  variant: TBrand,
   text: string,
+  state?: TState,
   size: TSizesButton
 }
 
 export interface ITextCTA extends ILink, IPattern {
-  variant: TBranding,
+  variant: TBrand,
+  state?: TState,
   text: string,
   size: TSizesButton
 }
@@ -45,13 +47,14 @@ export interface ITextLink extends ILink, IPattern {
   // this is for situations where the onclick is handled in
   // the core pattern e.g. the drawer or tab pattern so onclick or href should be empty (trigger)
   text: string,
-  variant: TBranding,
+  variant: "primary" | "inactive",
   isFaux?: boolean
 }
 
 export interface ITextForm extends Omit<IText, "tag" | "variant" | "size"> {
   size: TSizesButton,
-  variant: TBranding,
+  variant: TBrand,
+  state?: TState,
   form: string
 }
 

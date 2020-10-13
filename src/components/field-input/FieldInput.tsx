@@ -6,6 +6,7 @@ import { cssTextVariant } from "../text/_cssText";
 import { cssFieldInput } from "./_cssFieldInput";
 import _isFunction from 'lodash/isFunction';
 import { style, classes as combineClasses } from 'typestyle';
+import { ILabel } from '../label/Label.interface';
 
 interface ITraits {
   traits: IFieldInput
@@ -13,7 +14,7 @@ interface ITraits {
 
 export const FieldInput: FC<ITraits> = ({ traits }) => {
 
-  const { kind, traitLabel, isRequired, for: _for,
+  const { kind, traitLabel: _traitLabel, isRequired, for: _for,
           stylesExternal, onChange: _onChange } = traits;
 
   const stylesCoreForDiv = style({
@@ -27,6 +28,12 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
     ...cssFieldInput.input,
     ...cssTextVariant.placeholder
   })
+
+  const traitLabel: ILabel = {
+    isRequired: isRequired,
+    for: _for,
+    ..._traitLabel
+  }
 
   const handleChange = (event?: React.SyntheticEvent): void => {
     if (!_onChange) return
@@ -42,16 +49,14 @@ export const FieldInput: FC<ITraits> = ({ traits }) => {
 
   return (
     <div className={stylesCoreForDiv}>
-      <Label traits={({
-        isRequired: isRequired,
-        for: _for,
-        ...traitLabel
-      })} />
+      <Label traits={traitLabel} />
 
-      <input className={StylesCoreForInput}
-             id={_for}
-             type={kind}
-             {...optionalAttributes} />
+      <input
+        className={StylesCoreForInput}
+        id={_for}
+        type={kind}
+        {...optionalAttributes}
+      />
     </div>
   )
 }

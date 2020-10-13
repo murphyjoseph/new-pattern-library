@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { ITextForm, IText } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
-import { cssButton, cssButtonVariant, cssButtonSize } from "./_cssButton";
+import { cssButtonVariant, cssButtonSize } from "./_cssButton";
 import { style, classes as combineClasses } from 'typestyle';
 
 interface ITraits {
@@ -19,7 +19,6 @@ export const TextForm: FC<ITraits> = ({
 
   const stylesCore = style({
     $debugName: "TextForm",
-    ...cssButton,
     ...cssButtonVariant[variant],
     ...cssButtonSize[size],
     ...!!stylesExternal && stylesExternal
@@ -35,9 +34,11 @@ export const TextForm: FC<ITraits> = ({
   }
 
   return (
-    <button type="submit"
-            className={combineClasses(stylesCore, 'kitter_textForm', 'kitter_button')}
-            { ...optionalAttributes }>
+    <button
+      type="submit"
+      className={combineClasses(stylesCore, 'kitter_textForm', 'kitter_button', 'disabled')}
+      { ...optionalAttributes }
+    >
       <Text traits={ traitsForText } />
     </button>
   )

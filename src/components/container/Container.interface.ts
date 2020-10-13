@@ -8,7 +8,7 @@ import { ILink } from '../../interfaces/link.interface';
 
 export interface IContainer extends IPattern, IStylesColor, IStylesRounded, IStylesDisplay, IStylesTextAlign {
   border?: IStylesBorder,
-  padding?: IStylesSpacing,
+  padding?: IStylesSpacing | IStylesSpacing[],
   margin?: IStylesSpacing,
   position?: IStylesPosition,
   shadow?: IStylesShadow,

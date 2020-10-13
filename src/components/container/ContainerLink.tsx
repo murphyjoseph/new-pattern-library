@@ -1,11 +1,11 @@
 import React, { FC } from "react";
+
 import { IContainerLink } from './Container.interface';
-import { cssDisplay } from '../../styles/utility';
-import { classes, style } from 'typestyle';
-import { cssPadding, cssMargin, cssColorBackground } from '../../styles/utility';
-import { theme } from "../../theme";
+import { classes as combineClasses, style } from 'typestyle';
 import { mixinMargin } from '../../styles/mixinMargin';
 import { mixinPadding } from "../../styles/mixinPadding";
+import { mixinColorBackground } from '../../styles/mixinColor';
+import { mixinDisplay } from "../../styles/mixinDisplay";
 
 interface ITraits {
   traits: IContainerLink
@@ -16,11 +16,13 @@ export const ContainerLink: FC<ITraits> = ({
   children
 }) => {
 
-  const { href: _href, target: _target, display: _display, stylesExternal, colorBackground, padding, margin } = traits;
+  const { href: _href, target: _target,
+          display: _display, stylesExternal,
+          colorBackground, padding, margin } = traits;
 
   const stylesCore = style({
-    ...!!_display        && { display: _display },
-    ...!!colorBackground && { background: theme.color[colorBackground] },
+    ...!!_display        && mixinDisplay(_display),
+    ...!!colorBackground && mixinColorBackground(colorBackground),
     ...!!padding         && mixinPadding(padding),
     ...!!margin          && mixinMargin(margin),
     ...!!stylesExternal  && stylesExternal
@@ -31,7 +33,7 @@ export const ContainerLink: FC<ITraits> = ({
   };
 
   return (
-    <a  className={stylesCore}
+    <a  className={combineClasses(stylesCore, 'kitter_container')}
         href={_href}
         {...optionalAttributes}>
       {children}

@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 
 import { IText } from './Text.interface';
-import { cssText, cssTextVariant, cssTextStyle } from './_cssText';
+import { cssTextVariant, cssTextStyle } from './_cssText';
 import { mixinAlignText } from '../../styles/mixinAlignText';
-import { cssColorBackground, cssColorText } from '../../styles/utility';
 import { style, classes as combineClasses } from 'typestyle';
 import { mixinColorText, mixinColorBackground } from '../../styles/mixinColor';
+import { mixinDisplay } from '../../styles/mixinDisplay';
 
 interface ITraits {
   traits: IText;
@@ -16,16 +16,17 @@ export const Text: FC<ITraits> = ({ traits }) => {
   const { tag: _tag, id: _id, title: _title,
           variant, text, isItalic, isCrossedOut,
           isUnderlined, textAlignment, stylesExternal,
-          colorText, colorBackground } = traits
+          colorText, colorBackground, display: _display } = traits
 
   const Tag: keyof JSX.IntrinsicElements = !!_tag ? _tag : "span"
 
-  const stylesCore = style({
+  const cssCore = style({
     $debugName: 'Text',
     ...cssTextVariant[variant],
-    ...!!colorText       && { color: colorText },
-    ...!!colorBackground && { background: colorBackground },
-    ...!!textAlignment   && { textAlign: textAlignment },
+    ...!!colorText       && mixinColorText(colorText),
+    ...!!colorBackground && mixinColorBackground(colorBackground),
+    ...!!textAlignment   && mixinAlignText(textAlignment),
+    ...!!_display        && mixinDisplay(_display),
     ...!!isItalic        && cssTextStyle.italic,
     ...!!isCrossedOut    && cssTextStyle.crossedOut,
     ...!!isUnderlined    && cssTextStyle.underlined,
@@ -38,8 +39,10 @@ export const Text: FC<ITraits> = ({ traits }) => {
   };
 
   return (
-    <Tag className={combineClasses(stylesCore, 'kitter_text')}
-         {...optionalAttributes}>
+    <Tag
+      className={combineClasses(cssCore, 'kitter_text')}
+      {...optionalAttributes}
+    >
       { text }
     </Tag>
   )

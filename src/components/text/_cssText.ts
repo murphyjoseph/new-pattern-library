@@ -2,26 +2,18 @@ import { themeCss } from '../../themeCss';
 
 // how do we enforce types here? e.g. have a type of text elements?
 
-export const cssText = {
-  base: {
-    color: themeCss.color.black,
-    fontWeight: "normal",
-    lineHeight: 1.1
-  }
-}
-
 export const cssTextWeight = {
-  bold: { fontWeight: "bold" },
-  bolder: { fontWeight: "bolder" },
+  bold:    { fontWeight: "bold" },
+  bolder:  { fontWeight: "bolder" },
   lighter: { fontWeight: "lighter" },
-  normal: { fontWeight: "normal" }
+  normal:  { fontWeight: "normal" }
 }
 
 export const cssTextStyle = {
-  italic: { fontStyle: "italic" },
+  italic:     { fontStyle: "italic" },
   crossedOut: { textDecoration: "line-through" },
   underlined: { textDecoration: "underline" },
-  nowrap: { whiteSpace: "nowrap" },
+  nowrap:     { whiteSpace: "nowrap" },
   capitalize: { textTransform: "uppercase" }
 }
 

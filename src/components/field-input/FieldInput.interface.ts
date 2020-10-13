@@ -16,7 +16,6 @@ export interface IFieldInputLabels extends IPattern {
 
 export interface IFieldInput extends IPattern, IState, IStylesColor {
   kind: TKinds,
-  onChange?: React.FormEventHandler<HTMLInputElement>,
   onFocus?: Function,
   readonly?: boolean,
   isRequired?: boolean,
@@ -29,9 +28,10 @@ export interface IFieldInput extends IPattern, IState, IStylesColor {
   defaultValue?: any,
   inputmode?: string,
   pattern?: string,
-  validation?: () => {[key: string]: any},
   padding?: IStylesSpacing,
   margin?: IStylesSpacing,
   for: string,
-  traitLabel?: ILabel
+  traitLabel?: ILabel,
+  onChange?: React.FormEventHandler<HTMLInputElement>,
+  validation?: () => {[key: string]: any}
 }

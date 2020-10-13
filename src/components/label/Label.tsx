@@ -3,6 +3,7 @@ import { Text } from '../text/Text';
 import { IText } from '../text/Text.interface';
 import { ILabel } from './Label.interface';
 import { style } from 'typestyle';
+import { cssDisplay } from "../../styles/utility";
 
 export interface ITraits {
   traits: ILabel
@@ -31,31 +32,34 @@ export const Label: FC<ITraits> = ({ traits }) => {
   }
 
   const styleCore = style({
+    display: "block",
     ...!!stylesExternal && stylesExternal
   })
 
   return (
-    <label className={styleCore}
-           htmlFor={traits.for}>
+    <label
+      className={styleCore}
+      htmlFor={traits.for}
+    >
       {
         !!traitsForMain &&
-        <Fragment>
+        <div className={cssDisplay('block')}>
           <Text traits={traitsForMain} />
           {
             !!isRequired &&
             <abbr title="required" aria-label="required">*</abbr>
           }
-        </Fragment>
+        </div>
       }
       {
         !!traitsForSecondary &&
-        <Fragment>
+        <div className={cssDisplay('block')}>
           <Text traits={traitsForSecondary} />
           {
             !!isRequired && !traitsForMain &&
             <abbr title="required" aria-label="required">*</abbr>
           }
-        </Fragment>
+        </div>
       }
     </label>
   )

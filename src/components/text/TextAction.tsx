@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { ITextAction, IText } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
-import { cssButton, cssButtonVariant, cssButtonSize } from './_cssButton';
+import { cssButtonVariant, cssButtonSize } from './_cssButton';
 import { style, classes as combineClasses } from 'typestyle';
 
 interface ITraits {
@@ -14,16 +14,14 @@ export const TextAction: FC<ITraits> = ({
 }) => {
 
   const { onClick, size, text: _text, variant,
-          id: _id, stylesExternal } = traits;
+          id: _id, stylesExternal, state } = traits;
 
   const handleClick = (event?: React.SyntheticEvent): void => {
     if (!onClick) return
     if (_isFunction(onClick)) onClick(event);
   };
 
-  const stylesCore = style({
-    ...cssButton.base,
-    ...cssButton.hover,
+  const cssCore = style({
     ...cssButtonVariant[variant],
     ...cssButtonSize[size],
     ...!!stylesExternal && stylesExternal
@@ -39,9 +37,11 @@ export const TextAction: FC<ITraits> = ({
   }
 
   return (
-    <button onClick={handleClick}
-            className={combineClasses(stylesCore, 'kitter_textAction', 'kitter_button')}
-            {...optionalAttributes}>
+    <button
+      onClick={handleClick}
+      className={combineClasses(cssCore, 'kitter_textAction', 'kitter_button', !!state && `kitter_${state}`)}
+      {...optionalAttributes}
+    >
       <Text traits={traitsForText} />
     </button>
   )
