@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { ITextForm, IText } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
-import { cssButtonVariant, cssButtonSize } from "./_cssButton";
+import { cssButtonVariant, cssButtonSize, mixinButtonFill } from "./_cssButton";
 import { style, classes as combineClasses } from 'typestyle';
 
 interface ITraits {
@@ -20,6 +20,9 @@ export const TextForm: FC<ITraits> = ({
   const stylesCore = style(
     cssButtonVariant[variant],
     cssButtonSize[size],
+    kind === 'outline' && mixinButtonFill(variant),
+    kind === 'solid' && mixinButtonFill(variant),
+    kind === 'text' && mixinButtonFill(variant),
     !!stylesExternal && stylesExternal
   )
 

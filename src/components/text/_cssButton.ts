@@ -3,7 +3,7 @@ import { TBrand, TColorCore, TColor } from '../../types/util-types';
 import { mixinBorder } from '../../styles/mixinBorder';
 import { EColor } from '../../theme.enum';
 
-const mixinButtonFill: any = (colorCore: TColorCore) => {
+export const mixinButtonFill: any = (colorCore: TColorCore) => {
 
   const brandBase = theme.color[`${colorCore}`];
   const brandContrast = theme.color[`${colorCore}Contrast`];
@@ -12,19 +12,18 @@ const mixinButtonFill: any = (colorCore: TColorCore) => {
   return {
     ...mixinBorder(theme.size.border.size2, brandBase),
     background: brandBase,
-    $nest: {
+    color: theme.color[`${colorCore}Contrast`],
       '&:hover': {
         ...mixinBorder(theme.size.border.size2, brandHover),
-        background: brandBase,
+        background: brandHover,
+        color: "red"
       },
-      '.kitter_text': {
-        color: brandBase
-      }
-    }
+
+
   }
 }
 
-const mixinButtonText: any = (colorCore: TColorCore) => {
+export const mixinButtonText: any = (colorCore: TColorCore) => {
 
   const brandBase = theme.color[colorCore];
   const brandContrast = theme.color[`${colorCore}Contrast`];
@@ -43,7 +42,7 @@ const mixinButtonText: any = (colorCore: TColorCore) => {
   }
 }
 
-const mixinButtonOutline: any = (colorCore: TColorCore) => {
+export const mixinButtonOutline: any = (colorCore: TColorCore) => {
 
   const brandBase = theme.color[colorCore];
   const brandContrast = theme.color[`${colorCore}Contrast`];
@@ -87,20 +86,6 @@ export const mixinButton: any = (brand: TBrand) => {
     // outline is important for accessibility
     outlineWidth: theme.size.border.size1,
     outlineColor: theme.color.transparent,
-    // ...mixinButtonOutline(brand),
-    ...mixinButtonOutline(brand),
-    '&.kitter_button_outline': {
-      ...mixinButtonOutline(brand)
-    },
-    '&:kitter_button_solid': {
-      ...mixinButtonFill(brand)
-    },
-    '&:kitter_button_text': {
-      ...mixinButtonText(brand)
-    }
-
-
-
   }
 }
 
