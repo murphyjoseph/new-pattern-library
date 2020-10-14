@@ -1,13 +1,13 @@
 import { TAlignText } from '../types/util-types';
 import { theme } from '../theme';
-import { TLabelSize, TColors } from '../types/util-types';
+import { TLabelSize, TColor } from '../types/util-types';
 import { TDisplaySettings } from '../types/util-types';
 
 export const mixinAlignText = (alignment: TAlignText) => (
   { textAlign: alignment }
 )
 
-export const mixinBorder = (width: TLabelSize, color: TColors) => (
+export const mixinBorder = (width: TLabelSize, color: TColor) => (
   {
     borderWidth: width,
     borderColor: theme.color[color],
@@ -15,11 +15,11 @@ export const mixinBorder = (width: TLabelSize, color: TColors) => (
   }
 )
 
-export const mixinColorText = (color: TColors) => (
+export const mixinColorText = (color: TColor) => (
   { color: theme.color[color] }
 )
 
-export const mixinColorBackground = (color: TColors) => (
+export const mixinColorBackground = (color: TColor) => (
   { background: theme.color[color] }
 )
 

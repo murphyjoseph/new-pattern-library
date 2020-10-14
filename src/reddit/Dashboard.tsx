@@ -3,7 +3,7 @@ import api, { IParams } from '../api/redditAPI';
 import { Posts } from "./Posts";
 import RawJSONone from '../api/redditPostsRawJSON1.json';
 import RawJSONtwo from '../api/redditPostsRawJSON2.json';
-
+import * as csstips from 'csstips';
 // TYPESTYLE
 import { FieldText } from '../branded/fields/FieldText';
 import { ButtonSubmit } from "../branded/buttons/ButtonSubmit";
@@ -37,6 +37,11 @@ export const Dashboard: FC = () => {
     setSubreddit(e.target.value)
   }
 
+  const flexHorizontalGreen = style(
+    csstips.flex,
+    csstips.horizontal
+  );
+
   const fetchPosts =({event, subreddit: _subreddit, query }: IParams) => {
     console.log("fetch posts...");
     console.log(event);
@@ -63,8 +68,8 @@ export const Dashboard: FC = () => {
 
   return (
     <SettingProvider value={subreddit}>
-      <ContainerPrimary background="primary">
-      <form className={style(flex)}
+      <ContainerPrimary background="neutralLight1">
+      <form className={flexHorizontalGreen}
             onSubmit={(event) => fetchPosts({event, subreddit})}
             id="subredditSearch">
         <FieldText

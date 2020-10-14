@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { IFieldInput } from '../../components/field-input/FieldInput.interface';
 import { FieldInput } from '../../components/field-input/FieldInput';
-import { themeCss } from '../../themeCss';
+import { theme } from '../../theme';
 
 interface IPropsFieldText {
   textMain: string,
@@ -32,7 +32,7 @@ export const FieldText: FC<IPropsFieldText> = ({
         text: "more text"
       },
       stylesExternal: {
-        paddingRight: themeCss.size.spacing.size3
+        paddingRight: theme.size.spacing.size3
       }
     }
   }

@@ -14,38 +14,42 @@ export type TBreakpoints =
  'breakpoint12' |
  'main'
 
-export type TColors =
+export type TColorCore =
+ 'primary'   |
+ 'secondary' |
+ 'tertiary'  |
+ 'disabled'  |
+ 'failure'   |
+ 'global'    |
+ 'loading'   |
+ 'neutral'   |
+ 'info'      |
+ 'success'   |
+ 'warning'
+
+export type TColor =
+ TColorCore        |
  'black'           |
- 'disabled'        |
  'disabledDark1'   |
  'disabledLight1'  |
- 'failure'         |
  'failureDark1'    |
  'failureLight1'   |
- 'global'          |
  'globalDark1'     |
  'globalLight1'    |
- 'loading'         |
  'loadingDark1'    |
  'loadingLight1'   |
- 'neutral'         |
  'neutralDark1'    |
  'neutralDark2'    |
  'neutralLight1'   |
  'neutralLight2'   |
  'neutralLight3'   |
  'neutralLight4'   |
- 'info'            |
  'infoDark1'       |
  'infoLight1'      |
- 'none'            |
- 'primary'         |
  'primaryDark1'    |
  'primaryLight1'   |
- 'secondary'       |
  'secondaryDark1'  |
  'secondaryLight1' |
- 'tertiary'        |
  'tertiaryDark1'   |
  'tertiaryLight1'  |
  'shadow'          |

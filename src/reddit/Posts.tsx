@@ -4,7 +4,7 @@ import React, { FC, useState } from "react";
 import { ContainerPrimary } from '../branded/containers/ContainerPrimary';
 import { TextBodyPrimary } from "../branded/typography/TextBodyPrimary";
 
-import { themeCss } from '../themeCss';
+import { theme } from '../theme';
 import { LinkPrimary } from '../branded/links/LinkPrimary';
 
 interface Posts {
@@ -36,7 +36,7 @@ export const Posts: FC<Posts> = ({ posts }) => {
           console.log(post)
           return (
           <section key={index}>
-            <ContainerPrimary background={'neutral'}>
+            <ContainerPrimary background={'secondary'}>
               <div className='st-flex'>
                 <div className='st-flex__col-auto1'>
                   <img src={post.thumbnail} style={{height: 50, width: 50}} />
@@ -47,7 +47,7 @@ export const Posts: FC<Posts> = ({ posts }) => {
                   { !!post.title && <TextBodyPrimary text={`${trimCopy(post.title)}`} /> }
                   { !!post.body && <TextBodyPrimary text={`${trimCopy(post.body)}`} />}
 
-                  <ContainerPrimary background={themeCss.color.white}>
+                  <ContainerPrimary background={theme.color.white}>
                     <TextBodyPrimary text={post.score} />
 
                     {' + '}

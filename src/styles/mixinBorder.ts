@@ -1,7 +1,7 @@
 import { theme } from '../theme';
-import { TLabelSize, TColors } from '../types/util-types';
+import { TLabelSize, TColor } from '../types/util-types';
 
-export const mixinBorder = (width: TLabelSize, color: TColors) => (
+export const mixinBorder = (width: TLabelSize, color: TColor) => (
   {
     borderWidth: width,
     borderColor: theme.color[color],

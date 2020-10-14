@@ -1,6 +1,6 @@
 import { TWhiteSpace } from '../types/util-types';
 import { TBreakpoints,
-         TColors,
+         TColor,
          TLabelSize,
          TLabelPosition,
          TLabelDirection,
@@ -27,19 +27,19 @@ export interface IStylesRounded {
 }
 
 export interface IStylesColor {
-  colorText?: TColors,
-  colorBackground?: TColors
+  colorText?: TColor,
+  colorBackground?: TColor
 }
 
 export interface IStylesBorder {
-  color?: TColors,
+  color?: TColor,
   size?: TLabelSize,
   direction?: TDirectionSpacing
 }
 
 export interface IStylesColorSvg {
-  colorFill?: TColors,
-  colorStroke?: TColors
+  colorFill?: TColor,
+  colorStroke?: TColor
 }
 
 export interface IStylesSpacing extends IStylesBreakpoint {

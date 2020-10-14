@@ -40,7 +40,7 @@ export const Text: FC<ITraits> = ({ traits }) => {
 
   return (
     <Tag
-      className={combineClasses(cssCore, 'kitter_text')}
+      className={combineClasses(cssCore, text)}
       {...optionalAttributes}
     >
       { text }

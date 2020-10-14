@@ -2,11 +2,11 @@ import React, { FC } from 'react';
 import { Container } from '../../components/container/Container';
 import { IContainer } from '../../components/container/Container.interface';
 import { MixinPadding } from '../../styles/mixinPadding';
-import { TColors } from '../../types/util-types';
+import { TColor } from '../../types/util-types';
 
 interface IPropsTextTitlePrimary {
   children: any,
-  background: TColors
+  background: TColor
 }
 
 export const ContainerPrimary: FC<IPropsTextTitlePrimary> = ({

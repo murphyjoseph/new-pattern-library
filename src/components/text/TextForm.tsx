@@ -13,16 +13,22 @@ export const TextForm: FC<ITraits> = ({
   traits
 }) => {
 
-  const { text: _text, variant, size, stylesExternal } = traits;
+  const { text: _text, variant, size, stylesExternal, state, kind } = traits;
 
-  console.log(variant)
+  // console.log(variant)
 
-  const stylesCore = style({
-    $debugName: "TextForm",
-    ...cssButtonVariant[variant],
-    ...cssButtonSize[size],
-    ...!!stylesExternal && stylesExternal
-  })
+  const stylesCore = style(
+    cssButtonVariant[variant],
+    cssButtonSize[size],
+    !!stylesExternal && stylesExternal
+  )
+
+  const stylesClasses = combineClasses(
+    stylesCore,
+    'kitter_textForm',
+    'kitter_button',
+    kind
+  )
 
   const optionalAttributes: any = {
     ...(!!traits.id && { id: traits.id })
@@ -36,7 +42,7 @@ export const TextForm: FC<ITraits> = ({
   return (
     <button
       type="submit"
-      className={combineClasses(stylesCore, 'kitter_textForm', 'kitter_button', 'disabled')}
+      className={stylesClasses}
       { ...optionalAttributes }
     >
       <Text traits={ traitsForText } />

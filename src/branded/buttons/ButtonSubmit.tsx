@@ -15,10 +15,11 @@ export const ButtonSubmit: FC<IPropsTextTitle> = ({
 }) => {
 
   const settings: ITextForm = {
-    variant: 'tertiary',
+    variant: 'primary',
     stylesExternal: _styles,
     form: _form,
     text: _text,
+    kind: "outline",
     size: "medium"
   };
 

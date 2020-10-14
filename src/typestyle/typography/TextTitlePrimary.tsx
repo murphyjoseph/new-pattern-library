@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { IText } from '../../components/text/Text.interface';
 import { Text } from '../../components/text/Text';
-import { TColors } from '../../types/util-types';
+import { TColor } from '../../types/util-types';
 
 interface IPropsTextTitlePrimary {
   text: string
-  color: TColors
+  color: TColor
 }
 
 export const TextTitlePrimary: FC<IPropsTextTitlePrimary> = ({

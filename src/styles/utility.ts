@@ -2,7 +2,7 @@ import { style } from 'typestyle';
 import { IStylesSpacing } from '../interfaces/styles.interface';
 import { mixinMargin } from './mixinMargin';
 import { mixinPadding } from './mixinPadding';
-import { TColors, TAlignText, TDisplaySettings } from '../types/util-types';
+import { TColor, TAlignText, TDisplaySettings } from '../types/util-types';
 import { mixinColorBackground, mixinColorText } from './mixinColor';
 import { mixinAlignText } from './mixinAlignText';
 import { mixinDisplay } from './mixinDisplay';
@@ -15,11 +15,11 @@ export const cssMargin = (margin: IStylesSpacing) => style({
   ...!!margin && mixinMargin(margin)
 })
 
-export const cssColorBackground = (colorBackground: TColors) => style({
+export const cssColorBackground = (colorBackground: TColor) => style({
   ...!!colorBackground && mixinColorBackground(colorBackground)
 })
 
-export const cssColorText = (colorText: TColors) => style({
+export const cssColorText = (colorText: TColor) => style({
   ...!!colorText && mixinColorText(colorText)
 })
 

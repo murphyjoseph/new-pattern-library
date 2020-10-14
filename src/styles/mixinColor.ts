@@ -1,10 +1,10 @@
 import { theme } from "../theme";
-import { TColors } from '../types/util-types';
+import { TColor } from '../types/util-types';
 
-export const mixinColorText = (color: TColors) => (
+export const mixinColorText = (color: TColor) => (
   { color: theme.color[color] }
 )
 
-export const mixinColorBackground = (color: TColors) => (
+export const mixinColorBackground = (color: TColor) => (
   { background: theme.color[color] }
 )

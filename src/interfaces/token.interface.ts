@@ -1,4 +1,4 @@
-import { TUnitOfMeasurement, TSizesText, TFonts, TColors, TLabelSize } from '../types/util-types';
+import { TUnitOfMeasurement, TSizesText, TFonts, TColor, TLabelSize } from '../types/util-types';
 
 
 // probably should be one or the other still working out
@@ -24,79 +24,89 @@ export interface ITokenUnit {
 
 // global, primary, secondary, tertiary, warning, info, failure, loading, disabled, success
 export interface ITokenColor {
-  global          : string,
-  globalLight1    : string,
-  globalDark1     : string,
-  primary         : string,
-  primaryLight1   : string,
-  primaryDark1    : string,
-  secondary       : string,
-  secondaryLight1 : string,
-  secondaryDark1  : string,
-  tertiary        : string,
-  tertiaryLight1  : string,
-  tertiaryDark1   : string,
-  success         : string,
-  successLight1   : string,
-  successDark1    : string,
-  disabled        : string,
-  disabledLight1  : string,
-  disabledDark1   : string,
-  warning         : string,
-  warningLight1   : string,
-  warningDark1    : string,
-  failure         : string,
-  failureLight1   : string,
-  failureDark1    : string,
-  loading         : string,
-  loadingLight1   : string,
-  loadingDark1    : string,
-  info            : string,
-  infoLight1      : string,
-  infoDark1       : string,
-  white           : string,
-  black           : string,
-  neutral         : string,
-  neutralLight1   : string,
-  neutralLight2   : string,
-  neutralLight3   : string,
-  neutralDark1    : string,
-  neutralDark2    : string,
-  neutralDark3    : string
+  global            : string,
+  globalLight1      : string,
+  globalDark1       : string,
+  globalContrast    : string,
+  primary           : string,
+  primaryLight1     : string,
+  primaryDark1      : string,
+  primaryContrast   : string,
+  secondary         : string,
+  secondaryLight1   : string,
+  secondaryDark1    : string,
+  secondaryContrast : string,
+  tertiary          : string,
+  tertiaryLight1    : string,
+  tertiaryDark1     : string,
+  tertiaryContrast  : string,
+  success           : string,
+  successLight1     : string,
+  successDark1      : string,
+  successContrast   : string,
+  disabled          : string,
+  disabledLight1    : string,
+  disabledDark1     : string,
+  disabledContrast  : string,
+  warning           : string,
+  warningLight1     : string,
+  warningDark1      : string,
+  warningContrast   : string,
+  failure           : string,
+  failureLight1     : string,
+  failureDark1      : string,
+  failureContrast   : string,
+  loading           : string,
+  loadingLight1     : string,
+  loadingDark1      : string,
+  loadingContrast   : string,
+  info              : string,
+  infoLight1        : string,
+  infoDark1         : string,
+  infoContrast      : string,
+  white             : string,
+  black             : string,
+  neutral           : string,
+  neutralLight1     : string,
+  neutralLight2     : string,
+  neutralLight3     : string,
+  neutralDark1      : string,
+  neutralDark2      : string,
+  neutralDark3      : string
 }
 
 export interface ITokenSize extends ITokenSizeLabels, ITokenUnit {}
 
 export interface ITokenBrand {
-  globalColor: TColors,
-  globalContrast: TColors
+  globalColor: TColor
+  globalContrast: TColor
 
-  primaryColor: TColors,
-  primaryContrast: TColors
+  primaryColor: TColor
+  primaryContrast: TColor
 
-  secondaryColor: TColors,
-  secondaryContrast: TColors
+  secondaryColor: TColor
+  secondaryContrast: TColor
 
-  tertiaryColor: TColors,
-  tertiaryContrast: TColors
+  tertiaryColor: TColor
+  tertiaryContrast: TColor
 
-  warningColor: TColors,
-  warningContrast: TColors
+  warningColor: TColor
+  warningContrast: TColor
 
-  infoColor: TColors,
-  infoContrast: TColors
+  infoColor: TColor
+  infoContrast: TColor
 
-  failureColor: TColors,
-  failureContrast: TColors
+  failureColor: TColor,
+  failureContrast: TColor
 
-  loadingColor: TColors,
-  loadingContrast: TColors
+  loadingColor: TColor,
+  loadingContrast: TColor
 
-  disabledColor: TColors,
-  disabledContrast: TColors
+  disabledColor: TColor,
+  disabledContrast: TColor
 
-  successColor: TColors,
-  successContrast: TColors
+  successColor: TColor,
+  successContrast: TColor
 }
 
 // export interface ITokenBrand {

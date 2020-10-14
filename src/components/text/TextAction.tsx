@@ -28,7 +28,8 @@ export const TextAction: FC<ITraits> = ({
   })
 
   const optionalAttributes: any = {
-    ...(!!_id && { id: _id })
+    ...(!!_id && { id: _id }),
+    ...(!!state && state === 'disabled' && { disabled: true })
   };
 
   const traitsForText: IText = {
