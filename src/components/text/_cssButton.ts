@@ -13,13 +13,11 @@ export const mixinButtonFill: any = (colorCore: TColorCore) => {
     ...mixinBorder(theme.size.border.size2, brandBase),
     background: brandBase,
     color: theme.color[`${colorCore}Contrast`],
-      '&:hover': {
-        ...mixinBorder(theme.size.border.size2, brandHover),
-        background: brandHover,
-        color: "red"
-      },
-
-
+    '&:hover': {
+      ...mixinBorder(theme.size.border.size2, brandHover),
+      background: brandHover,
+      color: "red"
+    },
   }
 }
 
