@@ -3,9 +3,7 @@ import { IStylesSpacing } from '../interfaces/styles.interface';
 import { mixinMargin } from './mixinMargin';
 import { mixinPadding } from './mixinPadding';
 import { TColor, TAlignText, TDisplaySettings } from '../types/util-types';
-import { mixinColorBackground, mixinColorText } from './mixinColor';
-import { mixinAlignText } from './mixinAlignText';
-import { mixinDisplay } from './mixinDisplay';
+import { mixinColorBackground, mixinColorText, mixinAlignText, mixinDisplay } from './mixinGeneral';
 
 export const cssPadding = (padding: IStylesSpacing) => style({
   ...!!padding && mixinPadding(padding),

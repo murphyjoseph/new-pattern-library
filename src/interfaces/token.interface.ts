@@ -109,50 +109,39 @@ export interface ITokenBrand {
   successContrast: TColor
 }
 
-// export interface ITokenBrand {
-//   global: {
-//     color: TColors,
-//     contrast: TColors
-//   },
-//   primary: {
-//     color: TColors,
-//     contrast: TColors
-//   },
-//   secondary: {
-//     color: TColors,
-//     contrast: TColors
-//   },
-//   tertiary: {
-//     color: TColors,
-//     contrast: TColors
-//   },
-//   warning: {
-//     color: TColors,
-//     contrast: TColors
-//   },
-//   info: {
-//     color: TColors,
-//     contrast: TColors
-//   }
-//   state: {
-//     failure: {
-//       color: TColors,
-//       contrast: TColors
-//     },
-//     loading: {
-//       color: TColors,
-//       contrast: TColors
-//     },
-//     disabled: {
-//       color: TColors,
-//       contrast: TColors
-//     },
-//     success: {
-//       color: TColors,
-//       contrast: TColors
-//     }
-//   }
-// }
+export interface ITokenShadow {
+  small: {
+    blur: string,
+    spread: string,
+    x: string,
+    y: string
+  },
+  medium: {
+    blur: string,
+    spread: string,
+    x: string,
+    y: string
+  },
+  large: {
+    blur: string,
+    spread: string,
+    x: string,
+    y: string
+  }
+}
+
+export interface ITokenDepth {
+  content    : number,
+  navigation : number,
+  sheet      : number,
+  overlay    : number,
+  modal      : number,
+  toast      : number,
+  dialog     : number,
+  menu       : number,
+  tooltip    : number
+}
+
 
 export interface ITokenBreakpoint {
   breakpoint1  : string,
@@ -169,29 +158,17 @@ export interface ITokenBreakpoint {
 }
 
 export interface ITokenTypographyFonts {
-  heading: string,
-  title: string,
-  text: string
+  heading : string,
+  title   : string,
+  text    : string
 }
 
 export interface ITokenTypographyLevel {
-  size: TLabelSize,
-  lineHeight: number,
-  letterSpacing: number,
-  font: TFonts
+  size          : TLabelSize,
+  lineHeight    : number,
+  letterSpacing : number,
+  font          : TFonts
 }
-
-// export interface ITokenTypography {
-//   heading: {
-//     level1: ITokenTypographyLevel,
-//     level2: ITokenTypographyLevel,
-//     level3: ITokenTypographyLevel
-//   },
-//   title: {
-//     level1: ITokenTypographyLevel,
-//     level2: ITokenTypographyLevel
-//   }
-// }
 
 export interface ITokenTypography {
   level1: ITokenTypographyLevel,

@@ -4,8 +4,7 @@ import { IContainerLink } from './Container.interface';
 import { style } from 'typestyle';
 import { mixinMargin } from '../../styles/mixinMargin';
 import { mixinPadding } from "../../styles/mixinPadding";
-import { mixinColorBackground } from '../../styles/mixinColor';
-import { mixinDisplay } from "../../styles/mixinDisplay";
+import { mixinColorBackground, mixinDisplay } from '../../styles/mixinGeneral';
 
 interface ITraits {
   traits: IContainerLink

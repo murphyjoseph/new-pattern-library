@@ -139,7 +139,7 @@ const stylesCore = style({
     // A
     ...!!colorBackground && mixinColorBackground(colorBackground),
     // B
-    ...!!colorBackground && { background: themeCss.color[colorBackground] },
+    ...!!colorBackground && { background: theme.color[colorBackground] },
     ...!!styleExternal  && styleExternal
   })
 

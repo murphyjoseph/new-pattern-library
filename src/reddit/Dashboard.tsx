@@ -8,10 +8,11 @@ import * as csstips from 'csstips';
 import { FieldText } from '../branded/fields/FieldText';
 import { ButtonSubmit } from "../branded/buttons/ButtonSubmit";
 import { cssDisplay } from '../styles/utility';
-import { mixinDisplay } from '../styles/mixinDisplay';
+import { mixinDisplay } from '../styles/mixinGeneral';
 import { style } from 'typestyle'
 import { normalize, setupPage, flex } from "csstips";
 import { ContainerPrimary } from "../branded/containers/ContainerPrimary";
+import { LinkPrimary } from '../branded/links/LinkPrimary';
 
 normalize();
 setupPage('#root');
@@ -73,6 +74,7 @@ export const Dashboard: FC = () => {
   return (
     <SettingProvider value={subreddit}>
       <ContainerPrimary background="neutralLight1">
+      <LinkPrimary text="Click here to search more..." href="https://www.google.com" />
       <form
         className={flexHorizontalGreen}
         onSubmit={(event) => fetchPosts({event, subreddit})}

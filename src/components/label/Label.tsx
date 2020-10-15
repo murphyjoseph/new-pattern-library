@@ -4,7 +4,7 @@ import { IText } from '../text/Text.interface';
 import { ILabel } from './Label.interface';
 import { style } from 'typestyle';
 import { cssDisplay } from "../../styles/utility";
-import { mixinDisplay } from '../../styles/mixins';
+import { mixinDisplay } from '../../styles/mixinGeneral';
 
 export interface ITraits {
   traits: ILabel

@@ -1,37 +1,32 @@
 import { theme } from '../../theme';
-import { TBrand } from '../../types/util-types';
+import { TColorCore } from '../../types/util-types';
 
-export const mixinLink: any = (brand: TBrand) => (
+export const mixinLink: any = (brand: TColorCore) => (
   {
-    textDecoration: "none",
-    $nest: {
+    textDecoration : "underline",
+    color          : theme.color[brand],
+    '&:hover': {
+      color          : theme.color[`${brand}Light1`],
+      transition     : "200ms",
+      textDecoration : "none"
+    },
+    '&:visited': {
       '.kitter_text': {
-        textDecoration: "underline",
-        color: theme.color[brand],
-        '&:hover': {
-          color: theme.color[`${brand}Light1`],
-          transition: "200ms",
-          textDecoration: "none"
-        }
-      },
-      '&:visited': {
-        '.kitter_text': {
-          color: "red"
-        }
+        color: "red"
       }
     }
   }
 )
 
 export const cssLinkVariant: any = {
-  global:    { ...mixinLink('global')    },
-  primary:   { ...mixinLink('primary')   },
-  secondary: { ...mixinLink('secondary') },
-  neutral:   { ...mixinLink('neutral')   },
-  warning:   { ...mixinLink('warning')   },
-  info:      { ...mixinLink('info')      },
-  disabled:  { ...mixinLink('disabled')  },
-  inactive:  { ...mixinLink('inactive')  }
+  global    : { ...mixinLink('global')    },
+  primary   : { ...mixinLink('primary')   },
+  secondary : { ...mixinLink('secondary') },
+  neutral   : { ...mixinLink('neutral')   },
+  warning   : { ...mixinLink('warning')   },
+  info      : { ...mixinLink('info')      },
+  disabled  : { ...mixinLink('disabled')  },
+  inactive  : { ...mixinLink('inactive')  }
 }
 
 // https://typestyle.github.io/#/advanced/concept-ordering-pseudo-classes

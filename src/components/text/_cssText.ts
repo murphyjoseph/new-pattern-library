@@ -1,4 +1,4 @@
-import { themeCss } from '../../themeCss';
+import { theme } from '../../theme';
 
 // how do we enforce types here? e.g. have a type of text elements?
 
@@ -19,63 +19,63 @@ export const cssTextStyle = {
 
 export const cssTextVariant = {
   headingOne: {
-    ...themeCss.typography.headingOne
+    ...theme.typography.level1
   },
   headingTwo: {
-    ...themeCss.typography.headingTwo
+    ...theme.typography.level2
   },
   headingThree: {
-    ...themeCss.typography.headingThree
+    ...theme.typography.level3
   },
   titleOne: {
-    ...themeCss.typography.titleOne
+    ...theme.typography.level4
   },
   titleTwo: {
-    ...themeCss.typography.titleTwo
+    ...theme.typography.level5
   },
   bodyOne: {
-    ...themeCss.typography.bodyOne
+    ...theme.typography.level6
   },
   bodyTwo: {
-    ...themeCss.typography.bodyTwo
+    ...theme.typography.level7
   },
   description: {
-    ...themeCss.typography.description
+    ...theme.typography.level8
   },
   list: {
-    ...themeCss.typography.list
+    ...theme.typography.level5
   },
   button: {
-    ...themeCss.typography.button
+    ...theme.typography.level5
   },
   link: {
-    ...themeCss.typography.link
+    ...theme.typography.level5
   },
   labelOne: {
-    ...themeCss.typography.labelOne
+    ...theme.typography.level5
   },
   labelTwo: {
-    ...themeCss.typography.labelTwo
+    ...theme.typography.level7
   },
   input: {
-    ...themeCss.typography.input
+    ...theme.typography.level5
   },
   placeholder: {
-    ...themeCss.typography.placeholder
+    ...theme.typography.level5
   },
   icon: {
-    ...themeCss.typography.icon
+    ...theme.typography.level5
   },
   option: {
-    ...themeCss.typography.option
+    ...theme.typography.level5
   },
   invalid: {
-    ...themeCss.typography.invalid
+    ...theme.typography.level5
   },
   counter: {
-    ...themeCss.typography.counter
+    ...theme.typography.level5
   },
   figcaption: {
-    ...themeCss.typography.figcaption
+    ...theme.typography.level5
   }
 }

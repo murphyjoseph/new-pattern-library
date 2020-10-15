@@ -212,6 +212,7 @@ export type TColFixed =
  "widthsize11" |
  "widthsize12"
 
+export type THyphens = 'none' | 'manual' | 'auto' | 'initial' | 'unset'
 export type TKindButton = "outline" | "solid" | "text"
 export type TFonts = 'heading' | 'title' | 'text'
 export type TState = "failure" | "loading" | "disabled" | "success"

@@ -2,10 +2,8 @@ import React, { FC } from "react";
 
 import { IText } from './Text.interface';
 import { cssTextVariant, cssTextStyle } from './_cssText';
-import { mixinAlignText } from '../../styles/mixinAlignText';
 import { style } from 'typestyle';
-import { mixinColorText, mixinColorBackground } from '../../styles/mixinColor';
-import { mixinDisplay } from '../../styles/mixinDisplay';
+import { mixinColorText, mixinColorBackground, mixinDisplay, mixinAlignText } from '../../styles/mixinGeneral';
 
 interface ITraits {
   traits: IText;

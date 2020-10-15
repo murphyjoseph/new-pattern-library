@@ -1,4 +1,4 @@
-import { ITokenColor, ITokenTypography, ITokenTypographyFonts, ITokenSize, ITokenBrand, ITokenBreakpoint } from './interfaces/token.interface';
+import { ITokenColor, ITokenTypography, ITokenTypographyFonts, ITokenSize, ITokenBrand, ITokenBreakpoint, ITokenDepth, ITokenShadow } from './interfaces/token.interface';
 import { EColor } from './theme.enum';
 // hsla(200, 37%, 52%, 1)
 
@@ -363,74 +363,6 @@ const sizeColumnAuto: ITokenSize = {
   size12: 12
 }
 
-const brand: ITokenBrand = {
-  globalColor: 'global',
-  globalContrast: 'white',
-  primaryColor: 'primary',
-  primaryContrast: 'white',
-  secondaryColor: 'secondary',
-  secondaryContrast: 'white',
-  tertiaryColor: 'tertiary',
-  tertiaryContrast: 'white',
-  warningColor: 'warning',
-  warningContrast: 'white',
-  infoColor: 'info',
-  infoContrast: 'white',
-  failureColor: 'failure',
-  failureContrast: 'white',
-  loadingColor: 'loading',
-  loadingContrast: 'white',
-  disabledColor: 'disabled',
-  disabledContrast: 'white',
-  successColor: 'success',
-  successContrast: 'white'
-}
-
-// const brand: ITokenBrand = {
-//   global: {
-//     color: 'global',
-//     contrast: 'white'
-//   },
-//   primary: {
-//     color: 'primary',
-//     contrast: 'white'
-//   },
-//   secondary: {
-//     color: 'secondary',
-//     contrast: 'white'
-//   },
-//   tertiary: {
-//     color: 'tertiary',
-//     contrast: 'white'
-//   },
-//   warning: {
-//     color: 'warning',
-//     contrast: 'white'
-//   },
-//   info: {
-//     color: 'info',
-//     contrast: 'white'
-//   },
-//   state: {
-//     failure: {
-//       color: 'failure',
-//       contrast: 'white'
-//     },
-//     loading: {
-//       color: 'loading',
-//       contrast: 'white'
-//     },
-//     disabled: {
-//       color: 'disabled',
-//       contrast: 'white'
-//     },
-//     success: {
-//       color: 'success',
-//       contrast: 'white'
-//     }
-//   }
-// }
-
 const breakpoint: ITokenBreakpoint = {
   breakpoint1  : '350px',
   breakpoint2  : '560px',
@@ -502,10 +434,44 @@ const typographyLevel: ITokenTypography = {
   }
 }
 
+const shadow: ITokenShadow = {
+  small: {
+    blur: '0rem',
+    spread: '0.14rem',
+    x: '0.14rem',
+    y: '0.14rem'
+  },
+  medium: {
+    blur: '0rem',
+    spread: '0.23rem',
+    x: '0.25rem',
+    y: '0rem'
+  },
+  large: {
+    blur: '0rem',
+    spread: '0.98rem',
+    x: '1.34rem',
+    y: '0rem'
+  }
+}
+
+const depth: ITokenDepth = {
+  content: 100,
+  navigation: 1000,
+  sheet: 1100,
+  overlay: 1200,
+  modal: 1300,
+  toast: 1400,
+  dialog: 1500,
+  menu: 1600,
+  tooltip: 1700
+}
+
 export const theme: any = {
   color: color,
-  brand: brand,
   breakpoint: breakpoint,
+  depth: depth,
+  shadow: shadow,
   typography: {
     font: typographyFont,
     level: typographyLevel

@@ -1,6 +1,6 @@
 import { theme } from '../../theme';
 import { TBrand, TColorCore, TColor, TKindButton } from '../../types/util-types';
-import { mixinBorder } from '../../styles/mixinBorder';
+import { mixinBorder } from '../../styles/mixinGeneral';
 import { COLOR, EColor } from '../../theme.enum';
 
 export const mixinButtonSolid: any = (colorCore: TColorCore) => {
@@ -11,26 +11,25 @@ export const mixinButtonSolid: any = (colorCore: TColorCore) => {
 
   return {
     ...mixinBorder(theme.size.border.size2, brandBase),
-    background: brandBase,
-    color: brandContrast,
+    background : brandBase,
+    color      : brandContrast,
     '&:hover': {
       ...mixinBorder(theme.size.border.size2, brandHover),
-      background: brandHover,
-      // color: "red"
+      background: brandHover
     },
   }
 }
 
 export const mixinButtonText: any = (colorCore: TColorCore) => {
 
-  const brandBase = theme.color[colorCore];
+  const brandBase  = theme.color[colorCore];
   const brandHover = theme.color[`${colorCore}Light1`];
 
   return {
     color: brandBase,
     '&:hover': {
-      background: theme.color.neutralLight3,
-      color: brandHover
+      background : theme.color.neutralLight3,
+      color      : brandHover
     }
   }
 }
@@ -43,44 +42,29 @@ export const mixinButtonOutline: any = (colorCore: TColorCore) => {
 
   return {
     ...mixinBorder(theme.size.border.size4, colorCore),
-    background: 'transparent',
-    color: brandBase,
+    background : 'transparent',
+    color      : brandBase,
     '&:hover': {
       ...mixinBorder(theme.size.border.size4, COLOR[colorCore]),
-      background: theme.color.neutral,
-      color: brandHover
+      background : theme.color.neutral,
+      color      : brandHover
     }
   }
 }
 
 export const mixinButton: any = {
-
-    minWidth: theme.size.button.size2,
-    padding: theme.size.spacing.size2,
-    cursor: "pointer",
-    // outline is important for accessibility
-    outlineWidth: theme.size.border.size1,
-    outlineColor: theme.color.transparent,
-
+  minWidth     : theme.size.button.size2,
+  padding      : theme.size.spacing.size2,
+  cursor       : "pointer",
+  // outline is important for accessibility
+  outlineWidth : theme.size.border.size1,
+  outlineColor : theme.color.transparent,
 }
 
 export const cssButtonKind: any = (kind: TKindButton, variant: TColorCore) => {
   if (kind === 'outline') return { ...mixinButtonOutline(variant)}
   if (kind === 'solid')   return { ...mixinButtonSolid(variant)}
   if (kind === 'text')    return { ...mixinButtonText(variant)}
-}
-
-export const cssButtonVariant: any = {
-  global:    { ...mixinButton },
-  primary:   { ...mixinButton },
-  secondary: { ...mixinButton },
-  tertiary:  { ...mixinButton },
-  neutral:   { ...mixinButton },
-  warning:   { ...mixinButton },
-  info:      { ...mixinButton },
-  disabled:  { ...mixinButton },
-  inactive:  { ...mixinButton },
-  loading:   { ...mixinButton }
 }
 
 export const cssButtonSize: any = {
