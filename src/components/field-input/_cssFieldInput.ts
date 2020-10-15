@@ -1,4 +1,4 @@
-import { mixinBorder } from '../../styles/mixinBorder';
+import { mixinBorder } from '../../styles/mixinGeneral';
 import { mixinPadding } from '../../styles/mixinPadding';
 import { theme } from '../../theme';
 

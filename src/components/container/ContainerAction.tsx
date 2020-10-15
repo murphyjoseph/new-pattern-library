@@ -5,7 +5,7 @@ import _isFunction from 'lodash/isFunction';
 import { style } from 'typestyle';
 import { mixinMargin } from "../../styles/mixinMargin";
 import { mixinPadding } from "../../styles/mixinPadding";
-import { mixinDisplay } from '../../styles/mixins';
+import { mixinDisplay, mixinColorBackground } from '../../styles/mixinGeneral';
 
 interface ITraits {
   traits: IContainerAction
@@ -21,7 +21,7 @@ export const ContainerAction: FC<ITraits> = ({
 
   const stylesCore = style(
     !!_display        && mixinDisplay(_display),
-    !!colorBackground && { background: colorBackground},
+    !!colorBackground && mixinColorBackground(colorBackground),
     !!padding         && mixinPadding(padding),
     !!margin          && mixinMargin(margin),
     !!styleExternal   && styleExternal
