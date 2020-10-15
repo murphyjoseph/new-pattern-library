@@ -16,6 +16,7 @@ export const ButtonPrimary: FC<IPropsTextTitle> = ({
     variant: 'primary',
     text: _text,
     onClick: _onClick,
+    kind: "solid",
     size: "large"
   };
 

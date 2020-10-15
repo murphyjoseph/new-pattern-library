@@ -19,7 +19,8 @@ export const ButtonDynamic: FC<IPropsTextTitle> = ({
     variant: _variant,
     text: _text,
     onClick: _onClick,
-    size: "large"
+    size: "large",
+    kind: "solid"
   };
 
   return <TextAction traits={settings} />;

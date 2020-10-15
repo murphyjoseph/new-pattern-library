@@ -19,7 +19,8 @@ export const ButtonSubmit: FC<IPropsTextTitle> = ({
     stylesExternal: _styles,
     form: _form,
     text: _text,
-    size: "small"
+    size: "small",
+    kind: "solid"
   };
 
   return <TextForm traits={settings} />;

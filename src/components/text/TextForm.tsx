@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import { ITextForm, IText } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
-import { cssButtonVariant, cssButtonSize, mixinButtonFill } from "./_cssButton";
-import { style, classes as combineClasses } from 'typestyle';
+import { cssButtonSize, cssButtonKind, mixinButton } from "./_cssButton";
+import { style } from 'typestyle';
 
 interface ITraits {
   traits: ITextForm
@@ -15,22 +15,11 @@ export const TextForm: FC<ITraits> = ({
 
   const { text: _text, variant, size, stylesExternal, state, kind } = traits;
 
-  // console.log(variant)
-
   const stylesCore = style(
-    cssButtonVariant[variant],
+    mixinButton,
     cssButtonSize[size],
-    kind === 'outline' && mixinButtonFill(variant),
-    kind === 'solid' && mixinButtonFill(variant),
-    kind === 'text' && mixinButtonFill(variant),
+    cssButtonKind(kind, variant),
     !!stylesExternal && stylesExternal
-  )
-
-  const stylesClasses = combineClasses(
-    stylesCore,
-    'kitter_textForm',
-    'kitter_button',
-    kind
   )
 
   const optionalAttributes: any = {
@@ -45,7 +34,7 @@ export const TextForm: FC<ITraits> = ({
   return (
     <button
       type="submit"
-      className={stylesClasses}
+      className={stylesCore}
       { ...optionalAttributes }
     >
       <Text traits={ traitsForText } />

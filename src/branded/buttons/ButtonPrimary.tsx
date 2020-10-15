@@ -16,7 +16,8 @@ export const ButtonPrimary: FC<IPropsTextTitle> = ({
     variant: 'primary',
     text: _text,
     onClick: _onClick,
-    size: "large"
+    size: "large",
+    kind: "solid"
   };
 
   return <TextAction traits={settings} />;

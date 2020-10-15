@@ -19,7 +19,7 @@ export const ButtonSubmit: FC<IPropsTextTitle> = ({
     stylesExternal: _styles,
     form: _form,
     text: _text,
-    kind: "outline",
+    kind: "solid",
     size: "medium"
   };
 

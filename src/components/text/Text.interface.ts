@@ -2,7 +2,7 @@ import { IStylesColor, IStylesDisplay, IStylesSpacing, IStylesTextAlign } from '
 import { IPattern } from '../../interfaces/pattern.interface';
 import { ILink } from '../../interfaces/link.interface';
 import { IEvent } from '../../interfaces/event.interface';
-import { TVariantText, TBrand, TSizesButton, TWhiteSpace, TLabelPosition, TState, TColorCore } from '../../types/util-types';
+import { TVariantText, TBrand, TSizesButton, TWhiteSpace, TLabelPosition, TState, TColorCore, TKindButton } from '../../types/util-types';
 
 type ElementType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div" | "figcaption" | "legend";
 
@@ -33,14 +33,16 @@ export interface ITextAction extends IEvent, IPattern {
   variant: TBrand,
   text: string,
   state?: TState,
-  size: TSizesButton
+  size: TSizesButton,
+  kind: TKindButton
 }
 
 export interface ITextCTA extends ILink, IPattern {
   variant: TBrand,
   state?: TState,
   text: string,
-  size: TSizesButton
+  size: TSizesButton,
+  kind: TKindButton
 }
 
 export interface ITextLink extends ILink, IPattern {
@@ -56,7 +58,7 @@ export interface ITextForm extends Omit<IText, "tag" | "variant" | "size"> {
   variant: TColorCore,
   state?: TState,
   form: string,
-  kind: "solid" | "outline" | "text"
+  kind: TKindButton
 }
 
 export interface ITextActionLink extends Omit<IText, "tag">, IEvent, ILink {

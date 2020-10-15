@@ -16,7 +16,8 @@ export const ButtonGlobal: FC<IPropsTextTitle> = ({
     variant: 'global',
     text: _text,
     onClick: _onClick,
-    size: "medium"
+    size: "medium",
+    kind: "solid"
   };
 
   return <TextAction traits={settings} />;

@@ -1,9 +1,9 @@
 import { theme } from '../../theme';
-import { TBrand, TColorCore, TColor } from '../../types/util-types';
+import { TBrand, TColorCore, TColor, TKindButton } from '../../types/util-types';
 import { mixinBorder } from '../../styles/mixinBorder';
-import { EColor } from '../../theme.enum';
+import { COLOR, EColor } from '../../theme.enum';
 
-export const mixinButtonFill: any = (colorCore: TColorCore) => {
+export const mixinButtonSolid: any = (colorCore: TColorCore) => {
 
   const brandBase = theme.color[`${colorCore}`];
   const brandContrast = theme.color[`${colorCore}Contrast`];
@@ -12,11 +12,11 @@ export const mixinButtonFill: any = (colorCore: TColorCore) => {
   return {
     ...mixinBorder(theme.size.border.size2, brandBase),
     background: brandBase,
-    color: theme.color[`${colorCore}Contrast`],
+    color: brandContrast,
     '&:hover': {
       ...mixinBorder(theme.size.border.size2, brandHover),
       background: brandHover,
-      color: "red"
+      // color: "red"
     },
   }
 }
@@ -24,18 +24,13 @@ export const mixinButtonFill: any = (colorCore: TColorCore) => {
 export const mixinButtonText: any = (colorCore: TColorCore) => {
 
   const brandBase = theme.color[colorCore];
-  const brandContrast = theme.color[`${colorCore}Contrast`];
   const brandHover = theme.color[`${colorCore}Light1`];
 
   return {
+    color: brandBase,
     '&:hover': {
       background: theme.color.neutralLight3,
-      '.kitter_text': {
-        color: brandHover
-      }
-    },
-    '.kitter_text': {
-      color: brandBase
+      color: brandHover
     }
   }
 }
@@ -46,108 +41,46 @@ export const mixinButtonOutline: any = (colorCore: TColorCore) => {
   const brandContrast = theme.color[`${colorCore}Contrast`];
   const brandHover = theme.color[`${colorCore}Light1`];
 
-  console.log("BrandBase")
-  console.log(brandBase)
-  console.log(colorCore)
-
   return {
     ...mixinBorder(theme.size.border.size4, colorCore),
     background: 'transparent',
+    color: brandBase,
     '&:hover': {
-      ...mixinBorder(theme.size.border.size4, brandHover),
+      ...mixinBorder(theme.size.border.size4, COLOR[colorCore]),
       background: theme.color.neutral,
-      '.kitter_text': {
-        color: brandHover
-      }
-    },
-    'span': {
-      color: theme.color.warning,
-      // boxSizing: 'inherit',
-      // background: brandBase,
-      '&:before': {
-        content: `'${brandBase}'`
-      }
+      color: brandHover
     }
   }
 }
 
-export const mixinButton: any = (brand: TBrand) => {
+export const mixinButton: any = {
 
-  const brandBase = theme.brand[`${brand}Color`];
-  const brandContrast = theme.brand[`${brand}Contrast`];
-  const brandHover = theme.color[`${brand}Light1`];
-
-  return {
     minWidth: theme.size.button.size2,
     padding: theme.size.spacing.size2,
     cursor: "pointer",
     // outline is important for accessibility
     outlineWidth: theme.size.border.size1,
     outlineColor: theme.color.transparent,
-  }
+
 }
 
-export const mixinButtonSolid: any = (brand: TBrand) => {
-
-  const brandBase = theme.brand[`${brand}Color`];
-  const brandContrast = theme.brand[`${brand}Contrast`];
-  const brandHover = theme.color[`${brand}Light1`];
-
-  return {
-    ...mixinBorder(theme.size.border.size1, brandBase),
-    minWidth: theme.size.button.size2,
-    padding: theme.size.spacing.size2,
-    cursor: "pointer",
-    background: brandBase,
-    // outline is important for accessibility
-    outlineWidth: theme.size.border.size1,
-    outlineColor: theme.color.transparent,
-    '&:hover': {
-      ...mixinBorder(theme.size.border.size1, brandHover),
-      background: brandHover,
-      transition: "200ms",
-    },
-    $nest: {
-      '.kitter_text': {
-        color: brandContrast,
-      }
-    },
-    '&.disabled': {
-      ...mixinBorder(theme.size.border.size1, theme.color.disabled),
-      cursor: "not-allowed",
-      background: theme.color.disabled,
-      '&:hover': {
-        ...mixinBorder(theme.size.border.size1, theme.color.disabledLight1),
-        background: theme.color.disabledLight1,
-      }
-    },
-    '&.kitter_success': {
-      cursor: "not-allowed",
-      background: theme.color.success
-    },
-    '&.kitter_loading': {
-      ...mixinBorder(theme.size.border.size1, theme.color.loading),
-      cursor: "progress",
-      background: theme.color.loading,
-      '&:hover': {
-        ...mixinBorder(theme.size.border.size1, theme.color.loadingLight1),
-        background: theme.color.loadingLight1,
-      }
-    }
-  }
+export const cssButtonKind: any = (kind: TKindButton, variant: TColorCore) => {
+  if (kind === 'outline') return { ...mixinButtonOutline(variant)}
+  if (kind === 'solid')   return { ...mixinButtonSolid(variant)}
+  if (kind === 'text')    return { ...mixinButtonText(variant)}
 }
 
 export const cssButtonVariant: any = {
-  global:    { ...mixinButton('global') },
-  primary:   { ...mixinButton('primary') },
-  secondary: { ...mixinButton('secondary') },
-  tertiary:  { ...mixinButton('tertiary') },
-  neutral:   { ...mixinButton('neutral') },
-  warning:   { ...mixinButton('warning') },
-  info:      { ...mixinButton('info') },
-  disabled:  { ...mixinButton('disabled') },
-  inactive:  { ...mixinButton('inactive') },
-  loading:   { ...mixinButton('loading') }
+  global:    { ...mixinButton },
+  primary:   { ...mixinButton },
+  secondary: { ...mixinButton },
+  tertiary:  { ...mixinButton },
+  neutral:   { ...mixinButton },
+  warning:   { ...mixinButton },
+  info:      { ...mixinButton },
+  disabled:  { ...mixinButton },
+  inactive:  { ...mixinButton },
+  loading:   { ...mixinButton }
 }
 
 export const cssButtonSize: any = {
