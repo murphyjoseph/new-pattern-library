@@ -2,9 +2,10 @@ import React, { FC } from "react";
 
 import { IContainerAction } from './Container.interface';
 import _isFunction from 'lodash/isFunction';
-import { style, classes as combineClasses } from 'typestyle';
+import { style } from 'typestyle';
 import { mixinMargin } from "../../styles/mixinMargin";
 import { mixinPadding } from "../../styles/mixinPadding";
+import { mixinDisplay } from '../../styles/mixins';
 
 interface ITraits {
   traits: IContainerAction
@@ -16,15 +17,15 @@ export const ContainerAction: FC<ITraits> = ({
 }) => {
 
   const { onClick: _onClick, padding, display: _display,
-          margin, stylesExternal, colorBackground } = traits;
+          margin, styleExternal, colorBackground } = traits;
 
-  const stylesCore = style({
-    ...!!_display        && { display: _display },
-    ...!!colorBackground && { background: colorBackground},
-    ...!!padding         && mixinPadding(padding),
-    ...!!margin          && mixinMargin(margin),
-    ...!!stylesExternal  && stylesExternal
-  })
+  const stylesCore = style(
+    !!_display        && mixinDisplay(_display),
+    !!colorBackground && { background: colorBackground},
+    !!padding         && mixinPadding(padding),
+    !!margin          && mixinMargin(margin),
+    !!styleExternal   && styleExternal
+  )
 
   const handleClick = (event?: React.SyntheticEvent): void => {
     if (!_onClick) return
@@ -32,7 +33,7 @@ export const ContainerAction: FC<ITraits> = ({
   };
 
   return (
-    <div className={combineClasses(stylesCore, 'kitter_container')}
+    <div className={stylesCore}
          onClick={handleClick}>
       { children }
     </div>

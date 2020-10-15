@@ -13,13 +13,13 @@ export const TextForm: FC<ITraits> = ({
   traits
 }) => {
 
-  const { text: _text, variant, size, stylesExternal, state, kind } = traits;
+  const { text: _text, variant, size, styleExternal, state, kind } = traits;
 
   const stylesCore = style(
     mixinButton,
     cssButtonSize[size],
     cssButtonKind(kind, variant),
-    !!stylesExternal && stylesExternal
+    !!styleExternal && styleExternal
   )
 
   const optionalAttributes: any = {

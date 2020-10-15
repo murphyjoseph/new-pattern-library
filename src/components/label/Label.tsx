@@ -4,6 +4,7 @@ import { IText } from '../text/Text.interface';
 import { ILabel } from './Label.interface';
 import { style } from 'typestyle';
 import { cssDisplay } from "../../styles/utility";
+import { mixinDisplay } from '../../styles/mixins';
 
 export interface ITraits {
   traits: ILabel
@@ -11,7 +12,7 @@ export interface ITraits {
 
 export const Label: FC<ITraits> = ({ traits }) => {
 
-  const { isRequired, main, secondary, stylesExternal } = traits
+  const { isRequired, main, secondary, styleExternal } = traits
 
   if (!main && !secondary) return <Fragment></Fragment>
 
@@ -31,10 +32,10 @@ export const Label: FC<ITraits> = ({ traits }) => {
     }
   }
 
-  const styleCore = style({
-    display: "block",
-    ...!!stylesExternal && stylesExternal
-  })
+  const styleCore = style(
+    mixinDisplay('block'),
+    !!styleExternal && styleExternal
+  )
 
   return (
     <label

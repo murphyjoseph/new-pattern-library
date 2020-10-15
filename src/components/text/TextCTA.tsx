@@ -14,13 +14,13 @@ export const TextCTA: FC<ITraits> = ({
 }) => {
 
   const { text: _text, rel: _rel, target: _target,
-          href: _href, variant, size, stylesExternal, state, kind } = traits;
+          href: _href, variant, size, styleExternal, state, kind } = traits;
 
   const stylesCore = style(
     mixinButton,
     cssButtonSize[size],
     cssButtonKind(kind, variant),
-    !!stylesExternal && stylesExternal
+    !!styleExternal && styleExternal
   )
 
   const optionalAttributes: any = {

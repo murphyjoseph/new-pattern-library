@@ -110,7 +110,7 @@ interesting idea regarding the css prioritization. i really hate the idea of hav
 
 
 THings to do
-- all styles psaed in from branding are stylesExternal
+- all styles psaed in from branding are styleExternal
 - if no styles except one exist is stylesCore
 - remove interfaces that are only beinge extended and not used anywhere else (IStylesTypography
 )
@@ -128,7 +128,7 @@ THings to do
 ---------------
 
 the order that things show up in stylesCore
-e.g. mixins come after general properties and stylesexternal always last
+e.g. mixins come after general properties and styleExternal always last
 
 ---------------
 
@@ -140,7 +140,7 @@ const stylesCore = style({
     ...!!colorBackground && mixinColorBackground(colorBackground),
     // B
     ...!!colorBackground && { background: themeCss.color[colorBackground] },
-    ...!!stylesExternal  && stylesExternal
+    ...!!styleExternal  && styleExternal
   })
 
   ---------------

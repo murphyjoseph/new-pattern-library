@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 import { IContainerLink } from './Container.interface';
-import { classes as combineClasses, style } from 'typestyle';
+import { style } from 'typestyle';
 import { mixinMargin } from '../../styles/mixinMargin';
 import { mixinPadding } from "../../styles/mixinPadding";
 import { mixinColorBackground } from '../../styles/mixinColor';
@@ -17,23 +17,23 @@ export const ContainerLink: FC<ITraits> = ({
 }) => {
 
   const { href: _href, target: _target,
-          display: _display, stylesExternal,
+          display: _display, styleExternal,
           colorBackground, padding, margin } = traits;
 
-  const stylesCore = style({
-    ...!!_display        && mixinDisplay(_display),
-    ...!!colorBackground && mixinColorBackground(colorBackground),
-    ...!!padding         && mixinPadding(padding),
-    ...!!margin          && mixinMargin(margin),
-    ...!!stylesExternal  && stylesExternal
-  })
+  const styleCore = style(
+    !!_display        && mixinDisplay(_display),
+    !!colorBackground && mixinColorBackground(colorBackground),
+    !!padding         && mixinPadding(padding),
+    !!margin          && mixinMargin(margin),
+    !!styleExternal   && styleExternal
+  )
 
   const optionalAttributes: React.HTMLProps<HTMLAnchorElement> = {
     ...(!!_target && { target: _target })
   };
 
   return (
-    <a  className={combineClasses(stylesCore, 'kitter_container')}
+    <a  className={styleCore}
         href={_href}
         {...optionalAttributes}>
       {children}

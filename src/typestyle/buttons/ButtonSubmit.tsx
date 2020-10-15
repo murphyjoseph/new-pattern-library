@@ -16,7 +16,7 @@ export const ButtonSubmit: FC<IPropsTextTitle> = ({
 
   const settings: ITextForm = {
     variant: 'global',
-    stylesExternal: _styles,
+    styleExternal: _styles,
     form: _form,
     text: _text,
     size: "small",

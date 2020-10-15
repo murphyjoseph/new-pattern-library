@@ -3,7 +3,7 @@ import { ITextLink, IText } from './Text.interface';
 import { Text } from "./Text";
 import _isFunction from 'lodash/isFunction';
 import { cssLinkVariant } from "./_cssLink";
-import { style, classes as combineClasses } from 'typestyle';
+import { style } from 'typestyle';
 
 interface ITraits {
   traits: ITextLink
@@ -15,12 +15,12 @@ export const TextLink: FC<ITraits> = ({
 
   const { text: _text, rel: _rel, variant,
           target: _target, href: _href,
-          id: _id, stylesExternal} = traits;
+          id: _id, styleExternal} = traits;
 
-  const stylesCore = style({
-    ...cssLinkVariant[variant],
-    ...!!stylesExternal && stylesExternal
-  })
+  const stylesCore = style(
+    cssLinkVariant[variant],
+    !!styleExternal && styleExternal
+  )
 
   const optionalAttributes: any = {
     ...(!!_target && { target: _target }),
@@ -35,7 +35,7 @@ export const TextLink: FC<ITraits> = ({
 
   return (
     <a href={_href}
-       className={combineClasses(stylesCore, 'kitter_textLink')}
+       className={stylesCore}
        {...optionalAttributes}
     >
       <Text traits={traitsForText} />

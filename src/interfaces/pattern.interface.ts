@@ -5,5 +5,5 @@ export interface IPattern {
   hidden?: boolean,
   // delete styles cuz i dont want to refactor rn
   styles?: any,
-  stylesExternal?: any
+  styleExternal?: any
 }

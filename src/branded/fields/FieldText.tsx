@@ -20,7 +20,7 @@ export const FieldText: FC<IPropsFieldText> = ({
   const settings: IFieldInput = {
     for: _for,
     kind: "text",
-    stylesExternal: _styles,
+    styleExternal: _styles,
     onChange: _onChange,
     traitLabel: {
       for: _for,
@@ -31,7 +31,7 @@ export const FieldText: FC<IPropsFieldText> = ({
       secondary: {
         text: "more text"
       },
-      stylesExternal: {
+      styleExternal: {
         paddingRight: theme.size.spacing.size3
       }
     }

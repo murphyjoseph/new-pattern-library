@@ -62,25 +62,37 @@ export const Dashboard: FC = () => {
     })()
   }
 
-  // const displayInlineBlock = { display: "inline-block" };
+  // shows overwriting styles :)
+  // const myStyles = {
+  //   background: "black",
+  //   color: "white"
+  // }
 
   // VIEW
 
   return (
     <SettingProvider value={subreddit}>
       <ContainerPrimary background="neutralLight1">
-      <form className={flexHorizontalGreen}
-            onSubmit={(event) => fetchPosts({event, subreddit})}
-            id="subredditSearch">
+      <form
+        className={flexHorizontalGreen}
+        onSubmit={(event) => fetchPosts({event, subreddit})}
+        id="subredditSearch"
+      >
         <FieldText
           onChange={(e: React.SyntheticEvent) => handleSubreddit(e)}
           textMain="Enter Subreddit"
           for="subreddit"
-          styles={mixinDisplay('inline-block')} />
+          styles={mixinDisplay('inline-block')}
+        />
         <ButtonSubmit
           text="submit"
           form="subredditSearch"
-          styles={mixinDisplay('inline-block')} />
+        />
+        {/* <ButtonSubmit
+          text="submit"
+          form="subredditSearch"
+          styles={myStyles}
+        /> */}
 
       </form>
       {

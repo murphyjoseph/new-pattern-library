@@ -14,7 +14,7 @@ export const TextAction: FC<ITraits> = ({
 }) => {
 
   const { onClick, size, text: _text, variant,
-          id: _id, stylesExternal, state, kind } = traits;
+          id: _id, styleExternal, state, kind } = traits;
 
   const handleClick = (event?: React.SyntheticEvent): void => {
     if (!onClick) return
@@ -25,7 +25,7 @@ export const TextAction: FC<ITraits> = ({
     mixinButton,
     cssButtonSize[size],
     cssButtonKind(kind, variant),
-    !!stylesExternal && stylesExternal
+    !!styleExternal && styleExternal
   )
 
   const optionalAttributes: any = {
