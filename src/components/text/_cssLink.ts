@@ -11,9 +11,7 @@ export const mixinLink: any = (brand: TColorCore) => (
       textDecoration : "none"
     },
     '&:visited': {
-      '.kitter_text': {
-        color: "red"
-      }
+      color: "red"
     }
   }
 )

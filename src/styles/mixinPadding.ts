@@ -121,7 +121,7 @@ export const MixinPadding = (params: IStylesSpacing | IStylesSpacing[]) => {
         paddingarray.push(getPadding(padding))
       }
     })
-    return paddingarray
+    return  paddingarray
   } else {
     return {
       ...getPadding({...params})

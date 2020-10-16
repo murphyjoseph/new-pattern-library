@@ -28,8 +28,7 @@ export const ContainerPrimary: FC<IPropsTextTitlePrimary> = ({
       size: "size1"
     },
 
-    padding:
-      MixinPadding(
+      ...MixinPadding(
         [
           {direction: "right", size: "size12"},
           {direction: "all", size: "size5", breakpointName: "breakpoint2", breakpointDirection: "over"}

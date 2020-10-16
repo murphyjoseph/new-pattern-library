@@ -64,10 +64,10 @@ export const Dashboard: FC = () => {
   }
 
   // shows overwriting styles :)
-  // const myStyles = {
-  //   background: "black",
-  //   color: "white"
-  // }
+  const myStyles = {
+    background: "black",
+    color: "white"
+  }
 
   // VIEW
 
@@ -86,15 +86,15 @@ export const Dashboard: FC = () => {
           for="subreddit"
           styles={mixinDisplay('inline-block')}
         />
-        <ButtonSubmit
-          text="submit"
-          form="subredditSearch"
-        />
         {/* <ButtonSubmit
           text="submit"
           form="subredditSearch"
-          styles={myStyles}
         /> */}
+        <ButtonSubmit
+          text="submit"
+          form="subredditSearch"
+          styles={myStyles}
+        />
 
       </form>
       {
