@@ -1,57 +1,74 @@
-import { IStylesSpacing } from "../interfaces/styles.interface"
+import { isArray } from 'lodash';
+import { IStylesSpacing } from '../interfaces/styles.interface';
 import { CONSTANTS } from '../constants';
-import { theme } from "../theme";
+import { theme } from '../theme';
+import { mixinBreakpoints } from './mixinBreakpoints';
 
-export const mixinMargin: any = (params: IStylesSpacing | IStylesSpacing[]) => {
-  // probably make it dynamic between padding or margin
-  // add in support for breakpoints?
-  if (Array.isArray(params)) return
-  if (params.direction === CONSTANTS.label.direction.spacing.all) {
-    return {
+const { label: { direction: DIRECTION } } = CONSTANTS;
 
-      marginTop: `${theme.size.spacing[params.size]}`,
-      marginBottom: `${theme.size.spacing[params.size]}`,
-      marginLeft: `${theme.size.spacing[params.size]}`,
-      marginRight: `${theme.size.spacing[params.size]}`
 
+// NOTE: I realize this is just a copy pasta but it is more clear as to how the 
+// styles are being generated - you can read it easier
+const mixinArrayMargin = (params: IStylesSpacing[]) => {
+  let marginObject: any = {};
+  params.forEach(param => {
+    const { breakpointName, breakpointDirection } = param;
+    if (breakpointName && breakpointDirection) {
+      const query: string = mixinBreakpoints(breakpointDirection, breakpointName);
+      marginObject = {
+        ...marginObject,
+        [query]: { ...mixinSimpleMargin(param) }
+      };
+    } else {
+      marginObject = {
+        ...marginObject,
+        ...mixinSimpleMargin(param)
+      };
     }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.vertical) {
-    return {
+  });
+  return marginObject;
+}
+const mixinSimpleMargin = (params: IStylesSpacing) => {
+  const { direction, size } = params;
 
-      marginTop: `${theme.size.spacing[params.size]}`,
-      marginBottom: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.horizontal) {
-    return {
-
-      marginLeft: `${theme.size.spacing[params.size]}`,
-      marginRight: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.right) {
-    return {
-
-      marginRight: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.left) {
-    return {
-
-      marginLeft: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.top) {
-    return {
-
-      marginTop: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.bottom) {
-    return {
-
-      marginBottom: `${theme.size.spacing[params.size]}`
-
-    }
+  switch (direction) {
+    case DIRECTION.spacing.all:
+      return {
+        marginTop: `${theme.size.spacing[size]}`,
+        marginBottom: `${theme.size.spacing[size]}`,
+        marginLeft: `${theme.size.spacing[size]}`,
+        marginRight: `${theme.size.spacing[size]}`
+      }
+    case DIRECTION.spacing.vertical:
+      return {
+        marginTop: `${theme.size.spacing[size]}`,
+        marginBottom: `${theme.size.spacing[size]}`
+      }
+    case DIRECTION.spacing.horizontal:
+      return {
+        marginLeft: `${theme.size.spacing[size]}`,
+        marginRight: `${theme.size.spacing[size]}`
+      }
+    case DIRECTION.spacing.left:
+      return {
+        marginLeft: `${theme.size.spacing[size]}`
+      }
+    case DIRECTION.spacing.right:
+      return {
+        marginRight: `${theme.size.spacing[size]}`
+      }
+    case DIRECTION.spacing.top:
+      return {
+        marginTop: `${theme.size.spacing[size]}`
+      }
+    case DIRECTION.spacing.bottom:
+      return {
+        marginBottom: `${theme.size.spacing[size]}`
+      }
   }
+}
+
+export const mixinMargin = (params: IStylesSpacing | IStylesSpacing[]) => {
+  if (isArray(params)) return mixinArrayMargin(params);
+  return mixinSimpleMargin(params);
 }

@@ -132,6 +132,8 @@
     "typed-scss-modules": "^2.0.1"
   },
   "jest": {
+    "verbose": true,
+    "collectCoverage": true,
     "roots": [
       "<rootDir>/src"
     ],
