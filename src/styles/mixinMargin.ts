@@ -1,4 +1,3 @@
-import { isArray } from 'lodash';
 import { IStylesSpacing } from '../interfaces/styles.interface';
 import { CONSTANTS } from '../constants';
 import { theme } from '../theme';
@@ -69,6 +68,6 @@ const mixinSimpleMargin = (params: IStylesSpacing) => {
 }
 
 export const mixinMargin = (params: IStylesSpacing | IStylesSpacing[]) => {
-  if (isArray(params)) return mixinArrayMargin(params);
+  if (Array.isArray(params)) return mixinArrayMargin(params);
   return mixinSimpleMargin(params);
 }
