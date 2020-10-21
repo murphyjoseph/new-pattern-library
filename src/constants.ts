@@ -67,6 +67,19 @@ export const CONSTANTS = {
         center      : 'center',
         middle      : 'middle'
       }
+    },
+    breakpoint: {
+      direction: {
+        over: 'over',
+        under: 'under',
+      },
+      name: {
+        xs: 'xs',
+        sm: 'sm',
+        md: 'md',
+        lg: 'lg',
+        xl: 'xl',
+      }
     }
   }
 }

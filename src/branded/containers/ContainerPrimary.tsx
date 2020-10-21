@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Container } from '../../components/container/Container';
 import { IContainer } from '../../components/container/Container.interface';
-import { MixinPadding } from '../../styles/mixinPadding';
 import { TColor } from '../../types/util-types';
 
 interface IPropsTextTitlePrimary {
@@ -27,13 +26,10 @@ export const ContainerPrimary: FC<IPropsTextTitlePrimary> = ({
       direction: "all",
       size: "size1"
     },
-
-      ...MixinPadding(
-        [
-          {direction: "right", size: "size12"},
-          {direction: "all", size: "size5", breakpointName: "breakpoint2", breakpointDirection: "over"}
-        ]
-      ),
+    padding: [
+      { direction: "right", size: "size12" },
+      { direction: "all", size: "size5", breakpointName: "breakpoint2", breakpointDirection: "over" }
+    ],
     colorBackground: background
   }
 
@@ -42,7 +38,7 @@ export const ContainerPrimary: FC<IPropsTextTitlePrimary> = ({
 
   return (
     <Container traits={settings}>
-      { children }
+      { children}
     </Container>
   )
 

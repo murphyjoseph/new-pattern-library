@@ -1,134 +1,82 @@
 import { IStylesSpacing } from '../interfaces/styles.interface';
-import { isArray } from 'lodash';
-import { theme } from '../theme';
 import { CONSTANTS } from '../constants';
-import { padding } from 'csstips';
+import { theme } from '../theme';
+import { mixinBreakpoints } from './mixinBreakpoints';
 
-export const mixinPadding: any = (params: IStylesSpacing | IStylesSpacing[]) => {
-  // probably make it dynamic between padding or margin
-  // add in support for breakpoints?
-  if (isArray(params)) return
-  if (params.direction === CONSTANTS.label.direction.spacing.all) {
-    return {
+const { label: { direction: DIRECTION } } = CONSTANTS;
 
-      paddingTop: `${theme.size.spacing[params.size]}`,
-      paddingBottom: `${theme.size.spacing[params.size]}`,
-      paddingLeft: `${theme.size.spacing[params.size]}`,
-      paddingRight: `${theme.size.spacing[params.size]}`
-
+/**
+ * Handles styles when given more than one padding object
+ * Applies breakpoint styles along with normal padding styles
+ * object in an array
+ * @param params 
+ */
+const mixinArrayPadding = (params: IStylesSpacing[]) => {
+  let paddingObject: any = {};
+  params.forEach(param => {
+    const { breakpointName, breakpointDirection } = param;
+    if (breakpointName && breakpointDirection) {
+      const query: string = mixinBreakpoints(breakpointDirection, breakpointName);
+      paddingObject = {
+        ...paddingObject,
+        [query]: { ...mixinSimplePadding(param) }
+      };
+    } else {
+      paddingObject = {
+        ...paddingObject,
+        ...mixinSimplePadding(param)
+      };
     }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.vertical) {
-    return {
-
-      paddingTop: `${theme.size.spacing[params.size]}`,
-      paddingBottom: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.horizontal) {
-    return {
-
-      paddingLeft: `${theme.size.spacing[params.size]}`,
-      paddingRight: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.right) {
-    return {
-
-      paddingRight: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.left) {
-    return {
-
-      paddingLeft: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.top) {
-    return {
-
-      paddingTop: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.bottom) {
-    return {
-
-      paddingBottom: `${theme.size.spacing[params.size]}`
-
-    }
-  }
+  });
+  return paddingObject;
 }
 
-export const getPadding: any = (params: IStylesSpacing) => {
-  if (params.direction === CONSTANTS.label.direction.spacing.all) {
-    return {
+/**
+ * Creates style object given a size and direction to apply
+ * the padding
+ * @param params 
+ */
+const mixinSimplePadding = (params: IStylesSpacing) => {
+  const { direction, size } = params;
 
-      paddingTop: `${theme.size.spacing[params.size]}`,
-      paddingBottom: `${theme.size.spacing[params.size]}`,
-      paddingLeft: `${theme.size.spacing[params.size]}`,
-      paddingRight: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.vertical) {
-    return {
-
-      paddingTop: `${theme.size.spacing[params.size]}`,
-      paddingBottom: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.horizontal) {
-    return {
-
-      paddingLeft: `${theme.size.spacing[params.size]}`,
-      paddingRight: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.right) {
-    return {
-
-      paddingRight: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.left) {
-    return {
-
-      paddingLeft: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.top) {
-    return {
-
-      paddingTop: `${theme.size.spacing[params.size]}`
-
-    }
-  } else if (params.direction === CONSTANTS.label.direction.spacing.bottom) {
-    return {
-
-      paddingBottom: `${theme.size.spacing[params.size]}`
-
-    }
-  }
-}
-
-export const MixinPadding = (params: IStylesSpacing | IStylesSpacing[]) => {
-  // if (isArray(params)) return
-  if (Array.isArray(params)) {
-    let paddingarray: any = []
-    params.forEach(padding => {
-      if (padding.breakpointDirection && padding.breakpointName) {
-        const key: string = `@media all and (min-width: ${theme.breakpoint[padding.breakpointName]})`;
-        paddingarray.push({[key]: { ...getPadding(padding) }})
-      } else {
-        paddingarray.push(getPadding(padding))
+  switch (direction) {
+    case DIRECTION.spacing.all:
+      return {
+        paddingTop: `${theme.size.spacing[size]}`,
+        paddingBottom: `${theme.size.spacing[size]}`,
+        paddingLeft: `${theme.size.spacing[size]}`,
+        paddingRight: `${theme.size.spacing[size]}`
       }
-    })
-    return  paddingarray
-  } else {
-    return {
-      ...getPadding({...params})
-    }
-
+    case DIRECTION.spacing.vertical:
+      return {
+        paddingTop: `${theme.size.spacing[size]}`,
+        paddingBottom: `${theme.size.spacing[size]}`
+      }
+    case DIRECTION.spacing.horizontal:
+      return {
+        paddingLeft: `${theme.size.spacing[size]}`,
+        paddingRight: `${theme.size.spacing[size]}`
+      }
+    case DIRECTION.spacing.left:
+      return {
+        paddingLeft: `${theme.size.spacing[size]}`
+      }
+    case DIRECTION.spacing.right:
+      return {
+        paddingRight: `${theme.size.spacing[size]}`
+      }
+    case DIRECTION.spacing.top:
+      return {
+        paddingTop: `${theme.size.spacing[size]}`
+      }
+    case DIRECTION.spacing.bottom:
+      return {
+        paddingBottom: `${theme.size.spacing[size]}`
+      }
   }
-
 }
 
-
+export const mixinPadding = (params: IStylesSpacing | IStylesSpacing[]) => {
+  if (Array.isArray(params)) return mixinArrayPadding(params);
+  return mixinSimplePadding(params);
+}
